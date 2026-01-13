@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <!-- Force redéploiement -->
 <head>
-  <meta charset="UTF-8">
-  <title>ConciergOrne – Conciergerie Airbnb à Bagnoles-de-l'Orne</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConciergOrne - Conciergerie Locale</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bienvenue chez ConciergOrne</h1>
-  <p>Conciergerie locale à Bagnoles-de-l'Orne</p>
-  <p>Site en cours de construction 🚧</p>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Bienvenue chez ConciergOrne</h1>
+        <p>Conciergerie locale à Bagnoles-de-l'Orne</p>
+        <p>Site en cours de construction 🚧</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#packs">Packs</a>
+        <a href="#services">Services à la carte</a>
+        <a href="#contact">Contact</a>
+        <a href="#infos">Pourquoi nous choisir</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- Packs Section -->
+        <section id="packs">
+            <h2>Nos Packs avec engagement</h2>
+            <p>Découvrez nos packs adaptés pour vos locations avec engagement minimum 1 an.</p>
+            <div>
+                <h3>Pack Essentiel</h3>
+                <p>Gestion complète standard avec suivi.</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+            <div>
+                <h3>Pack Confort</h3>
+                <p>Pack Essentiel + services supplémentaires pour optimiser vos réservations.</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+            <div>
+                <h3>Pack Premium</h3>
+                <p>Confort + options prioritaires et suivi personnalisé.</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+        </section>
+
+        <!-- Services à la carte -->
+        <section id="services">
+            <h2>Services à la carte</h2>
+            <p>Ménage, linge, petites réparations et plus. Choisissez ce qui vous convient.</p>
+        </section>
+
+        <!-- Pourquoi nous choisir -->
+        <section id="infos">
+            <h2>Pourquoi choisir ConciergOrne ?</h2>
+            <p>Service local, réactif et flexible. Nous optimisons votre taux de réservation et prenons soin de vos biens.</p>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Envie de travailler avec nous ? Remplissez le formulaire ci-dessous :</p>
+            <form>
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="objet" placeholder="Objet" required>
+                <textarea name="message" placeholder="Votre message..." rows="4" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <p>Ou contactez-nous directement par WhatsApp : 07 71 62 39 74</p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 ConciergOrne - Auto-entreprise française | Tous droits réservés</p>
+    </footer>
+
 </body>
-</html>
+  </html>

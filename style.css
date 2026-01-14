@@ -1,5 +1,5 @@
 /* ===========================
-   STYLE GLOBAL
+   RESET & BASE
 =========================== */
 * {
     margin: 0;
@@ -26,7 +26,7 @@ header {
     background-color: #ffb347;
     color: #fff;
     text-align: center;
-    padding: 25px 10px;
+    padding: 30px 15px;
 }
 
 header h1 {
@@ -42,31 +42,31 @@ header p {
    NAVIGATION
 =========================== */
 nav {
-    background-color: #1a3e5c; /* bleu foncé */
+    background-color: #1a3e5c;
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 12px 0;
+    gap: 30px;
+    padding: 14px 0;
     flex-wrap: wrap;
 }
 
 nav a {
-    color: #fff; /* texte blanc pour bien contraster */
+    color: #ffffff;
     font-weight: bold;
     font-size: 1em;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ffb347; /* survol orange */
+    color: #ffb347;
 }
 
 /* ===========================
-   MAIN CONTENT
+   MAIN
 =========================== */
 main {
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 0 20px;
     text-align: center;
 }
@@ -78,51 +78,115 @@ main h2 {
 }
 
 main p {
-    font-size: 1em;
     color: #555;
+    margin-bottom: 20px;
 }
 
 /* ===========================
-   SECTIONS (PACKS, SERVICES)
+   SECTIONS
 =========================== */
 section {
-    padding: 40px 20px;
     background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-}
-
-section h3 {
-    color: #1a3e5c;
-    margin-bottom: 15px;
-}
-
-section p {
-    font-size: 1em;
-    color: #555;
-}
-
-ul {
-    list-style-type: none;
+    padding: 40px 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
 /* ===========================
    BUTTONS
 =========================== */
-button, .btn {
+.btn, button {
     background-color: #ffb347;
     color: white;
     padding: 12px 25px;
-    border: none;
     border-radius: 6px;
     font-size: 1em;
+    border: none;
     cursor: pointer;
     transition: 0.3s;
+    display: inline-block;
 }
 
-button:hover, .btn:hover {
+.btn:hover, button:hover {
     background-color: #ffa500;
+}
+
+/* ===========================
+   PACKS (PC + MOBILE)
+=========================== */
+.pack-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.pack-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.pack-card h3 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
+}
+
+.pack-card .percentage {
+    color: #ffb347;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pack-card ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.pack-card ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pack-card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ffb347;
+}
+
+.pack-card .options {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* ===========================
+   SERVICES À LA CARTE (PC FIX)
+=========================== */
+.service-item {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.service-item h3 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    margin-bottom: 15px;
+}
+
+.service-item .btn {
+    margin-top: 10px;
 }
 
 /* ===========================
@@ -136,13 +200,8 @@ footer {
     font-size: 0.9em;
 }
 
-footer a {
-    color: white;
-    text-decoration: underline;
-}
-
 /* ===========================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 =========================== */
 @media screen and (max-width: 768px) {
     nav {
@@ -164,31 +223,8 @@ footer a {
         padding: 25px 15px;
     }
 
-    button, .btn {
+    .btn, button {
         width: 100%;
-        padding: 12px;
+        text-align: center;
     }
-   }
-/* SERVICES A LA CARTE */
-.service-item {
-    background-color: #fff;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: left;
-}
-
-.service-item h3 {
-    margin-bottom: 10px;
-    color: #1a3e5c;
-}
-
-.service-item p {
-    margin-bottom: 15px;
-}
-
-.service-item .btn {
-    display: inline-block;
-    margin-top: 10px;
 }

@@ -190,29 +190,58 @@ footer {
   font-weight: bold;
   color: #f9a825;
 }
+/* PAGE CONTACT - STYLE PROFESSIONNEL */
+
 .contact {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+.contact form {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-label {
-  margin-top: 15px;
+.contact label {
+  margin-top: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #f9a825;
+}
+
+.contact button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
   font-weight: bold;
+  background-color: #f9a825;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-input, select, textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  margin-top: 25px;
+.contact button:hover {
+  background-color: #f57f17;
 }

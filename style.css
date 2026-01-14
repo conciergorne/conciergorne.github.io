@@ -42,5 +42,130 @@ header p {
    NAVIGATION
 =========================== */
 nav {
+    background-color: #1a3e5c; /* bleu foncé */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff; /* texte blanc pour bien contraster */
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffb347; /* survol orange */
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #1a3e5c;
+}
+
+main p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* ===========================
+   SECTIONS (PACKS, SERVICES)
+=========================== */
+section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+section h3 {
+    color: #1a3e5c;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1em;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button, .btn {
+    background-color: #ffb347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #ffa500;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
     background-color: #1a3e5c;
-    display:
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 25px 15px;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px;
+    }
+   }

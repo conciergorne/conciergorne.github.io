@@ -190,3 +190,29 @@ footer {
   font-weight: bold;
   color: #f9a825;
 }
+.contact {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 25px;
+}

@@ -1,17 +1,17 @@
-/* ========================
-   Styles généraux
-======================== */
-body {
-    font-family: 'Arial', sans-serif;
+/* ===========================
+   STYLE GLOBAL
+=========================== */
+* {
     margin: 0;
     padding: 0;
-    background-color: #fff8f0; /* couleur chaleureuse beige clair */
-    color: #333;
+    box-sizing: border-box;
 }
 
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif;
-    color: #3a3a3a;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+    line-height: 1.6;
 }
 
 a {
@@ -19,41 +19,28 @@ a {
     color: inherit;
 }
 
-/* ========================
-   Boutons
-======================== */
-.btn {
-    display: inline-block;
-    background-color: #f2b600; /* jaune chaleureux */
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-}
-
-.btn:hover {
-    background-color: #d99e00;
-    transform: translateY(-2px);
-}
-
-/* ========================
-   Header
-======================== */
+/* ===========================
+   HEADER
+=========================== */
 header {
+    background-color: #ffb347;
+    color: #fff;
     text-align: center;
-    padding: 60px 20px;
-    background-color: #ffe8c3; /* ton jaune clair doux */
+    padding: 25px 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2em;
-    margin: 15px 0 0 0;
+    font-size: 1em;
 }
 
-/* ========================
-   Packs & Services Cards
-======================== */
-.pack, .service-card {
-    background-color: #fff;
+/* ===========================
+   NAVIGATION
+=========================== */
+nav {
+    background-color: #1a3e5c;
+    display:

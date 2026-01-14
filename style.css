@@ -169,3 +169,26 @@ footer a {
         padding: 12px;
     }
    }
+/* SERVICES A LA CARTE */
+.service-item {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: #1a3e5c;
+}
+
+.service-item p {
+    margin-bottom: 15px;
+}
+
+.service-item .btn {
+    display: inline-block;
+    margin-top: 10px;
+}

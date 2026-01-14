@@ -2,65 +2,50 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contact & Devis - ConciergOrne</title>
+  <title>Contact / Devis - ConciergOrne</title>
+  <meta name="description" content="Contactez ConciergOrne pour une demande de devis pour vos services de conciergerie à Bagnoles-de-l'Orne.">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h1>Contact & Demande de devis</h1>
-  <p>Parlons de votre logement et de vos besoins</p>
+  <h1>Contact / Demande de devis</h1>
+  <p>Remplissez le formulaire pour recevoir un devis personnalisé.</p>
 </header>
 
 <section class="contact">
+  <form action="mailto:ton.email@example.com" method="post" enctype="text/plain">
+    <label for="nom">Nom et Prénom</label>
+    <input type="text" id="nom" name="nom" required>
 
-  <form action="https://formsubmit.co/florian.huet@gmail.com" method="POST">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
 
-    <input type="hidden" name="_subject" value="Demande de devis ConciergOrne">
-    <input type="hidden" name="_captcha" value="false">
+    <label for="telephone">Téléphone</label>
+    <input type="tel" id="telephone" name="telephone">
 
-    <label>Nom / Prénom</label>
-    <input type="text" name="Nom" required>
-
-    <label>Email</label>
-    <input type="email" name="Email" required>
-
-    <label>Téléphone</label>
-    <input type="text" name="Téléphone">
-
-    <label>Type de bien</label>
-    <select name="Type de bien">
-      <option>Studio</option>
-      <option>Appartement</option>
-      <option>Maison</option>
+    <label for="service">Service souhaité</label>
+    <select id="service" name="service">
+      <option value="pack-essentiel">Pack Essentiel</option>
+      <option value="pack-confort">Pack Confort</option>
+      <option value="pack-premium">Pack Premium</option>
+      <option value="menage">Ménage</option>
+      <option value="linge">Linge</option>
+      <option value="reparations">Petites réparations</option>
+      <option value="urgence">Intervention urgente</option>
     </select>
 
-    <label>Surface approximative (m²)</label>
-    <input type="number" name="Surface">
+    <label for="message">Message / détails</label>
+    <textarea id="message" name="message" rows="5"></textarea>
 
-    <label>Service souhaité</label>
-    <select name="Service">
-      <option>Pack Essentiel</option>
-      <option>Pack Confort</option>
-      <option>Pack Premium</option>
-      <option>Ménage ponctuel</option>
-      <option>Linge</option>
-      <option>Petites réparations</option>
-    </select>
-
-    <label>Message</label>
-    <textarea name="Message" rows="5"></textarea>
-
-    <button type="submit" class="btn">Envoyer ma demande</button>
-
+    <button type="submit">Envoyer ma demande</button>
   </form>
-
 </section>
 
 <footer>
+  <p>© ConciergOrne – Service local à Bagnoles-de-l'Orne</p>
   <a href="index.html" class="btn">Retour à l’accueil</a>
 </footer>
 
 </body>
-  </html>
+</html>

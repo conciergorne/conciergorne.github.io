@@ -1,25 +1,4 @@
 /* ===========================
-   STYLE GLOBAL
-=========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdfaf6;
-    color: #333;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ===========================
    HOME PAGE
 =========================== */
 .home-main {
@@ -34,11 +13,16 @@ a {
     overflow: hidden;
 }
 
-.home-main .logo {
-    max-width: 90%;
-    width: auto;
+.logo-container {
+    width: 200px; /* Limite largeur pour mobile */
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100%;
     height: auto;
-    margin-bottom: 25px;
+    display: block;
+    margin: 0 auto; /* Centre le logo */
 }
 
 .home-main h1 {
@@ -91,6 +75,10 @@ a {
         margin: 5px;
         flex: 1 1 calc(50% - 20px);
     }
+
+    .logo-container {
+        width: 250px; /* Un peu plus grand sur tablette */
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -104,5 +92,9 @@ a {
 
     .home-buttons .btn {
         flex: 1 1 calc(25% - 20px);
+    }
+
+    .logo-container {
+        width: 300px; /* Taille sur PC */
     }
 }

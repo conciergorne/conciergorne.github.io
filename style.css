@@ -23,87 +23,95 @@ a {
    HEADER
 =========================== */
 header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9); /* transparent blanc */
-    padding: 15px 10px;
-}
-
-.logo {
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* ===========================
-   NAVIGATION
-=========================== */
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-nav a {
-    color: #1a3e5c;
-    font-weight: bold;
-    font-size: 1em;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ffb347;
-}
-
-/* ===========================
-   HERO / MAIN
-=========================== */
-.hero {
     text-align: center;
-    padding: 50px 20px 80px;
+    padding: 50px 20px 40px 20px;
+    background-color: #fdfaf6; /* fond clair */
 }
 
-.hero h1 {
-    font-size: 2.5em;
+header .logo {
+    max-width: 300px;
+    width: 50%;
+    height: auto;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
     color: #1a3e5c;
-    margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.2em;
+header p {
+    font-size: 1em;
     color: #555;
-    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 /* ===========================
-   HERO BUTTONS
+   HEADER BUTTONS
 =========================== */
-.hero-buttons {
+.buttons-header {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
 }
 
-.hero-buttons .btn {
+.buttons-header .btn {
     background-color: #ffb347;
-    color: white;
+    color: #1a3e5c;
     padding: 12px 25px;
     border-radius: 6px;
-    font-size: 1em;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-.hero-buttons .btn:hover {
+.buttons-header .btn:hover {
+    background-color: #ffa500;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #1a3e5c;
+}
+
+main p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   MAIN BUTTONS
+=========================== */
+.buttons-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.buttons-main .btn {
+    background-color: #ffb347;
+    color: #1a3e5c;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buttons-main .btn:hover {
     background-color: #ffa500;
 }
 
@@ -122,19 +130,31 @@ footer {
    RESPONSIVE DESIGN
 =========================== */
 @media screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 2em;
+    header h1 {
+        font-size: 1.6em;
     }
 
-    .hero p {
-        font-size: 1em;
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    .buttons-header, .buttons-main {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .logo {
+        width: 70%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .hero-buttons .btn {
+    header .logo {
+        width: 80%;
+    }
+
+    .buttons-header .btn, .buttons-main .btn {
         width: 100%;
-        text-align: center;
         padding: 12px;
     }
 }

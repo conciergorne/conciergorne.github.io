@@ -15,20 +15,18 @@ body {
 }
 
 /* =========================
-   NAVIGATION (BARRE BLANCHE)
+   NAVIGATION TRANSPARENTE
 ========================= */
 header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    position: sticky;
+    position: absolute;
     top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
 nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px 20px;
+    width: 100%;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,55 +46,60 @@ nav .logo img {
 nav .logo span {
     font-size: 22px;
     font-weight: bold;
-    color: #1f3c88;
+    color: white;
 }
 
 /* MENU */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #1f3c88;
+    color: white;
     font-weight: 600;
-    transition: color 0.3s ease;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffb703;
+    opacity: 0.7;
 }
 
 /* =========================
    HERO / ACCUEIL
 ========================= */
 .hero {
+    min-height: 100vh;
+    padding: 120px 20px 80px;
     text-align: center;
-    padding: 80px 20px;
     background: linear-gradient(135deg, #1f3c88, #3a6ea5);
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 44px;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 18px;
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
 }
 
 /* =========================
-   BOUTONS GÉNÉRAUX
+   BOUTONS
 ========================= */
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
+    margin-top: 30px;
+    padding: 14px 30px;
     background-color: #ffb703;
     color: #1f3c88;
     text-decoration: none;
@@ -114,7 +117,7 @@ nav ul li a:hover {
    SECTIONS
 ========================= */
 section {
-    padding: 60px 20px;
+    padding: 70px 20px;
     max-width: 1100px;
     margin: auto;
 }
@@ -133,7 +136,7 @@ section p {
 }
 
 /* =========================
-   CARTES (PACKS / SERVICES)
+   CARTES
 ========================= */
 .cards {
     display: grid;
@@ -155,15 +158,6 @@ section p {
     margin-bottom: 15px;
 }
 
-.card ul {
-    list-style: none;
-    margin-top: 15px;
-}
-
-.card ul li {
-    margin-bottom: 10px;
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -171,8 +165,7 @@ footer {
     background-color: #1f3c88;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 60px;
+    padding: 25px;
 }
 
 footer p {
@@ -180,12 +173,13 @@ footer p {
 }
 
 /* =========================
-   RESPONSIVE MOBILE
+   RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         gap: 15px;
+        padding: 20px;
     }
 
     nav ul {
@@ -196,9 +190,5 @@ footer p {
 
     .hero h1 {
         font-size: 32px;
-    }
-
-    section h2 {
-        font-size: 26px;
     }
 }

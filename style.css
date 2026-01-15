@@ -23,42 +23,19 @@ a {
    HEADER
 =========================== */
 header {
-    background-color: #ffb347;
-    color: #fff;
+    background-color: #fdfaf6;
     text-align: center;
     padding: 25px 10px;
 }
 
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1em;
-}
-
-/* ===========================
-   NAVIGATION
-=========================== */
-nav {
-    background-color: rgba(255, 255, 255, 0.0); /* transparent */
+.header-container {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 12px 0;
-    flex-wrap: wrap;
 }
 
-nav a {
-    color: #1a3e5c; /* texte visible sur blanc / transparent */
-    font-weight: bold;
-    font-size: 1em;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ffb347;
+header .logo {
+    max-width: 200px; /* Ajustable selon ton logo */
+    height: auto;
 }
 
 /* ===========================
@@ -71,21 +48,29 @@ main {
     text-align: center;
 }
 
-main h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
+main h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
     color: #1a3e5c;
 }
 
 main p {
     font-size: 1em;
+    margin-bottom: 25px;
     color: #555;
 }
 
 /* ===========================
-   BUTTONS
+   BOUTONS
 =========================== */
-button, .btn {
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.button-group .btn {
     background-color: #ffb347;
     color: white;
     padding: 12px 25px;
@@ -94,9 +79,11 @@ button, .btn {
     font-size: 1em;
     cursor: pointer;
     transition: 0.3s;
+    min-width: 200px;
+    text-align: center;
 }
 
-button:hover, .btn:hover {
+.button-group .btn:hover {
     background-color: #ffa500;
 }
 
@@ -111,254 +98,32 @@ footer {
     font-size: 0.9em;
 }
 
-/* ===========================
-   PAGE D’ACCUEIL
-=========================== */
-.home-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 20px;
-    min-height: 80vh;
-    background-color: #fdfaf6;
+footer a {
+    color: #ffb347;
 }
 
-.home-main .logo {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 25px;
-}
-
-.home-main .home-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-/* ===========================
-   PAGE QUI SOMMES-NOUS
-=========================== */
-.about-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #fdfaf6;
-}
-
-.about-main .logo-container {
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-.about-main .logo {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.about-main h1, 
-.about-main h2 {
-    color: #1a3e5c;
-    margin: 20px 0 10px;
-}
-
-.about-main p {
-    color: #555;
-    font-size: 1em;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.about-main ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.about-main ul li {
-    margin-bottom: 10px;
-}
-
-/* ===========================
-   PAGE PACKS
-=========================== */
-.packs-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.packs-main h1, .packs-main h2 {
-    color: #1a3e5c;
-    margin-bottom: 20px;
-}
-
-.pack {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-    text-align: left;
-    width: 100%;
-    max-width: 400px;
-}
-
-.pack h3 {
-    color: #1a3e5c;
-    margin-bottom: 10px;
-}
-
-.pack ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.pack ul li {
-    margin-bottom: 8px;
-}
-
-.pack .btn {
-    display: block;
-    margin: 15px 0 0 0;
-    text-align: center;
-}
-
-/* ===========================
-   PAGE SERVICES
-=========================== */
-.services-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.service {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
-}
-
-.service h3 {
-    color: #1a3e5c;
-    margin-bottom: 10px;
-}
-
-.service p, .service ul {
-    color: #555;
-}
-
-.service .btn {
-    display: block;
-    margin-top: 10px;
-}
-
-/* ===========================
-   PAGE CONTACT
-=========================== */
-.contact-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-main h1, .contact-main h2 {
-    color: #1a3e5c;
-    margin-bottom: 20px;
-}
-
-.contact-main form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-}
-
-.contact-main input, .contact-main textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-}
-
-.contact-main button {
-    width: 100%;
+footer a:hover {
+    color: #fff;
 }
 
 /* ===========================
    RESPONSIVE DESIGN
 =========================== */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    header h1 {
-        font-size: 1.6em;
-    }
-
-    main h2 {
-        font-size: 1.5em;
-    }
-
-    .about-main, .packs-main, .services-main, .contact-main {
-        padding: 30px 15px;
-    }
-
-    .home-main .logo {
-        max-width: 200px;
-    }
-
-    .pack, .service {
-        max-width: 100%;
-    }
-
-    .home-buttons .btn, .pack .btn, .service .btn, .contact-main button {
-        width: 100%;
+@media screen and (min-width: 768px) {
+    .button-group {
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 480px) {
-    section {
-        padding: 25px 15px;
+    main h1 {
+        font-size: 1.6em;
     }
 
-    button, .btn {
+    .button-group .btn {
         width: 100%;
-        padding: 12px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .home-main .logo {
         max-width: 250px;
     }
-   }
+}

@@ -17,9 +17,8 @@
     <section class="intro">
         <h1>Demande de devis</h1>
         <p>
-            Ce formulaire nous permet de mieux comprendre votre logement et vos besoins.
-            <br>
-            📩 Une réponse personnalisée vous sera envoyée rapidement par email.
+            Remplissez ce formulaire afin que nous puissions vous proposer une solution adaptée.<br>
+            💡 Vous pouvez demander un pack ou uniquement des services à la carte.
         </p>
     </section>
 
@@ -55,15 +54,52 @@
             <label>Surface approximative (m²)</label>
             <input type="number" placeholder="Ex : 60">
 
-            <label>Localisation du logement</label>
-            <input type="text" placeholder="Ville / Commune" required>
+            <label>Ville / Commune</label>
+            <input type="text" placeholder="Localisation du logement" required>
         </div>
 
         <!-- ÉTAPE 3 -->
         <div class="form-card">
-            <h2>3️⃣ Votre besoin</h2>
+            <h2>3️⃣ Votre demande</h2>
 
-            <label>Pack souhaité</label>
+            <label>Type de prestation souhaitée</label>
             <select required>
-                <option value="">-- Choisir un pack --</option>
-                <option>Pack Essentiel – 18
+                <option value="">-- Faites votre choix --</option>
+                <option>Pack de conciergerie</option>
+                <option>Services à la carte uniquement</option>
+                <option>Je ne sais pas encore / besoin de conseils</option>
+            </select>
+
+            <label>Si vous souhaitez un pack (facultatif)</label>
+            <select>
+                <option value="">-- Aucun pack sélectionné --</option>
+                <option>Pack Essentiel – 18%</option>
+                <option>Pack Standard – 20%</option>
+                <option>Pack Premium – 22%</option>
+                <option>Pack Sérénité – 24%</option>
+            </select>
+
+            <label>Détails de votre demande</label>
+            <textarea rows="6" placeholder="Décrivez librement vos besoins : ménage, check-in, bricolage, suivi de travaux, demandes ponctuelles, etc."></textarea>
+        </div>
+
+        <!-- VALIDATION -->
+        <div class="form-submit">
+            <button type="submit">📨 Envoyer ma demande de devis</button>
+        </div>
+
+        <p class="form-note">
+            📌 Devis gratuit et sans engagement<br>
+            📧 Contact : <strong>ConciergOrne@gmail.com</strong>
+        </p>
+
+    </form>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 Concierg’Orne – Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

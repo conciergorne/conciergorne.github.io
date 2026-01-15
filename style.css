@@ -63,7 +63,7 @@ main p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 50px;
     margin-top: 20px;
 }
 

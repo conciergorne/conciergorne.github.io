@@ -1,5 +1,118 @@
 /* ===========================
-   HOME PAGE
+   STYLE GLOBAL
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    background-color: #ffb347;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1em;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+nav {
+    background-color: rgba(255, 255, 255, 0.0); /* transparent */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #1a3e5c; /* texte visible sur blanc / transparent */
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffb347;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #1a3e5c;
+}
+
+main p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button, .btn {
+    background-color: #ffb347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #ffa500;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #1a3e5c;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+}
+
+/* ===========================
+   PAGE D’ACCUEIL
 =========================== */
 .home-main {
     display: flex;
@@ -10,91 +123,242 @@
     padding: 50px 20px;
     min-height: 80vh;
     background-color: #fdfaf6;
-    overflow: hidden;
 }
 
-.logo-container {
-    width: 200px; /* Limite largeur pour mobile */
+.home-main .logo {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.home-main .home-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* ===========================
+   PAGE QUI SOMMES-NOUS
+=========================== */
+.about-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fdfaf6;
+}
+
+.about-main .logo-container {
+    width: 200px;
     margin-bottom: 20px;
 }
 
-.logo {
+.about-main .logo {
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Centre le logo */
+    margin: 0 auto;
 }
 
-.home-main h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.about-main h1, 
+.about-main h2 {
     color: #1a3e5c;
+    margin: 20px 0 10px;
 }
 
-.home-main p {
-    font-size: 1em;
+.about-main p {
     color: #555;
-    margin-bottom: 30px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
-.home-buttons {
+.about-main ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-main ul li {
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   PAGE PACKS
+=========================== */
+.packs-main {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.packs-main h1, .packs-main h2 {
+    color: #1a3e5c;
+    margin-bottom: 20px;
+}
+
+.pack {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
     width: 100%;
     max-width: 400px;
 }
 
-.home-buttons .btn {
-    display: block;
-    text-align: center;
-    background-color: #ffb347;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1em;
-    transition: 0.3s;
+.pack h3 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
 }
 
-.home-buttons .btn:hover {
-    background-color: #ffa500;
+.pack ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.pack ul li {
+    margin-bottom: 8px;
+}
+
+.pack .btn {
+    display: block;
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+/* ===========================
+   PAGE SERVICES
+=========================== */
+.services-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.service h3 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
+}
+
+.service p, .service ul {
+    color: #555;
+}
+
+.service .btn {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ===========================
+   PAGE CONTACT
+=========================== */
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-main h1, .contact-main h2 {
+    color: #1a3e5c;
+    margin-bottom: 20px;
+}
+
+.contact-main form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.contact-main input, .contact-main textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact-main button {
+    width: 100%;
 }
 
 /* ===========================
    RESPONSIVE DESIGN
 =========================== */
-@media screen and (min-width: 768px) {
-    .home-buttons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .home-buttons .btn {
-        margin: 5px;
-        flex: 1 1 calc(50% - 20px);
+    header h1 {
+        font-size: 1.6em;
     }
 
-    .logo-container {
-        width: 250px; /* Un peu plus grand sur tablette */
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    .about-main, .packs-main, .services-main, .contact-main {
+        padding: 30px 15px;
+    }
+
+    .home-main .logo {
+        max-width: 200px;
+    }
+
+    .pack, .service {
+        max-width: 100%;
+    }
+
+    .home-buttons .btn, .pack .btn, .service .btn, .contact-main button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 25px 15px;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .home-main h1 {
-        font-size: 2.5em;
+    .home-main .logo {
+        max-width: 250px;
     }
-
-    .home-main p {
-        font-size: 1.2em;
-    }
-
-    .home-buttons .btn {
-        flex: 1 1 calc(25% - 20px);
-    }
-
-    .logo-container {
-        width: 300px; /* Taille sur PC */
-    }
-}
+   }

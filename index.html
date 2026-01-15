@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concierg'Orne</title>
+    <title>Accueil - Concierg'Orne</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- HEADER -->
     <header>
-        <img src="logo.png" alt="Concierg'Orne" class="logo">
+        <div class="header-logo-container">
+            <img src="logo.png" alt="Concierg'Orne" class="logo">
+        </div>
     </header>
 
-    <!-- BOUTONS CENTRAUX -->
+    <!-- SECTION BIENVENUE -->
     <main>
-        <div class="button-container">
-            <a href="qui-sommes-nous.html" class="btn">Qui sommes-nous ?</a>
-            <a href="packs.html" class="btn">Nos packs</a>
-            <a href="services.html" class="btn">Service à la carte</a>
-            <a href="contact.html" class="btn">Contact / Devis</a>
-        </div>
+        <section class="welcome-section">
+            <h1>Bienvenue chez Concierg'Orne</h1>
+            <p>Votre conciergerie locale pour gérer vos logements Airbnb avec professionnalisme et transparence.</p>
+        </section>
+
+        <!-- BOUTONS CENTRAUX -->
+        <section class="buttons-section">
+            <div class="button-card">
+                <a href="qui-sommes-nous.html" class="btn">Qui sommes-nous ?</a>
+            </div>
+            <div class="button-card">
+                <a href="packs.html" class="btn">Nos packs</a>
+            </div>
+            <div class="button-card">
+                <a href="services.html" class="btn">Service à la carte</a>
+            </div>
+            <div class="button-card">
+                <a href="contact.html" class="btn">Contact / Devis</a>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER -->

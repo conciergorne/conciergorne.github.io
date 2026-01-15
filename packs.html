@@ -2,22 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Nos Packs – ConciergOrne</title>
+    <title>Nos Packs – Concierg’Orne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez les packs de conciergerie ConciergOrne pour la gestion de votre location courte durée à Bagnoles-de-l'Orne.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-    <img src="logo.png" alt="Logo ConciergOrne" width="110" style="display:block;margin:0 auto 10px;">
     <h1>Nos Packs de Conciergerie</h1>
-    <p>Une gestion claire, efficace et adaptée à vos besoins</p>
+    <p>Des formules claires, sans surprise, avec engagement annuel</p>
 </header>
 
-<!-- NAVIGATION -->
 <nav>
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous</a>
@@ -26,97 +22,66 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- CONTENU PRINCIPAL -->
-<main>
+<main class="packs-main">
 
-<section>
-    <h2>Choisissez la formule qui vous correspond</h2>
-    <p>
-        Nos packs sont conçus pour vous libérer du quotidien tout en maximisant
-        vos revenus locatifs, avec une gestion professionnelle et transparente.
-    </p>
+    <h2>Choisissez la formule adaptée à votre bien</h2>
+    <p>Tous nos packs sont proposés avec un engagement minimum de 12 mois.</p>
 
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:30px;">
-
-        <!-- PACK ESSENTIEL -->
-        <div class="pack-card">
-            <h3>Essentiel</h3>
-            <ul>
-                <li>Gestion des réservations</li>
-                <li>Communication voyageurs</li>
-            </ul>
-            <p><strong>18 %</strong> des revenus locatifs</p>
-            <a href="contact.html" class="btn">Choisir ce pack</a>
-        </div>
-
-        <!-- PACK CONFORT -->
-        <div class="pack-card">
-            <h3>Confort</h3>
-            <ul>
-                <li>Tout le pack Essentiel</li>
-                <li>Check-in / Check-out</li>
-            </ul>
-            <p><strong>20 %</strong> des revenus locatifs</p>
-            <a href="contact.html" class="btn">Choisir ce pack</a>
-        </div>
-
-        <!-- PACK STANDARD -->
-        <div class="pack-card">
-            <h3>Standard</h3>
-            <ul>
-                <li>Tout le pack Confort</li>
-                <li>Optimisation de l’annonce</li>
-                <li>Suivi des avis voyageurs</li>
-                <li><strong>Ménage inclus</strong></li>
-            </ul>
-            <p><strong>22 %</strong> des revenus locatifs</p>
-            <a href="contact.html" class="btn">Choisir ce pack</a>
-        </div>
-
-        <!-- PACK PREMIUM -->
-        <div class="pack-card">
-            <h3>Premium</h3>
-            <ul>
-                <li>Tout le pack Standard</li>
-                <li>Reporting mensuel détaillé</li>
-                <li>Service prioritaire</li>
-                <li><strong>Ménage inclus</strong></li>
-            </ul>
-            <p><strong>24 %</strong> des revenus locatifs</p>
-            <a href="contact.html" class="btn">Choisir ce pack</a>
-        </div>
-
+    <!-- PACK ESSENTIEL -->
+    <div class="pack">
+        <h3>Pack Essentiel – 18 %</h3>
+        <ul>
+            <li>Création et optimisation de l’annonce</li>
+            <li>Gestion du calendrier et des réservations</li>
+            <li>Communication avec les voyageurs</li>
+            <li>Check-in / Check-out des locataires</li>
+            <li>Assistance voyageurs pendant le séjour</li>
+        </ul>
+        <a href="contact.html" class="btn">Choisir ce pack</a>
     </div>
-</section>
 
-<!-- INFORMATIONS IMPORTANTES -->
-<section>
-    <h3>Informations importantes</h3>
-    <p>
-        • Tous nos packs sont proposés avec un <strong>engagement minimum de 12 mois</strong>,
-        afin de garantir une gestion stable et une optimisation durable de votre location.
-    </p>
-    <p>
-        • Le linge et les prestations de bricolage ne sont pas inclus dans les packs.
-        Ils sont disponibles via nos <a href="services.html"><strong>services à la carte</strong></a>.
-    </p>
-</section>
+    <!-- PACK STANDARD -->
+    <div class="pack">
+        <h3>Pack Standard – 20 %</h3>
+        <ul>
+            <li><strong>Inclut toutes les prestations du Pack Essentiel</strong></li>
+            <li>Ménage professionnel inclus</li>
+            <li>Contrôle qualité après chaque séjour</li>
+            <li>Gestion des imprévus courants</li>
+        </ul>
+        <a href="contact.html" class="btn">Choisir ce pack</a>
+    </div>
 
-<!-- CTA FINAL -->
-<section>
-    <h3>Besoin d’aide pour choisir ?</h3>
-    <p>
-        Nous vous accompagnons pour sélectionner la solution la plus adaptée à votre logement.
-    </p>
-    <a href="contact.html" class="btn">Demander un devis</a>
-</section>
+    <!-- PACK CONFORT -->
+    <div class="pack">
+        <h3>Pack Confort – 22 %</h3>
+        <ul>
+            <li><strong>Inclut toutes les prestations du Pack Standard</strong></li>
+            <li>Suivi renforcé de l’état du logement</li>
+            <li>Coordination des interventions techniques</li>
+            <li>Optimisation du taux d’occupation</li>
+        </ul>
+        <a href="contact.html" class="btn">Choisir ce pack</a>
+    </div>
+
+    <!-- PACK PREMIUM -->
+    <div class="pack">
+        <h3>Pack Premium – 24 %</h3>
+        <ul>
+            <li><strong>Inclut toutes les prestations des autres packs</strong></li>
+            <li>Priorité absolue sur toutes les interventions</li>
+            <li>Gestion complète du bien sans contrainte</li>
+            <li>Accompagnement personnalisé propriétaire</li>
+            <li>Tranquillité totale toute l’année</li>
+        </ul>
+        <a href="contact.html" class="btn">Choisir ce pack</a>
+    </div>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 – ConciergOrne • Conciergerie locale à Bagnoles-de-l'Orne</p>
+    <p>© 2026 Concierg’Orne – Auto-entreprise française – Tous droits réservés</p>
 </footer>
 
 </body>
-    </html>
+</html>

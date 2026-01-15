@@ -3,103 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demande de devis – Concierg’Orne</title>
+    <title>Contact / Devis - Concierg'Orne</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="simple-header">
-    <img src="logo/logo.png" alt="Concierg’Orne" class="logo">
+<header>
+    <img src="logo.png" alt="Concierg'Orne">
+    <h1>Contact / Devis</h1>
 </header>
 
-<main class="container">
+<section>
+    <form>
+        <label>Nom / Prénom :</label>
+        <input type="text" name="name" required>
 
-    <section class="intro">
-        <h1>Demande de devis</h1>
-        <p>
-            Remplissez ce formulaire afin que nous puissions vous proposer une solution adaptée.<br>
-            💡 Vous pouvez demander un pack ou uniquement des services à la carte.
-        </p>
-    </section>
+        <label>Email :</label>
+        <input type="email" name="email" required value="ConciergOrne@gmail.com">
 
-    <form class="devis-form">
+        <label>Téléphone :</label>
+        <input type="tel" name="phone">
 
-        <!-- ÉTAPE 1 -->
-        <div class="form-card">
-            <h2>1️⃣ Vos coordonnées</h2>
+        <label>Message / Services souhaités :</label>
+        <textarea name="message" rows="4"></textarea>
 
-            <label>Nom et prénom</label>
-            <input type="text" placeholder="Ex : Jean Dupont" required>
-
-            <label>Adresse email</label>
-            <input type="email" placeholder="Ex : exemple@email.com" required>
-
-            <label>Téléphone</label>
-            <input type="tel" placeholder="Ex : 06 00 00 00 00">
-        </div>
-
-        <!-- ÉTAPE 2 -->
-        <div class="form-card">
-            <h2>2️⃣ Informations sur le logement</h2>
-
-            <label>Type de bien</label>
-            <select required>
-                <option value="">-- Sélectionnez --</option>
-                <option>Appartement</option>
-                <option>Maison</option>
-                <option>Studio</option>
-                <option>Autre</option>
-            </select>
-
-            <label>Surface approximative (m²)</label>
-            <input type="number" placeholder="Ex : 60">
-
-            <label>Ville / Commune</label>
-            <input type="text" placeholder="Localisation du logement" required>
-        </div>
-
-        <!-- ÉTAPE 3 -->
-        <div class="form-card">
-            <h2>3️⃣ Votre demande</h2>
-
-            <label>Type de prestation souhaitée</label>
-            <select required>
-                <option value="">-- Faites votre choix --</option>
-                <option>Pack de conciergerie</option>
-                <option>Services à la carte uniquement</option>
-                <option>Je ne sais pas encore / besoin de conseils</option>
-            </select>
-
-            <label>Si vous souhaitez un pack (facultatif)</label>
-            <select>
-                <option value="">-- Aucun pack sélectionné --</option>
-                <option>Pack Essentiel – 18%</option>
-                <option>Pack Standard – 20%</option>
-                <option>Pack Premium – 22%</option>
-                <option>Pack Sérénité – 24%</option>
-            </select>
-
-            <label>Détails de votre demande</label>
-            <textarea rows="6" placeholder="Décrivez librement vos besoins : ménage, check-in, bricolage, suivi de travaux, demandes ponctuelles, etc."></textarea>
-        </div>
-
-        <!-- VALIDATION -->
-        <div class="form-submit">
-            <button type="submit">📨 Envoyer ma demande de devis</button>
-        </div>
-
-        <p class="form-note">
-            📌 Devis gratuit et sans engagement<br>
-            📧 Contact : <strong>ConciergOrne@gmail.com</strong>
-        </p>
-
+        <button type="submit">Envoyer</button>
     </form>
+</section>
 
-</main>
+<div class="index-buttons">
+    <a href="index.html">Accueil</a>
+</div>
 
-<footer class="footer">
-    <p>© 2026 Concierg’Orne – Tous droits réservés</p>
+<footer>
+    © 2026 Concierg'Orne – Tous droits réservés |
+    <a href="mentions-legales.html">Mentions légales</a> |
+    <a href="cgv.html">CGV</a>
 </footer>
-
 </body>
 </html>

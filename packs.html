@@ -2,93 +2,121 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>ConciergOrne - Nos packs</title>
+    <title>Nos Packs – ConciergOrne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les packs de conciergerie ConciergOrne pour la gestion de votre location courte durée à Bagnoles-de-l'Orne.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER avec logo -->
+<!-- HEADER -->
 <header>
-    <img src="logo.png" alt="ConciergOrne Logo" width="120" style="display:block; margin:0 auto 10px;">
-    <h1>Nos Packs</h1>
-    <p>Choisissez le pack qui correspond le mieux à vos besoins</p>
+    <img src="logo.png" alt="Logo ConciergOrne" width="110" style="display:block;margin:0 auto 10px;">
+    <h1>Nos Packs de Conciergerie</h1>
+    <p>Une gestion claire, efficace et adaptée à vos besoins</p>
 </header>
 
 <!-- NAVIGATION -->
 <nav>
     <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous</a>
     <a href="packs.html">Nos packs</a>
-    <a href="services.html">Service à la carte</a>
+    <a href="services.html">Services à la carte</a>
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- MAIN CONTENT -->
+<!-- CONTENU PRINCIPAL -->
 <main>
 
-    <section>
-        <h2>Nos 4 Packs</h2>
-        <p>Chaque pack comprend un pourcentage de gestion sur vos revenus Airbnb :</p>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
+<section>
+    <h2>Choisissez la formule qui vous correspond</h2>
+    <p>
+        Nos packs sont conçus pour vous libérer du quotidien tout en maximisant
+        vos revenus locatifs, avec une gestion professionnelle et transparente.
+    </p>
 
-            <!-- Pack Essentiel -->
-            <div class="pack-card">
-                <h3>Essentiel</h3>
-                <ul>
-                    <li>Gestion basique des réservations</li>
-                    <li>Communication avec les voyageurs</li>
-                </ul>
-                <p><strong>Pourcentage :</strong> 18%</p>
-                <button class="btn">Choisir ce pack</button>
-            </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:30px;">
 
-            <!-- Pack Confort -->
-            <div class="pack-card">
-                <h3>Confort</h3>
-                <ul>
-                    <li>Tout ce qu’il y a dans <strong>Essentiel</strong></li>
-                    <li>Check-in / Check-out</li>
-                </ul>
-                <p><strong>Pourcentage :</strong> 20%</p>
-                <button class="btn">Choisir ce pack</button>
-            </div>
-
-            <!-- Pack Standard -->
-            <div class="pack-card">
-                <h3>Standard</h3>
-                <ul>
-                    <li>Tout ce qu’il y a dans <strong>Confort</strong></li>
-                    <li>Optimisation de l’annonce</li>
-                    <li>Suivi des avis</li>
-                    <li>Ménage inclus</li>
-                </ul>
-                <p><strong>Pourcentage :</strong> 22%</p>
-                <button class="btn">Choisir ce pack</button>
-            </div>
-
-            <!-- Pack Premium -->
-            <div class="pack-card">
-                <h3>Premium</h3>
-                <ul>
-                    <li>Tout ce qu’il y a dans <strong>Standard</strong></li>
-                    <li>Reporting mensuel détaillé</li>
-                    <li>Service prioritaire</li>
-                </ul>
-                <p><strong>Pourcentage :</strong> 24%</p>
-                <button class="btn">Choisir ce pack</button>
-            </div>
-
+        <!-- PACK ESSENTIEL -->
+        <div class="pack-card">
+            <h3>Essentiel</h3>
+            <ul>
+                <li>Gestion des réservations</li>
+                <li>Communication voyageurs</li>
+            </ul>
+            <p><strong>18 %</strong> des revenus locatifs</p>
+            <a href="contact.html" class="btn">Choisir ce pack</a>
         </div>
-    </section>
+
+        <!-- PACK CONFORT -->
+        <div class="pack-card">
+            <h3>Confort</h3>
+            <ul>
+                <li>Tout le pack Essentiel</li>
+                <li>Check-in / Check-out</li>
+            </ul>
+            <p><strong>20 %</strong> des revenus locatifs</p>
+            <a href="contact.html" class="btn">Choisir ce pack</a>
+        </div>
+
+        <!-- PACK STANDARD -->
+        <div class="pack-card">
+            <h3>Standard</h3>
+            <ul>
+                <li>Tout le pack Confort</li>
+                <li>Optimisation de l’annonce</li>
+                <li>Suivi des avis voyageurs</li>
+                <li><strong>Ménage inclus</strong></li>
+            </ul>
+            <p><strong>22 %</strong> des revenus locatifs</p>
+            <a href="contact.html" class="btn">Choisir ce pack</a>
+        </div>
+
+        <!-- PACK PREMIUM -->
+        <div class="pack-card">
+            <h3>Premium</h3>
+            <ul>
+                <li>Tout le pack Standard</li>
+                <li>Reporting mensuel détaillé</li>
+                <li>Service prioritaire</li>
+                <li><strong>Ménage inclus</strong></li>
+            </ul>
+            <p><strong>24 %</strong> des revenus locatifs</p>
+            <a href="contact.html" class="btn">Choisir ce pack</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- INFORMATIONS IMPORTANTES -->
+<section>
+    <h3>Informations importantes</h3>
+    <p>
+        • Tous nos packs sont proposés avec un <strong>engagement minimum de 12 mois</strong>,
+        afin de garantir une gestion stable et une optimisation durable de votre location.
+    </p>
+    <p>
+        • Le linge et les prestations de bricolage ne sont pas inclus dans les packs.
+        Ils sont disponibles via nos <a href="services.html"><strong>services à la carte</strong></a>.
+    </p>
+</section>
+
+<!-- CTA FINAL -->
+<section>
+    <h3>Besoin d’aide pour choisir ?</h3>
+    <p>
+        Nous vous accompagnons pour sélectionner la solution la plus adaptée à votre logement.
+    </p>
+    <a href="contact.html" class="btn">Demander un devis</a>
+</section>
 
 </main>
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 – Conciergerie | Tous droits réservés</p>
+    <p>© 2026 – ConciergOrne • Conciergerie locale à Bagnoles-de-l'Orne</p>
 </footer>
 
 </body>
-</html>
+    </html>

@@ -1,6 +1,4 @@
-/* ===========================
-   STYLE GLOBAL
-=========================== */
+/* STYLE GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +17,7 @@ a {
     color: inherit;
 }
 
-/* ===========================
-   HEADER
-=========================== */
+/* HEADER */
 header {
     text-align: center;
     padding: 30px 10px;
@@ -43,9 +39,7 @@ header p {
     color: #555;
 }
 
-/* ===========================
-   SERVICE A LA CARTE
-=========================== */
+/* SERVICE A LA CARTE */
 .service-card {
     background-color: #fff;
     padding: 25px 20px;
@@ -67,10 +61,8 @@ header p {
     color: #555;
 }
 
-/* ===========================
-   BOUTONS
-=========================== */
-.btn, button {
+/* BOUTONS */
+.btn {
     background-color: #ffb347;
     color: white;
     padding: 12px 25px;
@@ -82,7 +74,7 @@ header p {
     transition: 0.3s;
 }
 
-.btn:hover, button:hover {
+.btn:hover {
     background-color: #ffa500;
 }
 
@@ -102,9 +94,7 @@ header p {
     margin-bottom: 40px;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/* FOOTER */
 footer {
     background-color: #1a3e5c;
     color: white;
@@ -118,9 +108,7 @@ footer a {
     margin: 0 5px;
 }
 
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
+/* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
     header h1 {
         font-size: 1.6em;
@@ -136,7 +124,7 @@ footer a {
         padding: 15px 10px;
     }
 
-    .btn, button {
+    .btn {
         width: 100%;
         padding: 12px;
     }

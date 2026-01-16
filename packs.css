@@ -11,10 +11,13 @@ body {
     text-align: center;
 }
 
+/* HEADER LOGO */
 header .logo {
-    width: 200px;
-    margin: 20px auto;
     display: block;
+    margin: 20px auto; /* centre horizontalement */
+    max-width: 250px;  /* largeur maximale */
+    height: auto;      /* garde les proportions du logo */
+}
 }
 
 h1 {

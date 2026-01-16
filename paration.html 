@@ -3,57 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services de Paration - ConciergOrne</title>
+    <title>Bricolage - Concierg'Orne</title>
     <link rel="stylesheet" href="paration.css">
 </head>
 <body>
-    <!-- HEADER -->
     <header>
-        <img src="logo.png" alt="Logo ConciergOrne" class="logo">
-        <p class="intro">
-            Ici vous trouverez les détails et tarifs des prestations de paration. Choisissez exactement ce dont vous avez besoin.
-        </p>
+        <img src="logo.png" alt="Concierg'Orne" class="logo">
+        <p>Détails des interventions de bricolage et tarifs.</p>
     </header>
 
-    <!-- SERVICES -->
     <main>
-        <h2>Nos Services de Paration</h2>
+        <h1>Interventions de bricolage</h1>
 
-        <div class="service-card yellow">
-            <h3>Peinture & Revêtement</h3>
-            <p>Application de peinture, papier peint, enduits et finitions décoratives.</p>
-            <p><strong>Tarif :</strong> À partir de 30€/m²</p>
-        </div>
+        <section class="repair-block">
+            <h2>Remplacement d’ampoules</h2>
+            <p>Tarif : 15€ / intervention</p>
+        </section>
 
-        <div class="service-card blue">
-            <h3>Petits Travaux</h3>
-            <p>Montage, fixation, installation de meubles et petits équipements.</p>
-            <p><strong>Tarif :</strong> À partir de 25€/intervention</p>
-        </div>
+        <section class="repair-block">
+            <h2>Petites réparations plomberie</h2>
+            <p>Tarif : 30€ / intervention</p>
+        </section>
 
-        <div class="service-card green">
-            <h3>Réparations Techniques</h3>
-            <p>Interventions sur plomberie, électricité ou menuiserie.</p>
-            <p><strong>Tarif :</strong> Sur devis</p>
-        </div>
+        <section class="repair-block">
+            <h2>Fixation étagères et tableaux</h2>
+            <p>Tarif : 20€ / intervention</p>
+        </section>
 
-        <div class="service-card red">
-            <h3>Autres Services</h3>
-            <p>Prestations personnalisées selon vos besoins.</p>
-            <p><strong>Tarif :</strong> Sur devis</p>
-        </div>
+        <section class="repair-block">
+            <h2>Interventions pour devis de gros travaux</h2>
+            <p>Nous pouvons intervenir pour étudier, trouver des prestataires et suivre vos travaux.</p>
+        </section>
 
-        <!-- BOUTONS -->
-        <div class="buttons">
-            <a href="service.html" class="btn">Retour Service</a>
-            <a href="index.html" class="btn">Accueil</a>
+        <div class="bottom-buttons">
+            <a href="service.html" class="btn">Retour aux services</a>
             <a href="contact.html" class="btn">Demander un devis</a>
         </div>
     </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 ConciergOrne. Tous droits réservés.</p>
-    </footer>
 </body>
 </html>

@@ -4,49 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services à la carte - ConciergOrne</title>
-    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <img src="logo.png" alt="ConciergOrne Logo" class="logo">
-        <p class="intro">Nos services à la carte sont facturés 48h après l'intervention, aucune facturation mensuelle hors supplément d'un pack.</p>
+        <img src="logo.png" alt="ConciergOrne Logo" class="logo-header">
+        <p>Notre service à la carte vous permet de choisir exactement ce dont vous avez besoin. La facturation se fait 48h après chaque intervention.</p>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
-        <h1>Nos Services à la Carte</h1>
+        <h2>Nos services à la carte</h2>
 
-        <div class="service service-ménage">
-            <h2>Ménage</h2>
-            <p>Service de nettoyage complet de votre logement.</p>
-            <p class="prix">Tarif : 25€ / intervention</p>
-        </div>
+        <section class="service-card" style="background-color: #ffe4b3;">
+            <h3>Ménage</h3>
+            <p>Nettoyage complet de vos locations ou résidence principale.</p>
+            <p><strong>Tarif :</strong> 20€/intervention</p>
+        </section>
 
-        <div class="service service-linge">
-            <h2>Linge</h2>
-            <p>Gestion et nettoyage de votre linge de maison.</p>
-            <p class="prix">Tarif : 15€ / intervention</p>
-        </div>
+        <section class="service-card" style="background-color: #b3e0ff;">
+            <h3>Linge</h3>
+            <p>Gestion du linge de maison : lavage, repassage et mise en place.</p>
+            <p><strong>Tarif :</strong> 15€/intervention</p>
+        </section>
 
-        <div class="service service-bricolage">
-            <h2>Bricolage</h2>
-            <p>Petits travaux d’entretien, facturés par intervention.</p>
-            <p class="prix">Tarifs : Voir détails en cliquant sur "En savoir plus"</p>
-        </div>
+        <section class="service-card" style="background-color: #d4ffd4;">
+            <h3>Bricolage</h3>
+            <p>Petits travaux : fixation, montage de meubles, installations simples.</p>
+            <p><strong>Tarif :</strong> À partir de 25€/intervention</p>
+        </section>
 
-        <div class="service service-gros-travaux">
-            <h2>Devis et suivi de gros travaux</h2>
-            <p>Nous recherchons, comparons et suivons les devis pour vos travaux importants.</p>
-        </div>
+        <section class="service-card" style="background-color: #ffd4d4;">
+            <h3>Réparations et devis travaux</h3>
+            <p>Nous vous aidons à trouver et suivre des devis pour vos gros chantiers.</p>
+            <p><strong>Tarif :</strong> Sur devis</p>
+        </section>
 
-        <div class="buttons">
-            <a href="devis.html" class="btn">Demander un devis</a>
-            <a href="index.html" class="btn">Accueil</a>
+        <!-- BOUTONS -->
+        <div class="btn-container">
             <a href="paration.html" class="btn">En savoir plus</a>
+            <a href="index.html" class="btn btn-secondary">Accueil</a>
+            <a href="contact.html" class="btn">Demander un devis</a>
         </div>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 ConciergOrne</p>
+        &copy; 2026 ConciergOrne. Tous droits réservés.
     </footer>
 </body>
 </html>

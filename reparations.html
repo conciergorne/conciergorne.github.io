@@ -3,59 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConciergOrne - Réparations et travaux</title>
+    <title>Réparations - Concierg'Orne</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <img src="logo.png" alt="ConciergOrne Logo">
-        <h1>ConciergOrne</h1>
-        <p>Votre conciergerie locale à Bagnoles-de-l'Orne</p>
+    <!-- Header -->
+    <header class="header">
+        <img src="logo.png" alt="Concierg'Orne" class="logo">
     </header>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-        <a href="packs.html">Nos Packs</a>
-        <a href="services.html">Service à la carte</a>
-        <a href="contact.html">Contact / Devis</a>
+    <!-- Navigation bouton accueil -->
+    <nav class="nav-center">
+        <a href="index.html" class="btn">Accueil</a>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        <h2>Réparations et suivi des travaux</h2>
-        <p>Nous proposons un ensemble d’interventions pour l’entretien de votre logement. Les prix indiqués sont des tarifs moyens pour la main-d’œuvre. Le matériel utilisé sera facturé en supplément selon l’intervention.</p>
+    <!-- Section Réparations -->
+    <main class="content">
+        <h1>Nos interventions et réparations</h1>
+        <p>Voici toutes les interventions que nous proposons pour vos logements. Les prix indiqués sont indicatifs et peuvent varier selon les besoins spécifiques. Pour un devis personnalisé, contactez-nous.</p>
 
-        <section>
-            <div class="service-item">
-                <h4>Remplacement d’ampoules et luminaires</h4>
-                <p>Changement d’ampoules, petites lampes, réglage de luminaires.<br><strong>Prix : 10€ / intervention</strong></p>
+        <div class="cards">
+            <div class="card">
+                <h2>Petites réparations</h2>
+                <p>Remplacement d’ampoules, serrures, joints, petites fuites, etc.</p>
+                <p><strong>Prix :</strong> à partir de 15 € / intervention</p>
             </div>
 
-            <div class="service-item">
-                <h4>Fixation / accroche d’éléments décoratifs</h4>
-                <p>Accroche de cadres, tableaux, tringles à rideaux, etc.<br><strong>Prix : 15€ / intervention</strong></p>
+            <div class="card">
+                <h2>Bricolage / Suivi de travaux</h2>
+                <p>Coordination et suivi de petits chantiers, aide aux artisans.</p>
+                <p><strong>Prix :</strong> devis personnalisé</p>
             </div>
 
-            <div class="service-item">
-                <h4>Réglages et petites réparations</h4>
-                <p>Portes, fenêtres, robinets, petits problèmes de plomberie ou électricité.<br><strong>Prix : 20-40€ / intervention</strong></p>
+            <div class="card">
+                <h2>Maintenance divers</h2>
+                <p>Réparations diverses et interventions ponctuelles sur demande.</p>
+                <p><strong>Prix :</strong> selon intervention</p>
             </div>
+        </div>
 
-            <div class="service-item">
-                <h4>Devis et suivi de travaux plus importants</h4>
-                <p>Pour tout projet nécessitant plusieurs interventions ou artisans : nous réalisons le devis, coordonnons les intervenants et assurons le suivi complet.<br><strong>Prix : selon devis</strong></p>
-            </div>
-        </section>
-
-        <button class="btn" onclick="location.href='services.html'">Retour aux services</button>
+        <p class="devis-note">Pour toute intervention, nous vous invitons à demander un devis via le formulaire <a href="contact.html">Contact / Devis</a>.</p>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 ConciergOrne - Tous droits réservés</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Concierg'Orne – Tous droits réservés | 
+        <a href="mentions-légaux.html">Mentions légales</a> | 
+        <a href="cgv.html">CGV</a></p>
     </footer>
 </body>
 </html>

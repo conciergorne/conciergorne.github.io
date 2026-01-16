@@ -14,6 +14,9 @@ body {
     line-height: 1.6;
 }
 
+/* ===========================
+   LIENS
+=========================== */
 a {
     text-decoration: none;
     color: inherit;
@@ -30,14 +33,15 @@ header {
 }
 
 header img {
-    max-width: 200px;
+    width: 120px;
     height: auto;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 header h1 {
     font-size: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 header p {
@@ -48,12 +52,12 @@ header p {
    NAVIGATION
 =========================== */
 nav {
-    background-color: transparent; /* barre transparente */
     display: flex;
     justify-content: center;
     gap: 25px;
     padding: 12px 0;
     flex-wrap: wrap;
+    background-color: transparent; /* Barre transparente */
 }
 
 nav a {
@@ -78,18 +82,19 @@ main {
 }
 
 main h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #1a3e5c;
 }
 
 main p {
-    font-size: 1em;
+    font-size: 1.05em;
     color: #555;
+    margin-bottom: 25px;
 }
 
 /* ===========================
-   SECTIONS (PACKS, SERVICES)
+   SECTIONS
 =========================== */
 section {
     padding: 40px 20px;
@@ -97,75 +102,24 @@ section {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
 section h3 {
     color: #1a3e5c;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 section p {
     font-size: 1em;
     color: #555;
-}
-
-.pack-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.pack-card {
-    background-color: #fef9f4;
-    border: 2px solid #ffb347;
-    border-radius: 12px;
-    padding: 25px;
-    width: 260px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.pack-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
-}
-
-.pack-card h4 {
-    color: #1a3e5c;
-    margin-bottom: 12px;
-}
-
-.pack-card p {
     margin-bottom: 15px;
-    color: #555;
 }
 
-/* ===========================
-   SERVICE A LA CARTE
-=========================== */
 .service-item {
-    background-color: #fef9f4;
-    border-left: 4px solid #ffb347;
     margin-bottom: 20px;
-    padding: 15px 20px;
-    text-align: left;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.service-item:hover {
-    background-color: #fff5e6;
-}
-
-.service-item h4 {
-    margin-bottom: 8px;
-    color: #1a3e5c;
-}
-
-.service-item p {
-    color: #555;
-    font-size: 0.95em;
+    padding: 15px;
+    border-left: 4px solid #ffb347;
 }
 
 /* ===========================
@@ -180,8 +134,7 @@ button, .btn {
     font-size: 1em;
     cursor: pointer;
     transition: 0.3s;
-    margin-top: 10px;
-    display: inline-block;
+    margin: 10px 5px;
 }
 
 button:hover, .btn:hover {
@@ -202,6 +155,12 @@ footer {
 /* ===========================
    RESPONSIVE DESIGN
 =========================== */
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 0 15px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -215,15 +174,6 @@ footer {
     main h2 {
         font-size: 1.5em;
     }
-
-    .pack-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pack-card {
-        width: 90%;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -235,4 +185,4 @@ footer {
         width: 100%;
         padding: 12px;
     }
-        }
+}

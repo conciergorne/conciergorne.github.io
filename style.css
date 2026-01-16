@@ -1,4 +1,6 @@
-/* =============================== GLOBAL =============================== */
+/* ===========================
+   STYLE GLOBAL
+=========================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff8f0;
+    background-color: #fdfaf6;
     color: #333;
     line-height: 1.6;
 }
@@ -17,167 +19,229 @@ a {
     color: inherit;
 }
 
-/* =============================== HEADER =============================== */
-header.header {
+/* ===========================
+   HEADER
+=========================== */
+header {
     background-color: #ffb347;
+    color: #fff;
     text-align: center;
-    padding: 40px 20px;
-    color: white;
+    padding: 20px 10px;
+    position: relative;
 }
 
-header.header .logo {
-    max-width: 150px;
-    margin-bottom: 15px;
+header img.logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
-header.header h1 {
+header h1 {
     font-size: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-header.header p {
-    font-size: 1.1em;
+header p {
+    font-size: 1em;
 }
 
-/* =============================== NAVIGATION =============================== */
-nav.nav-main {
+/* ===========================
+   NAVIGATION
+=========================== */
+nav {
     display: flex;
     justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
+    background-color: transparent; /* barre transparente */
 }
 
-nav.nav-main a {
-    background-color: #ffb347;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 10px;
+nav a {
+    color: #1a3e5c;
     font-weight: bold;
+    font-size: 1em;
     transition: 0.3s;
 }
 
-nav.nav-main a:hover {
-    background-color: #ffa500;
+nav a:hover {
+    color: #ffb347;
 }
 
-/* =============================== MAIN CONTENT =============================== */
-main.content {
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
     max-width: 1200px;
-    margin: auto;
-    padding: 30px 20px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-main.content h2 {
+main h2 {
     font-size: 1.8em;
-    color: #1a3e5c;
     margin-bottom: 15px;
+    color: #1a3e5c;
 }
 
-main.content p, main.content li {
+main p {
     font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+section {
+    padding: 30px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+section h3 {
+    color: #1a3e5c;
     margin-bottom: 10px;
 }
 
-/* =============================== CARDS / SECTIONS =============================== */
-.repair-cards, .pack-cards {
+section p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   FORMULAIRES
+=========================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 100%;
+}
+
+form textarea {
+    resize: none;
+}
+
+form .info {
+    font-size: 0.9em;
+    color: #ff8c00;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button, .btn {
+    background-color: #ffb347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background-color: #ffa500;
+}
+
+.btn-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* ===========================
+   PACKS ET SERVICES
+=========================== */
+.pack-container, .service-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
-.card {
+.pack, .service-item {
     background-color: #fff;
     border-radius: 10px;
-    padding: 25px 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    max-width: 350px;
-    flex: 1 1 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-
-.card ul {
-    list-style: disc inside;
-    margin-top: 10px;
-}
-
-.card ul li {
-    margin-bottom: 8px;
-}
-
-/* =============================== BUTTONS =============================== */
-.btn, .repair-buttons a {
-    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    padding: 20px;
+    flex: 1 1 250px;
+    max-width: 300px;
     text-align: center;
-    background-color: #ffb347;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-weight: bold;
-    margin: 10px 5px;
-    transition: 0.3s;
 }
 
-.btn:hover, .repair-buttons a:hover {
-    background-color: #ffa500;
+.pack h3, .service-item h3 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
 }
 
-/* Flex container for repair buttons */
-.repair-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 25px;
+.pack p, .service-item p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
 }
 
-/* =============================== FOOTER =============================== */
-footer.footer {
+/* ===========================
+   FOOTER
+=========================== */
+footer {
     background-color: #1a3e5c;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 10px;
     font-size: 0.9em;
 }
 
-footer.footer a {
-    color: #ffb347;
-    margin: 0 5px;
-}
-
-/* =============================== RESPONSIVE =============================== */
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
 @media screen and (max-width: 768px) {
-    nav.nav-main {
+    nav {
         flex-direction: column;
+        gap: 15px;
     }
 
-    .repair-cards, .pack-cards {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    .pack-container, .service-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    .card {
-        max-width: 90%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    header.header h1 {
-        font-size: 1.5em;
+    section {
+        padding: 20px 15px;
     }
 
-    header.header p {
-        font-size: 1em;
-    }
-
-    .btn, .repair-buttons a {
+    button, .btn {
         width: 100%;
-        padding: 12px 0;
+        padding: 12px;
     }
 }

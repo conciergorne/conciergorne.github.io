@@ -1,164 +1,69 @@
-/* ===========================
-   STYLE GLOBAL
-=========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Service à la carte – Concierg'Orne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdfaf6;
-    color: #333;
-    line-height: 1.6;
-}
+<body>
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+<header class="header-simple">
+    <a href="index.html" class="btn-secondary">← Accueil</a>
+</header>
 
-/* ===========================
-   HEADER / LOGO
-=========================== */
-header {
-    background-color: #ffb347;
-    padding: 20px 10px;
-    text-align: center;
-}
+<main class="page-container">
 
-header img {
-    max-width: 180px;
-    height: auto;
-    display: block;
-    margin: 0 auto 15px;
-}
+    <h1>Service à la carte</h1>
+    <p class="intro">
+        Ces services sont disponibles hors pack ou en complément,
+        avec une facturation à l’intervention.
+    </p>
 
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+    <div class="card">
+        <h2>Ménage</h2>
+        <p>Nettoyage complet du logement après chaque réservation.</p>
+        <p class="price">Prix : <strong>30 € / intervention</strong></p>
+    </div>
 
-header p {
-    font-size: 1em;
-}
+    <div class="card">
+        <h2>Linge</h2>
+        <p>Changement et lavage des draps et serviettes.</p>
+        <p class="price">Prix : <strong>10 € / intervention</strong></p>
+    </div>
 
-/* ===========================
-   BOUTONS INDEX
-=========================== */
-.index-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
-}
+    <div class="card">
+        <h2>Petites réparations</h2>
+        <p>Remplacement d’ampoules, joints, serrures, petits ajustements.</p>
+        <p class="price">Prix : <strong>à partir de 15 € / intervention</strong></p>
+    </div>
 
-.index-buttons a {
-    display: inline-block;
-    background-color: #ffb347;
-    color: #1a3e5c;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 15px 25px;
-    border-radius: 8px;
-    transition: 0.3s;
-    text-align: center;
-}
+    <div class="card">
+        <h2>Bricolage & suivi de travaux</h2>
+        <p>
+            Intervention pour rechercher des devis, coordonner des artisans
+            et assurer le suivi de petits ou moyens chantiers.
+        </p>
+        <p class="price">Prix : <strong>devis personnalisé</strong></p>
+    </div>
 
-.index-buttons a:hover {
-    background-color: #ffa500;
-}
+    <p class="note">
+        📌 Facturation sous 48h après intervention  
+        <br>📌 Aucune facturation mensuelle hors pack
+    </p>
 
-/* ===========================
-   SECTIONS (PACKS, SERVICES)
-=========================== */
-section {
-    padding: 40px 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-}
+    <div class="center">
+        <a href="contact.html" class="btn-primary">Demander un devis</a>
+    </div>
 
-section h2, section h3 {
-    color: #1a3e5c;
-    margin-bottom: 15px;
-}
+</main>
 
-section p {
-    font-size: 1em;
-    color: #555;
-}
+<footer>
+    © 2026 Concierg'Orne – Tous droits réservés |
+    <a href="mentions-legaux.html">Mentions légales</a> |
+    <a href="cgv.html">CGV</a>
+</footer>
 
-.service-item {
-    margin-bottom: 20px;
-    padding-left: 15px;
-    border-left: 4px solid #ffb347;
-}
-
-/* ===========================
-   BUTTONS
-=========================== */
-button, .btn {
-    background-color: #ffb347;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover, .btn:hover {
-    background-color: #ffa500;
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-footer {
-    background-color: #1a3e5c;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9em;
-}
-
-footer a {
-    color: #ffb347;
-    margin: 0 5px;
-}
-
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
-@media screen and (max-width: 1024px) {
-    .index-buttons {
-        gap: 15px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.6em;
-    }
-    section {
-        padding: 25px 15px;
-    }
-    .index-buttons {
-        flex-direction: column;
-    }
-    .index-buttons a {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .index-buttons a {
-        font-size: 1em;
-        padding: 12px;
-    }
-}
+</body>
+</html>

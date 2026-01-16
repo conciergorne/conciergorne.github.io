@@ -1,99 +1,103 @@
-/* Reset et base */
+/* ===========================
+   STYLE GLOBAL
+=========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #fff8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
     color: #333;
     line-height: 1.6;
 }
 
-/* Header */
-.header-page {
-    background-color: #f8981d;
-    padding: 10px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
     text-align: center;
+    padding: 30px 10px;
 }
 
-.logo {
-    max-width: 180px;
-    height: auto;
+header .logo {
+    width: 150px;
+    margin-bottom: 20px;
 }
 
-.btn-return {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #f8981d;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-/* Main Content */
-.main-content {
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Navigation buttons (index) */
-.main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.btn-main {
-    padding: 12px 20px;
-    background-color: #f8981d;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-/* Packs / Service Cards */
-.pack-card, .service-item {
-    background: #fff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-.pack-card h2, .service-item h2 {
-    color: #17395d;
+header h1 {
+    font-size: 2em;
+    color: #1a3e5c;
     margin-bottom: 10px;
 }
 
-.btn-more, .btn-devis {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
-    background-color: #f8981d;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
+header p {
+    font-size: 1em;
+    color: #555;
 }
 
-/* Footer */
-.footer {
-    background-color: #17395d;
+/* ===========================
+   BOUTONS PAGE D'ACCUEIL
+=========================== */
+.buttons-home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+    margin: 50px auto;
+}
+
+.buttons-home .btn {
+    background-color: #ffb347;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.buttons-home .btn:hover {
+    background-color: #ffa500;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #1a3e5c;
     color: white;
     text-align: center;
-    padding: 12px;
-    margin-top: 30px;
+    padding: 20px 10px;
+    font-size: 0.9em;
 }
 
-.footer a {
-    color: #f8981d;
-    text-decoration: none;
+footer a {
+    color: #ffb347;
     margin: 0 5px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+    .buttons-home {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buttons-home .btn {
+        width: 100%;
+    }
 }

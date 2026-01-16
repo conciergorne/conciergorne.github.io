@@ -3,37 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact / Devis - Concierg'Orne</title>
+    <title>Contact & Devis - ConciergOrne</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header-page">
-        <img src="logo.png" alt="Concierg'Orne" class="logo">
-        <a href="index.html" class="btn-return">Accueil</a>
+    <header>
+        <img src="logo.png" alt="Logo ConciergOrne" class="logo">
+        <h1>ConciergOrne</h1>
+        <p>Votre conciergerie locale à Bagnoles-de-l'Orne</p>
     </header>
 
-    <main class="main-content">
-        <section class="contact-section">
-            <h1>Contact / Demande de devis</h1>
-            <p>Vous pouvez nous envoyer vos questions ou demandes de devis via le formulaire ci-dessous :</p>
+    <main>
+        <section>
+            <h2>Contact & Demande de Devis</h2>
+            <p>Remplissez ce formulaire pour nous envoyer votre demande. Nous vous répondrons dans les 48h.</p>
+        </section>
 
+        <section class="form-section">
             <form action="mailto:ConciergOrne@gmail.com" method="post" enctype="text/plain">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required>
+                <label for="name">Nom complet :</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom">
 
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Adresse email :</label>
+                <input type="email" id="email" name="email" required placeholder="Votre email">
 
-                <label for="message">Message / Détails de la demande :</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Votre numéro de téléphone">
 
-                <input type="submit" value="Envoyer">
+                <label for="property-type">Type de bien :</label>
+                <select id="property-type" name="property-type" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="studio">Studio</option>
+                    <option value="appartement">Appartement</option>
+                    <option value="maison">Maison</option>
+                    <option value="autre">Autre</option>
+                </select>
+
+                <label for="service">Service souhaité :</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="pack_essentiel">Pack Essentiel</option>
+                    <option value="pack_standard">Pack Standard</option>
+                    <option value="pack_confort">Pack Confort</option>
+                    <option value="pack_premium">Pack Premium</option>
+                    <option value="service_carte">Service à la carte</option>
+                    <option value="reparation">Réparation / Bricolage</option>
+                </select>
+
+                <label for="comments">Commentaires / Besoins spécifiques :</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Ex : uniquement ménage, suivi travaux, etc."></textarea>
+
+                <p class="info">⚠️ La facturation des services à la carte sera réalisée 48h après intervention. Aucun prélèvement mensuel hors packs souscrits.</p>
+
+                <button type="submit" class="btn">Envoyer la demande</button>
             </form>
         </section>
+
+        <div class="btn-container">
+            <a href="index.html" class="btn">Retour à l'accueil</a>
+        </div>
     </main>
 
-    <footer class="footer">
-        <p>© 2026 Concierg'Orne – Tous droits réservés | <a href="mentions-legales.html">Mentions légales</a> | <a href="cgv.html">CGV</a></p>
+    <footer>
+        <p>&copy; 2026 ConciergOrne. Tous droits réservés.</p>
+        <p><a href="mentions-legales.html">Mentions légales</a> | <a href="cgv.html">CGV</a></p>
     </footer>
 </body>
-</html>
+            </html>

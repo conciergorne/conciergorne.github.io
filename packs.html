@@ -2,56 +2,101 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Packs - Concierg'Orne</title>
+    <title>Nos Packs – ConciergOrne</title>
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS SPÉCIFIQUE PACKS -->
     <link rel="stylesheet" href="packs.css">
 </head>
+
 <body>
-    <!-- HEADER LOGO -->
-    <header>
-        <img src="logo.png" alt="Logo Concierg'Orne" class="logo">
-    </header>
 
-    <!-- TITRE -->
-    <main>
-        <h1>ConciergOrne</h1>
-        <h2>Découvrez nos packs de conciergerie</h2>
-        <p>Choisissez le pack qui correspond le mieux à vos besoins et bénéficiez d’un service complet et professionnel.</p>
+<header>
+    <img src="logo.png" alt="ConciergOrne Logo" class="logo">
+</header>
 
-        <!-- PACKS -->
-        <div class="packs-container">
-            <div class="pack-card">
-                <h3>Essentiel</h3>
-                <p>Services de base pour vos locations : remise des clés, accueil des locataires et suivi de réservation.</p>
-                <div class="pack-price">18% du montant de la réservation</div>
-            </div>
-            <div class="pack-card">
-                <h3>Standard</h3>
-                <p>Inclut tout le pack Essentiel + ménage après chaque séjour et gestion des petites demandes.</p>
-                <div class="pack-price">20% du montant de la réservation</div>
-            </div>
-            <div class="pack-card">
-                <h3>Confort</h3>
-                <p>Inclut tout le pack Standard + services personnalisés et interventions urgentes.</p>
-                <div class="pack-price">22% du montant de la réservation</div>
-            </div>
-            <div class="pack-card">
-                <h3>Prémium</h3>
-                <p>Inclut tout le pack Confort + suivi complet des locations et assistance premium 24/7.</p>
-                <div class="pack-price">24% du montant de la réservation</div>
-            </div>
+<main class="packs-container">
+
+    <h2>Nos Packs de Conciergerie</h2>
+
+    <div class="packs-grid">
+
+        <!-- PACK ESSENTIEL -->
+        <div class="pack essentiel">
+            <h3>Essentiel</h3>
+            <p>Gestion simple et efficace</p>
+
+            <ul>
+                <li>✔ Annonces & calendrier</li>
+                <li>✔ Communication voyageurs</li>
+                <li>✔ Arrivées / départs</li>
+                <li>✔ Assistance voyageurs</li>
+            </ul>
+
+            <div class="price">18 % par réservation</div>
+
+            <a href="contact.html" class="btn-pack">Choisir ce pack</a>
         </div>
 
-        <!-- BOUTON -->
-        <div class="btn-container">
-            <a href="contact.html" class="btn">Demander un devis</a>
-        </div>
-    </main>
+        <!-- PACK STANDARD -->
+        <div class="pack standard">
+            <h3>Standard</h3>
+            <p>Sérénité & propreté incluses</p>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 ConciergOrne - Tous droits réservés</p>
-        <p><a href="mentions-legales.html">Mentions légales</a> | <a href="cgv.html">CGV</a></p>
-    </footer>
+            <ul>
+                <li>✔ Tout le pack Essentiel</li>
+                <li>✔ Ménage inclus</li>
+                <li>✔ Suivi logement</li>
+            </ul>
+
+            <div class="price">20 % par réservation</div>
+
+            <a href="contact.html" class="btn-pack">Choisir ce pack</a>
+        </div>
+
+        <!-- PACK CONFORT -->
+        <div class="pack confort">
+            <h3>Confort</h3>
+            <p>Gestion avancée & tranquillité</p>
+
+            <ul>
+                <li>✔ Tout le pack Standard</li>
+                <li>✔ Ménage inclus</li>
+                <li>✔ Coordination prestataires</li>
+                <li>✔ Suivi interventions</li>
+            </ul>
+
+            <div class="price">22 % par réservation</div>
+
+            <a href="contact.html" class="btn-pack">Choisir ce pack</a>
+        </div>
+
+        <!-- PACK PREMIUM -->
+        <div class="pack premium">
+            <h3>Premium</h3>
+            <p>Service haut de gamme clé en main</p>
+
+            <ul>
+                <li>✔ Tout le pack Confort</li>
+                <li>✔ Priorité interventions</li>
+                <li>✔ Suivi personnalisé</li>
+                <li>✔ Optimisation des performances</li>
+            </ul>
+
+            <div class="price">24 % par réservation</div>
+
+            <a href="contact.html" class="btn-pack">Choisir ce pack</a>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 ConciergOrne – Tous droits réservés</p>
+</footer>
+
 </body>
-    </html>
+</html>

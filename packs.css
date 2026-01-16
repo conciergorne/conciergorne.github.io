@@ -1,185 +1,157 @@
-/* ===========================
-   PAGE PACKS – STYLE GLOBAL
-=========================== */
+/* ==============================
+   PAGE PACKS – STYLE SPÉCIFIQUE
+   ============================== */
 
-body {
-    background-color: #fdfaf6;
-}
-
-/* Container principal */
 .packs-container {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 30px 15px;
+    text-align: center;
 }
 
 .packs-container h2 {
-    text-align: center;
-    font-size: 2em;
-    color: #1a3e5c;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #333;
 }
 
-/* Grille des packs */
+/* GRID RESPONSIVE */
 .packs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
 
-/* ===========================
-   STYLE COMMUN DES PACKS
-=========================== */
-
+/* CARTES PACKS */
 .pack {
-    position: relative;
     background: #ffffff;
-    border-radius: 18px;
-    padding: 30px 24px;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     text-align: center;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pack:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+    position: relative;
 }
 
 .pack h3 {
-    font-size: 1.5em;
-    margin-bottom: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.pack p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #555;
 }
 
 .pack ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .pack ul li {
-    margin-bottom: 10px;
-    color: #555;
+    margin: 8px 0;
+    font-size: 0.9rem;
 }
 
-.pack .price {
-    margin-top: 20px;
-    font-size: 1.2em;
+/* PRIX */
+.price {
+    font-size: 1.1rem;
     font-weight: bold;
+    margin: 15px 0;
 }
 
-.pack .btn-pack {
+/* BOUTON */
+.btn-pack {
     display: inline-block;
-    margin-top: 22px;
-    padding: 12px 24px;
-    border-radius: 8px;
-    background-color: #1a3e5c;
-    color: #fff;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    color: #fff;
 }
 
-.pack .btn-pack:hover {
-    background-color: #ffb347;
-}
+/* ==============================
+   COULEURS PAR PACK
+   ============================== */
 
-/* ===========================
-   PACK ESSENTIEL
-=========================== */
-
+/* ESSENTIEL */
 .pack.essentiel {
-    background: #fff4e6;
-    border-top: 6px solid #ffb347;
-}
-
-.pack.essentiel h3 {
-    color: #e67e22;
-}
-
-.pack.essentiel .price {
-    color: #e67e22;
-}
-
-/* ===========================
-   PACK STANDARD
-=========================== */
-
-.pack.standard {
-    background: #eef6ff;
-    border-top: 6px solid #4da3ff;
-}
-
-.pack.standard h3 {
-    color: #2980b9;
-}
-
-.pack.standard .price {
-    color: #2980b9;
-}
-
-/* ===========================
-   PACK CONFORT
-=========================== */
-
-.pack.confort {
-    background: #eefaf0;
     border-top: 6px solid #4caf50;
 }
+.pack.essentiel h3 {
+    color: #4caf50;
+}
+.pack.essentiel .btn-pack {
+    background: #4caf50;
+}
 
+/* STANDARD */
+.pack.standard {
+    border-top: 6px solid #2196f3;
+}
+.pack.standard h3 {
+    color: #2196f3;
+}
+.pack.standard .btn-pack {
+    background: #2196f3;
+}
+
+/* CONFORT */
+.pack.confort {
+    border-top: 6px solid #ff9800;
+}
 .pack.confort h3 {
-    color: #2e7d32;
+    color: #ff9800;
+}
+.pack.confort .btn-pack {
+    background: #ff9800;
 }
 
-.pack.confort .price {
-    color: #2e7d32;
-}
-
-/* ===========================
-   PACK PREMIUM (MIS EN AVANT)
-=========================== */
-
+/* PREMIUM */
 .pack.premium {
-    background: linear-gradient(135deg, #fff8dc, #fff1b8);
-    border-top: 6px solid #f1c40f;
-    box-shadow: 0 14px 36px rgba(241,196,15,0.4);
-}
-
-.pack.premium h3 {
-    color: #b8860b;
-}
-
-.pack.premium .price {
-    color: #b8860b;
+    border-top: 6px solid #fbc02d;
+    background: linear-gradient(180deg, #fff8dc, #ffffff);
 }
 
 /* ÉTOILE PREMIUM */
 .pack.premium::before {
     content: "⭐";
     position: absolute;
-    top: -16px;
-    right: -16px;
-    font-size: 2.6em;
-    background: #f1c40f;
+    top: -15px;
+    right: -15px;
+    background: #fbc02d;
     color: #fff;
-    width: 56px;
-    height: 56px;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+.pack.premium h3 {
+    color: #c49000;
+}
+.pack.premium .btn-pack {
+    background: #fbc02d;
+    color: #333;
+}
 
-@media screen and (max-width: 768px) {
-    .packs-container h2 {
-        font-size: 1.6em;
+/* ==============================
+   RESPONSIVE DESKTOP
+   ============================== */
+@media (min-width: 768px) {
+    .packs-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .pack {
-        padding: 26px 18px;
+@media (min-width: 1100px) {
+    .packs-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

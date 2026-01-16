@@ -30,7 +30,7 @@ header {
 }
 
 header .logo {
-    max-width: 120px;
+    max-width: 100px;
     display: block;
     margin: 0 auto 15px auto;
 }
@@ -78,14 +78,9 @@ main h2 {
 }
 
 /* Couleurs distinctes par service */
-.service-item.menage { background-color: #ff7f50; } /* corail */
+.service-item.menage { background-color: #ff7f50; }   /* corail */
 .service-item.linge { background-color: #1e90ff; }    /* bleu */
 .service-item.bricolage { background-color: #32cd32; } /* vert */
-
-.service-item p strong {
-    display: block;
-    margin-top: 8px;
-}
 
 /* ===========================
    BOUTONS

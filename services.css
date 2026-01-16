@@ -23,77 +23,90 @@ a {
    HEADER
 =========================== */
 header {
-    background-color: #ffb347;
-    color: #fff;
     text-align: center;
     padding: 20px 10px;
 }
 
 header .logo {
-    max-width: 100px;
-    display: block;
-    margin: 0 auto 15px auto;
+    width: 150px;
+    margin-bottom: 15px;
 }
 
 header .intro {
     font-size: 1em;
-    color: #fff;
-    max-width: 800px;
-    margin: 0 auto;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 /* ===========================
    MAIN CONTENT
 =========================== */
 main {
-    max-width: 900px;
-    margin: 30px auto;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
 
-main h2 {
-    font-size: 1.8em;
-    margin-bottom: 25px;
+main h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
     color: #1a3e5c;
 }
 
 /* ===========================
-   SERVICES (cadres colorés)
+   SERVICES
 =========================== */
-.service-item {
-    padding: 25px;
+.service {
+    padding: 25px 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    color: #fff;
+    color: white;
+    text-align: left;
 }
 
-.service-item h3 {
+.service h2 {
+    font-size: 1.5em;
     margin-bottom: 10px;
-    font-size: 1.4em;
 }
 
-.service-item p {
+.service p {
     font-size: 1em;
+    margin-bottom: 5px;
 }
 
-/* Couleurs distinctes par service */
-.service-item.menage { background-color: #ff7f50; }   /* corail */
-.service-item.linge { background-color: #1e90ff; }    /* bleu */
-.service-item.bricolage { background-color: #32cd32; } /* vert */
+.service-ménage {
+    background-color: #ff6b6b;
+}
+
+.service-linge {
+    background-color: #4ecdc4;
+}
+
+.service-bricolage {
+    background-color: #f7b32b;
+}
+
+.service-gros-travaux {
+    background-color: #1a3e5c;
+}
+
+.prix {
+    font-weight: bold;
+}
 
 /* ===========================
-   BOUTONS
+   BUTTONS
 =========================== */
-.cta-buttons {
+.buttons {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 25px 0;
     flex-wrap: wrap;
 }
 
-.btn {
+button, .btn {
     background-color: #ffb347;
     color: white;
     padding: 12px 25px;
@@ -104,16 +117,8 @@ main h2 {
     transition: 0.3s;
 }
 
-.btn:hover {
+button:hover, .btn:hover {
     background-color: #ffa500;
-}
-
-.secondary {
-    background-color: #1a3e5c;
-}
-
-.secondary:hover {
-    background-color: #16324a;
 }
 
 /* ===========================
@@ -131,22 +136,26 @@ footer {
    RESPONSIVE DESIGN
 =========================== */
 @media screen and (max-width: 768px) {
-    .cta-buttons {
+    .buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    main {
-        padding: 0 15px;
-    }
-    
-    .service-item {
-        padding: 20px;
+    main h1 {
+        font-size: 1.5em;
     }
 
-    .btn {
+    .service h2 {
+        font-size: 1.2em;
+    }
+
+    .service {
+        padding: 20px 15px;
+    }
+
+    button, .btn {
         width: 100%;
     }
 }

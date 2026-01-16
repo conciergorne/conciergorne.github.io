@@ -1,166 +1,119 @@
-/* =========================
-   HEADER (logo réduit)
-   ========================= */
+/* PACKS - Styles cartes */
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
+
 header {
-    text-align: center;
-    padding: 20px 0;
+  text-align: center;
+  padding: 15px 0;
+  background: #ffb347;
 }
 
-header img {
-    max-width: 150px;
-    height: auto;
+header .logo {
+  max-width: 100px;
+  height: auto;
 }
 
-/* =========================
-   CONTAINER
-   ========================= */
+main {
+  padding: 20px;
+  text-align: center;
+}
 
 .packs-container {
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.packs-container h1 {
-    font-size: 1.8em;
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    color: #666;
-    margin-bottom: 30px;
-}
-
-/* =========================
-   PACKS GRID
-   ========================= */
-
-.packs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-/* =========================
-   PACK CARD
-   ========================= */
-
+/* Pack général */
 .pack {
-    background: #fff;
-    border-radius: 16px;
-    padding: 25px 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.pack:hover {
-    transform: translateY(-5px);
+  flex: 1 1 250px;
+  max-width: 300px;
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .pack h2 {
-    margin-bottom: 5px;
-}
-
-.tagline {
-    font-size: 0.95em;
-    margin-bottom: 15px;
-    opacity: 0.85;
+  margin-top: 0;
 }
 
 .pack ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    text-align: left;
+  text-align: left;
+  margin: 15px 0;
+  padding-left: 20px;
 }
 
-.pack ul li {
-    margin-bottom: 8px;
+.btn {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
 }
 
-.price {
-    font-weight: bold;
-    margin: 15px 0;
+/* Couleurs des packs */
+.ess {
+  background-color: #6cace4;
 }
 
-/* =========================
-   BOUTON
-   ========================= */
-
-.btn-pack {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+.ess .btn {
+  background-color: #478ed1;
 }
 
-/* =========================
-   COULEURS PAR PACK
-   ========================= */
-
-.essentiel {
-    border-top: 6px solid #4CAF50;
-}
-.essentiel .btn-pack {
-    background: #4CAF50;
+.std {
+  background-color: #4caf50;
 }
 
-.standard {
-    border-top: 6px solid #2196F3;
-}
-.standard .btn-pack {
-    background: #2196F3;
+.std .btn {
+  background-color: #3e8e41;
 }
 
-.confort {
-    border-top: 6px solid #FF9800;
-}
-.confort .btn-pack {
-    background: #FF9800;
+.conf {
+  background-color: #f39c12;
 }
 
-.premium {
-    border-top: 6px solid #FFD700;
-    background: linear-gradient(180deg, #fffbe6, #ffffff);
+.conf .btn {
+  background-color: #e07b00;
 }
 
-.premium .btn-pack {
-    background: #FFD700;
-    color: #333;
+.prem {
+  background-color: #e74c3c;
 }
 
-/* =========================
-   ÉTOILE PREMIUM
-   ========================= */
+.prem h2::after {
+  content: " ★";
+  color: yellow;
+}
 
-.star {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    background: #FFD700;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    font-size: 22px;
-    display: flex;
+.prem .btn {
+  background-color: #c0392b;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .packs-container {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+  }
 
-/* =========================
-   FOOTER
-   ========================= */
+  .pack {
+    max-width: 90%;
+  }
 
-footer {
-    margin-top: 40px;
-    padding: 15px;
-    background: #1f3b53;
-    color: #fff;
-    text-align: center;
-    font-size: 0.9em;
+  header .logo {
+    max-width: 80px;
+  }
 }

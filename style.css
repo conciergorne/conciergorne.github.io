@@ -28,8 +28,8 @@ header {
 }
 
 header .logo {
-    width: 150px;
-    margin-bottom: 20px;
+    width: 120px;
+    margin-bottom: 15px;
 }
 
 header h1 {
@@ -44,28 +44,62 @@ header p {
 }
 
 /* ===========================
-   BOUTONS PAGE D'ACCUEIL
+   SERVICE A LA CARTE
 =========================== */
-.buttons-home {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 300px;
-    margin: 50px auto;
+.service-card {
+    background-color: #fff;
+    padding: 25px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
-.buttons-home .btn {
+.service-card h2 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* ===========================
+   BOUTONS
+=========================== */
+.btn, button {
     background-color: #ffb347;
     color: white;
-    padding: 15px 25px;
+    padding: 12px 25px;
+    border: none;
     border-radius: 6px;
-    font-size: 1.1em;
-    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
     transition: 0.3s;
 }
 
-.buttons-home .btn:hover {
+.btn:hover, button:hover {
     background-color: #ffa500;
+}
+
+.service-devis {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.service-devis .info-facturation {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.btn-home {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /* ===========================
@@ -91,13 +125,19 @@ footer a {
     header h1 {
         font-size: 1.6em;
     }
-    .buttons-home {
-        max-width: 80%;
+
+    .service-card {
+        padding: 20px 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .buttons-home .btn {
+    .service-card {
+        padding: 15px 10px;
+    }
+
+    .btn, button {
         width: 100%;
+        padding: 12px;
     }
 }

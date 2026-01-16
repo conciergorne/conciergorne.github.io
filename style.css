@@ -26,13 +26,12 @@ header {
     background-color: #ffb347;
     color: #fff;
     text-align: center;
-    padding: 25px 10px;
+    padding: 20px 10px;
 }
 
 header img {
-    width: 180px;
-    display: block;
-    margin: 0 auto 15px;
+    max-width: 200px;
+    margin-bottom: 15px;
 }
 
 header h1 {
@@ -45,19 +44,45 @@ header p {
 }
 
 /* ===========================
-   NAVIGATION
+   NAVIGATION - INDEX
+=========================== */
+#index-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+#index-buttons a {
+    background-color: #ffb347;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+#index-buttons a:hover {
+    background-color: #ffa500;
+}
+
+/* ===========================
+   NAVIGATION - AUTRES PAGES
 =========================== */
 nav {
-    background: transparent;
+    background-color: #1a3e5c;
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 15px 0;
+    padding: 12px 0;
     flex-wrap: wrap;
 }
 
 nav a {
-    color: #1a3e5c;
+    color: #fff;
     font-weight: bold;
     font-size: 1em;
     transition: 0.3s;
@@ -78,24 +103,23 @@ main {
 }
 
 main h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
     color: #1a3e5c;
 }
 
 main p {
-    font-size: 1.05em;
+    font-size: 1em;
     color: #555;
-    margin-bottom: 15px;
 }
 
 /* ===========================
-   SECTIONS
+   SECTIONS (PACKS, SERVICES)
 =========================== */
 section {
     padding: 40px 20px;
     background-color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
     text-align: left;
@@ -104,30 +128,11 @@ section {
 section h3 {
     color: #1a3e5c;
     margin-bottom: 15px;
-    font-size: 1.6em;
 }
 
 section p {
     font-size: 1em;
     color: #555;
-}
-
-section ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-section ul li {
-    margin-bottom: 8px;
-    padding-left: 15px;
-    position: relative;
-}
-
-section ul li::before {
-    content: "•";
-    color: #ffb347;
-    position: absolute;
-    left: 0;
 }
 
 /* ===========================
@@ -142,57 +147,12 @@ button, .btn {
     font-size: 1em;
     cursor: pointer;
     transition: 0.3s;
-    margin: 10px 0;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 button:hover, .btn:hover {
     background-color: #ffa500;
-    color: #fff;
-    text-decoration: none;
-}
-
-.button-center {
-    display: inline-block;
-    margin: 15px auto;
-}
-
-/* ===========================
-   PACKS & SERVICES
-=========================== */
-.pack-container, .service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.pack, .service {
-    background-color: #fdfaf6;
-    border: 2px solid #1a3e5c;
-    border-radius: 10px;
-    padding: 20px;
-    width: 280px;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.pack:hover, .service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
-}
-
-.pack h4, .service h4 {
-    color: #1a3e5c;
-    margin-bottom: 10px;
-}
-
-.pack p, .service p {
-    font-size: 0.95em;
-    color: #555;
-}
-
-.service-description {
-    margin-bottom: 15px;
 }
 
 /* ===========================
@@ -206,13 +166,64 @@ footer {
     font-size: 0.9em;
 }
 
-footer a {
+/* ===========================
+   SERVICE A LA CARTE
+=========================== */
+.service-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #fefcf9;
+}
+
+.service-card h4 {
+    color: #1a3e5c;
+    margin-bottom: 5px;
+}
+
+.service-card p {
+    flex: 1;
+}
+
+.service-card .price {
+    font-weight: bold;
     color: #ffb347;
-    text-decoration: underline;
 }
 
 /* ===========================
-   FORMS
+   PACKS
+=========================== */
+.pack-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fefcf9;
+}
+
+.pack-card h4 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
+}
+
+.pack-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.pack-card ul li::before {
+    content: "✔️";
+    margin-right: 8px;
+    color: #ffb347;
+}
+
+/* ===========================
+   CONTACT & DEVIS
 =========================== */
 form {
     max-width: 600px;
@@ -224,32 +235,23 @@ form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #1a3e5c;
 }
 
-form input, form textarea, form select {
+form input, form select, form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
-form button {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
+form textarea {
+    resize: vertical;
 }
 
 /* ===========================
    RESPONSIVE DESIGN
 =========================== */
-@media screen and (max-width: 1024px) {
-    .pack-container, .service-container {
-        justify-content: center;
-    }
-}
-
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -264,8 +266,8 @@ form button {
         font-size: 1.5em;
     }
 
-    .pack, .service {
-        width: 90%;
+    .service-card {
+        flex-direction: column;
     }
 }
 
@@ -279,7 +281,8 @@ form button {
         padding: 12px;
     }
 
-    header img {
-        width: 140px;
+    #index-buttons a {
+        width: 80%;
+        padding: 15px 0;
     }
 }

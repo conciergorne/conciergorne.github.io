@@ -3,53 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réparations et bricolage - ConciergOrne</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS global -->
-    <link rel="stylesheet" href="paration.css"> <!-- CSS spécifique -->
+    <title>Services de Paration - ConciergOrne</title>
+    <link rel="stylesheet" href="paration.css">
 </head>
 <body>
+    <!-- HEADER -->
+    <header>
+        <img src="logo.png" alt="Logo ConciergOrne" class="logo">
+        <p class="intro">
+            Ici vous trouverez les détails et tarifs des prestations de paration. Choisissez exactement ce dont vous avez besoin.
+        </p>
+    </header>
 
-<header>
-    <img src="logo.png" alt="ConciergOrne Logo" class="logo" width="150">
-    <p>Notre équipe intervient rapidement pour tous vos petits travaux et bricolages !</p>
-</header>
+    <!-- SERVICES -->
+    <main>
+        <h2>Nos Services de Paration</h2>
 
-<main>
-    <h2>Nos services de réparation et bricolage</h2>
+        <div class="service-card yellow">
+            <h3>Peinture & Revêtement</h3>
+            <p>Application de peinture, papier peint, enduits et finitions décoratives.</p>
+            <p><strong>Tarif :</strong> À partir de 30€/m²</p>
+        </div>
 
-    <div class="service-card">
-        <h3>Petits travaux de plomberie</h3>
-        <p>Changement de robinet, réparation fuite, débouchage lavabo.</p>
-        <p class="price">Prix : 45€ par intervention</p>
-    </div>
+        <div class="service-card blue">
+            <h3>Petits Travaux</h3>
+            <p>Montage, fixation, installation de meubles et petits équipements.</p>
+            <p><strong>Tarif :</strong> À partir de 25€/intervention</p>
+        </div>
 
-    <div class="service-card">
-        <h3>Électricité légère</h3>
-        <p>Remplacement d'ampoules, prises ou interrupteurs, petit dépannage électrique.</p>
-        <p class="price">Prix : 40€ par intervention</p>
-    </div>
+        <div class="service-card green">
+            <h3>Réparations Techniques</h3>
+            <p>Interventions sur plomberie, électricité ou menuiserie.</p>
+            <p><strong>Tarif :</strong> Sur devis</p>
+        </div>
 
-    <div class="service-card">
-        <h3>Menuiserie et bricolage intérieur</h3>
-        <p>Assemblage de meubles, installation étagères, portes ou fenêtres.</p>
-        <p class="price">Prix : 50€ par intervention</p>
-    </div>
+        <div class="service-card red">
+            <h3>Autres Services</h3>
+            <p>Prestations personnalisées selon vos besoins.</p>
+            <p><strong>Tarif :</strong> Sur devis</p>
+        </div>
 
-    <div class="service-card">
-        <h3>Devis et suivi pour gros travaux</h3>
-        <p>Nous vous aidons à trouver des artisans fiables, réaliser les devis et suivre le chantier.</p>
-        <p class="price">Prix : sur devis</p>
-    </div>
+        <!-- BOUTONS -->
+        <div class="buttons">
+            <a href="service.html" class="btn">Retour Service</a>
+            <a href="index.html" class="btn">Accueil</a>
+            <a href="contact.html" class="btn">Demander un devis</a>
+        </div>
+    </main>
 
-    <div class="btn-container">
-        <a href="service.html" class="btn">En savoir plus</a>
-        <a href="index.html" class="btn btn-secondary">Accueil</a>
-    </div>
-</main>
-
-<footer>
-    <p>© 2026 ConciergOrne - Tous droits réservés</p>
-</footer>
-
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 ConciergOrne. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>

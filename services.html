@@ -2,49 +2,86 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Service à la carte – Concierg'Orne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service à la carte - Concierg'Orne</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-    <img src="logo.png" alt="Concierg'Orne">
-    <h1>Service à la carte</h1>
+
+<!-- HEADER -->
+<header class="header-simple">
+    <a href="index.html" class="btn-secondary">Accueil</a>
 </header>
 
-<section class="service-item">
-    <h3>Ménage</h3>
-    <p>Nettoyage complet du logement après chaque réservation.</p>
-    <p class="price">Prix : 30 € / intervention</p>
-</section>
+<!-- CONTENU -->
+<main class="page-container">
 
-<section class="service-item">
-    <h3>Linge</h3>
-    <p>Changement et lavage des draps et serviettes.</p>
-    <p class="price">Prix : 10 € / intervention</p>
-</section>
+    <h1>Service à la carte</h1>
 
-<section class="service-item">
-    <h3>Petites réparations</h3>
-    <p>Remplacement d’ampoules, serrures, joints, etc.</p>
-    <p class="price">Prix : à partir de 15 € / intervention</p>
-</section>
+    <p class="intro">
+        Des prestations flexibles, sans engagement, adaptées à vos besoins.
+        Vous choisissez uniquement les services dont vous avez besoin.
+    </p>
 
-<section class="service-item">
-    <h3>Bricolage / Suivi de travaux</h3>
-    <p>Intervention pour devis, suivi et coordination de petits chantiers.</p>
-    <p class="price">Prix : devis personnalisé</p>
-</section>
+    <p class="facturation-info">
+        💡 Les services à la carte sont facturés uniquement en cas d’intervention,
+        sans abonnement ni engagement. La facturation est effectuée après chaque prestation.
+    </p>
 
-<div class="index-buttons">
-    <a href="contact.html">Demander un devis</a>
-    <a href="index.html">Accueil</a>
-</div>
+    <!-- MENAGE -->
+    <div class="card">
+        <h2>Ménage</h2>
+        <p>Nettoyage complet du logement après chaque réservation.</p>
+        <p class="price">Prix : <strong>30 € / intervention</strong></p>
+    </div>
 
+    <!-- LINGE -->
+    <div class="card">
+        <h2>Linge</h2>
+        <p>Changement et lavage des draps et serviettes.</p>
+        <p class="price">Prix : <strong>10 € / intervention</strong></p>
+    </div>
+
+    <!-- PETITES REPARATIONS -->
+    <div class="card">
+        <h2>Petites réparations</h2>
+        <p>
+            Interventions courantes pour l’entretien du logement
+            (ampoules, joints, serrures, petits ajustements).
+        </p>
+        <p class="price">Prix : <strong>à partir de 15 € / intervention</strong></p>
+
+        <a href="reparations.html" class="btn-secondary small">
+            En savoir plus
+        </a>
+    </div>
+
+    <!-- BRICOLAGE / SUIVI -->
+    <div class="card">
+        <h2>Bricolage / Suivi de travaux</h2>
+        <p>
+            Coordination, suivi et présence lors de petits travaux ou interventions
+            techniques.
+        </p>
+        <p class="price"><strong>Devis personnalisé</strong></p>
+    </div>
+
+    <!-- BOUTON UNIQUE -->
+    <div class="center">
+        <a href="contact.html" class="btn-primary">
+            Demander un devis
+        </a>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
     © 2026 Concierg'Orne – Tous droits réservés |
-    <a href="mentions-legales.html">Mentions légales</a> |
+    <a href="mentions-legaux.html">Mentions légales</a> |
     <a href="cgv.html">CGV</a>
 </footer>
+
 </body>
 </html>

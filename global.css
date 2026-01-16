@@ -1,0 +1,128 @@
+/* ===========================
+   STYLE GLOBAL
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    background-color: #ffb347;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1em;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #1a3e5c;
+}
+
+main p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button, .btn {
+    background-color: #ffb347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 15px auto;
+    min-width: 200px;
+}
+
+button:hover, .btn:hover {
+    background-color: #ffa500;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #1a3e5c;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    button, .btn {
+        width: 80%;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 0 10px;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px;
+    }
+  }

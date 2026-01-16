@@ -1,115 +1,128 @@
-/* ========== Service Page ========== */
-
-/* Logo */
-.logo {
-    display: block;
-    margin: 30px auto 20px auto;
-    max-width: 180px;
-    height: auto;
-}
-
-/* Titre de page */
-.titre-page {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.titre-page h1 {
-    font-size: 1.8em;
+/* ===========================
+   GLOBAL
+=========================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
     color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-.titre-page p {
-    font-size: 1em;
+h2, h3 {
+    color: #1a3e5c;
+}
+
+p {
     color: #555;
 }
 
-/* Services */
-.services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 0 10px;
-    margin-bottom: 30px;
-}
-
-.service-card {
-    background-color: #fff3e0;
-    border-radius: 12px;
-    padding: 20px;
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.service-card h2 {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: #ff9800;
-}
-
-.service-card p {
-    font-size: 1em;
-    color: #444;
-}
-
-/* Bouton accueil */
-.bouton-acceuil {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.bouton-acceuil button {
+/* ===========================
+   HEADER
+=========================== */
+header {
     background-color: #ffb347;
     color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 30px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-align: center;
+    padding: 15px 10px;
 }
 
-.bouton-acceuil button:hover {
+header .logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+header .info {
+    font-size: 0.95em;
+    margin-top: 5px;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   SERVICE SECTIONS
+=========================== */
+.service {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    padding: 25px 20px;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.service .price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.service button {
+    margin-top: 15px;
+}
+
+/* ===========================
+   BUTTON DEVIS
+=========================== */
+.devis-container {
+    margin: 30px 0;
+}
+
+.btn {
+    background-color: #ffb347;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
     background-color: #ffa500;
 }
 
-/* Footer */
-footer {
-    background-color: #203A5A;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9em;
-}
-
-footer a {
-    color: #ffb347;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-    .services {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0 15px;
     }
 
-    .service-card {
-        width: 45%;
+    header .logo {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service {
+        padding: 20px 15px;
+    }
+
+    .btn {
+        width: 100%;
     }
 }

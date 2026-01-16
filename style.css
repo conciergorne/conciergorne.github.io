@@ -125,3 +125,45 @@ footer {
         padding: 12px;
     }
 }
+/* ===========================
+   SERVICES DE RÉPARATION
+=========================== */
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h2 {
+    color: #1a3e5c;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.service-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Boutons alignés */
+a.btn {
+    display: inline-block;
+    margin: 15px 10px 15px 10px;
+}

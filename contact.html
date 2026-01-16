@@ -8,36 +8,30 @@
 </head>
 <body>
 <header>
-    <img src="logo.png" alt="Concierg'Orne">
-    <h1>Contact / Devis</h1>
+    <img src="logo.png" alt="Concierg'Orne" class="logo">
 </header>
 
-<section>
-    <form>
-        <label>Nom / Prénom :</label>
-        <input type="text" name="name" required>
+<main>
+    <h1>Contact / Devis</h1>
+    <p>Pour nous contacter ou demander un devis, remplissez le formulaire ci-dessous :</p>
 
-        <label>Email :</label>
-        <input type="email" name="email" required value="ConciergOrne@gmail.com">
-
-        <label>Téléphone :</label>
-        <input type="tel" name="phone">
-
-        <label>Message / Services souhaités :</label>
-        <textarea name="message" rows="4"></textarea>
-
-        <button type="submit">Envoyer</button>
+    <form action="mailto:ConciergOrne@gmail.com" method="post" enctype="text/plain" class="formulaire">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message / demandes spéciales"></textarea>
+        <input type="submit" value="Envoyer">
     </form>
-</section>
 
-<div class="index-buttons">
-    <a href="index.html">Accueil</a>
-</div>
+    <div class="boutons-page">
+        <a href="index.html" class="btn">Accueil</a>
+    </div>
+</main>
 
 <footer>
-    © 2026 Concierg'Orne – Tous droits réservés |
-    <a href="mentions-legales.html">Mentions légales</a> |
-    <a href="cgv.html">CGV</a>
+    <p>© 2026 Concierg'Orne – Tous droits réservés | 
+        <a href="mentions-legales.html">Mentions légales</a> | 
+        <a href="cgv.html">CGV</a>
+    </p>
 </footer>
 </body>
 </html>

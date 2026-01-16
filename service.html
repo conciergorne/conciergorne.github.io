@@ -3,46 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service à la Carte - ConciergOrne</title>
+    <title>Service à la carte - ConciergOrne</title>
     <link rel="stylesheet" href="service.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="ConciergOrne Logo" class="logo">
-        <p>Notre conciergerie vous propose des services personnalisés facturés 48h après intervention. Aucun abonnement mensuel requis.</p>
+        <img src="logo.png" alt="ConciergOrne Logo">
+        <p>Découvrez nos services à la carte : facturation 48h après intervention, simple et transparent pour les propriétaires.</p>
     </header>
 
     <main>
-        <h2>Nos Services à la Carte</h2>
+        <h2>Nos services à la carte</h2>
 
-        <section class="service-card">
+        <div class="service-card menage">
             <h3>Ménage</h3>
-            <p>Tarif : 20€/heure</p>
-            <p>Nettoyage complet de votre logement, ponctuel ou régulier.</p>
-        </section>
+            <p>Nettoyage complet de votre logement pour préparer l’arrivée des locataires.</p>
+            <p>Prix : 40€ / intervention</p>
+        </div>
 
-        <section class="service-card">
+        <div class="service-card linge">
             <h3>Linge</h3>
-            <p>Tarif : 10€/lavage</p>
-            <p>Collecte, lavage et retour de votre linge.</p>
-        </section>
+            <p>Fourniture et changement du linge de maison pour vos locations.</p>
+            <p>Prix : 10€ / intervention</p>
+        </div>
 
-        <section class="service-card">
+        <div class="service-card bricolage">
             <h3>Bricolage</h3>
-            <p>Interventions ponctuelles à partir de 30€</p>
-            <p>Petits travaux dans votre logement (voir page bricolage pour détails).</p>
-        </section>
+            <p>Petits travaux d’entretien et réparations ponctuelles.</p>
+            <p>Prix : à l’intervention selon devis</p>
+            <a href="bricolage.html" class="btn">En savoir plus</a>
+        </div>
 
-        <div class="buttons">
+        <div class="service-card travaux">
+            <h3>Gestion de travaux</h3>
+            <p>Nous recherchons, obtenons et suivons les devis pour vos travaux importants avec un suivi complet.</p>
+            <a href="travaux.html" class="btn">En savoir plus</a>
+        </div>
+
+        <div class="btn-container">
             <a href="contact.html" class="btn">Demander un devis</a>
             <a href="index.html" class="btn">Accueil</a>
         </div>
     </main>
-
-    <footer>
-        <p>© 2026 ConciergOrne - Tous droits réservés</p>
-        <a href="mentions-legales.html">Mentions légales</a> | 
-        <a href="cgv.html">CGV</a>
-    </footer>
 </body>
 </html>

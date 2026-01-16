@@ -1,107 +1,238 @@
-/* ==== RESET ==== */
+/* ===========================
+   STYLE GLOBAL
+=========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #fff8f0;
-    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
     line-height: 1.6;
 }
 
-/* ==== HEADER ==== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===========================
+   HEADER
+=========================== */
 header {
-    background-color: #ffb347; /* Couleur orange douce */
-    padding: 20px 0;
+    background-color: #ffb347;
+    color: #fff;
     text-align: center;
+    padding: 25px 10px;
 }
 
-header .logo {
+header img {
     max-width: 200px;
-    width: 60%;
     height: auto;
+    margin-bottom: 10px;
 }
 
-/* ==== MAIN ==== */
-main {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-main h1 {
+header h1 {
     font-size: 2em;
     margin-bottom: 10px;
 }
 
-main p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+header p {
+    font-size: 1em;
 }
 
-/* ==== BOUTONS D'ACCUEIL ==== */
-.boutons-accueil {
+/* ===========================
+   NAVIGATION
+=========================== */
+nav {
+    background-color: transparent; /* barre transparente */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #1a3e5c;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffb347;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #1a3e5c;
+}
+
+main p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* ===========================
+   SECTIONS (PACKS, SERVICES)
+=========================== */
+section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+section h3 {
+    color: #1a3e5c;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1em;
+    color: #555;
+}
+
+.pack-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    gap: 15px; /* espace entre les boutons */
-    margin-top: 20px;
 }
 
-.boutons-accueil .btn {
-    background-color: #ffb347;
-    color: #0b2f5a;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    min-width: 180px;
-}
-
-.boutons-accueil .btn:hover {
-    background-color: #ffa733;
-    transform: translateY(-2px);
-}
-
-/* ==== FOOTER ==== */
-footer {
-    background-color: #0b2f5a;
-    color: #fff;
+.pack-card {
+    background-color: #fef9f4;
+    border: 2px solid #ffb347;
+    border-radius: 12px;
+    padding: 25px;
+    width: 260px;
     text-align: center;
-    padding: 15px 10px;
+    transition: 0.3s;
+}
+
+.pack-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+.pack-card h4 {
+    color: #1a3e5c;
+    margin-bottom: 12px;
+}
+
+.pack-card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* ===========================
+   SERVICE A LA CARTE
+=========================== */
+.service-item {
+    background-color: #fef9f4;
+    border-left: 4px solid #ffb347;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    text-align: left;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    background-color: #fff5e6;
+}
+
+.service-item h4 {
+    margin-bottom: 8px;
+    color: #1a3e5c;
+}
+
+.service-item p {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button, .btn {
+    background-color: #ffb347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background-color: #ffa500;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #1a3e5c;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
     font-size: 0.9em;
 }
 
-footer a {
-    color: #ffb347;
-    text-decoration: none;
-    margin: 0 5px;
-}
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-footer a:hover {
-    text-decoration: underline;
-}
+    header h1 {
+        font-size: 1.6em;
+    }
 
-/* ==== RESPONSIVE ==== */
-@media screen and (max-width: 600px) {
-    main h1 {
+    main h2 {
         font-size: 1.5em;
     }
 
-    main p {
-        font-size: 1em;
+    .pack-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .boutons-accueil .btn {
-        width: 100%;
-        max-width: 300px;
-        padding: 12px 20px;
-    }
-
-    header .logo {
-        width: 70%;
+    .pack-card {
+        width: 90%;
     }
 }
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 25px 15px;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px;
+    }
+        }

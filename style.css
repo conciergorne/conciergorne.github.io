@@ -1,69 +1,97 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Service à la carte – Concierg'Orne</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-<body>
+/* GLOBAL */
+body {
+    background-color: #fffaf2;
+    color: #2b2b2b;
+    text-align: center;
+}
 
-<header class="header-simple">
-    <a href="index.html" class="btn-secondary">← Accueil</a>
-</header>
+/* HEADER */
+.header {
+    background-color: #ffb84d;
+    padding: 30px 10px;
+}
 
-<main class="page-container">
+.logo {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
 
-    <h1>Service à la carte</h1>
-    <p class="intro">
-        Ces services sont disponibles hors pack ou en complément,
-        avec une facturation à l’intervention.
-    </p>
+/* HOME */
+.home {
+    padding: 50px 20px;
+}
 
-    <div class="card">
-        <h2>Ménage</h2>
-        <p>Nettoyage complet du logement après chaque réservation.</p>
-        <p class="price">Prix : <strong>30 € / intervention</strong></p>
-    </div>
+.home h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
 
-    <div class="card">
-        <h2>Linge</h2>
-        <p>Changement et lavage des draps et serviettes.</p>
-        <p class="price">Prix : <strong>10 € / intervention</strong></p>
-    </div>
+.home h1 span {
+    color: #ff8c1a;
+}
 
-    <div class="card">
-        <h2>Petites réparations</h2>
-        <p>Remplacement d’ampoules, joints, serrures, petits ajustements.</p>
-        <p class="price">Prix : <strong>à partir de 15 € / intervention</strong></p>
-    </div>
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
 
-    <div class="card">
-        <h2>Bricolage & suivi de travaux</h2>
-        <p>
-            Intervention pour rechercher des devis, coordonner des artisans
-            et assurer le suivi de petits ou moyens chantiers.
-        </p>
-        <p class="price">Prix : <strong>devis personnalisé</strong></p>
-    </div>
+/* BUTTONS */
+.home-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-    <p class="note">
-        📌 Facturation sous 48h après intervention  
-        <br>📌 Aucune facturation mensuelle hors pack
-    </p>
+.btn {
+    background-color: #ffb84d;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
 
-    <div class="center">
-        <a href="contact.html" class="btn-primary">Demander un devis</a>
-    </div>
+.btn:hover {
+    background-color: #ff9f1c;
+    transform: translateY(-3px);
+}
 
-</main>
+/* FOOTER */
+.footer {
+    background-color: #1f3b53;
+    color: #fff;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
 
-<footer>
-    © 2026 Concierg'Orne – Tous droits réservés |
-    <a href="mentions-legaux.html">Mentions légales</a> |
-    <a href="cgv.html">CGV</a>
-</footer>
+.footer a {
+    color: #ffb84d;
+    text-decoration: none;
+    margin: 0 5px;
+}
 
-</body>
-</html>
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 1.8rem;
+    }
+}

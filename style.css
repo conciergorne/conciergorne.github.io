@@ -43,30 +43,33 @@ header p {
     font-size: 1em;
 }
 
-/* ===========================
-   NAVIGATION - INDEX
-=========================== */
+/* ===== NAVIGATION - INDEX ===== */
 #index-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* placer les boutons verticalement */
+    align-items: center;    /* centrer horizontalement */
     justify-content: center;
-    gap: 15px;
+    gap: 15px;              /* espace entre les boutons */
     margin: 30px 0;
 }
 
 #index-buttons a {
+    display: block;
+    width: 220px;           /* largeur des boutons */
+    text-align: center;
     background-color: #ffb347;
     color: #fff;
-    padding: 15px 40px;
+    padding: 15px 0;
     border-radius: 8px;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.1em;
+    text-decoration: none;
     transition: 0.3s;
 }
 
 #index-buttons a:hover {
     background-color: #ffa500;
+}
 }
 
 /* ===========================

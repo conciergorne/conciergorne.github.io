@@ -3,50 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service à la carte - Concierg'Orne</title>
+    <title>ConciergOrne - Services à la carte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <img src="logo.png" alt="Concierg'Orne" class="logo">
-</header>
+    <!-- HEADER -->
+    <header>
+        <img src="logo.png" alt="ConciergOrne Logo">
+        <h1>ConciergOrne</h1>
+        <p>Votre conciergerie locale à Bagnoles-de-l'Orne</p>
+    </header>
 
-<main>
-    <h1>Service à la carte</h1>
-    <p>Choisissez les services que vous souhaitez, nous facturons chaque intervention selon vos besoins.</p>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+        <a href="packs.html">Nos Packs</a>
+        <a href="services.html">Service à la carte</a>
+        <a href="contact.html">Contact / Devis</a>
+    </nav>
 
-    <div class="service">
-        <h2>Ménage</h2>
-        <p>Nettoyage complet du logement après chaque réservation.</p>
-        <p>Prix : 30 € / intervention</p>
-    </div>
-    <div class="service">
-        <h2>Linge</h2>
-        <p>Changement et lavage des draps et serviettes.</p>
-        <p>Prix : 10 € / intervention</p>
-    </div>
-    <div class="service">
-        <h2>Petites réparations</h2>
-        <p>Remplacement d’ampoules, serrures, joints, etc.</p>
-        <p>Prix : à partir de 15 € / intervention</p>
-    </div>
-    <div class="service">
-        <h2>Bricolage / Suivi de travaux</h2>
-        <p>Intervention pour devis, suivi et coordination de petits chantiers.</p>
-        <p>Prix : devis personnalisé</p>
-    </div>
+    <!-- MAIN CONTENT -->
+    <main>
+        <h2>Services à la carte</h2>
+        <p>Choisissez les services dont vous avez besoin, facturation 48h après intervention.</p>
 
-    <div class="boutons-page">
-        <a href="contact.html" class="btn">Demander un devis</a>
-        <a href="index.html" class="btn">Accueil</a>
-    </div>
-</main>
+        <section>
+            <div class="service-item">
+                <h4>Ménage complet</h4>
+                <p>Nettoyage complet du logement, incluant sols, surfaces, cuisine et salle de bain.<br><strong>Prix : 50€ / studio 35m²</strong></p>
+            </div>
 
-<footer>
-    <p>© 2026 Concierg'Orne – Tous droits réservés | 
-        <a href="mentions-legales.html">Mentions légales</a> | 
-        <a href="cgv.html">CGV</a>
-    </p>
-</footer>
+            <div class="service-item">
+                <h4>Entretien du linge</h4>
+                <p>Changement du linge, lavage et repassage si nécessaire.<br><strong>Prix : 15€ / lit simple</strong></p>
+            </div>
+
+            <div class="service-item">
+                <h4>Petits travaux de bricolage</h4>
+                <p>Remplacement d’ampoules, petits réglages, accroche de cadres, etc.<br><strong>Prix : à partir de 20€ par intervention</strong></p>
+            </div>
+
+            <div class="service-item">
+                <h4>Réparations et devis de travaux</h4>
+                <p>Pour des interventions plus importantes, nous établissons un devis et suivons vos travaux.<br><strong>Prix : selon devis</strong></p>
+                <button class="btn" onclick="location.href='reparation.html'">En savoir plus</button>
+            </div>
+        </section>
+
+        <button class="btn" onclick="location.href='contact.html'">Demander un devis</button>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 ConciergOrne - Tous droits réservés</p>
+    </footer>
 </body>
 </html>

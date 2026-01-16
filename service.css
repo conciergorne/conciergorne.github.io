@@ -1,75 +1,115 @@
-/* ===========================
-   Service à la carte
-=========================== */
+/* ========== Service Page ========== */
 
-.service-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: left;
+/* Logo */
+.logo {
+    display: block;
+    margin: 30px auto 20px auto;
+    max-width: 180px;
+    height: auto;
 }
 
-.service-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #1a3e5c;
+/* Titre de page */
+.titre-page {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.service-section p {
+.titre-page h1 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.titre-page p {
     font-size: 1em;
-    margin-bottom: 20px;
     color: #555;
 }
 
-.service-card {
-    background-color: #fff8e1;
-    border-left: 6px solid #ffb347;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+/* Services */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+    margin-bottom: 30px;
 }
 
-.service-card h3 {
-    font-size: 1.4em;
-    color: #ff9800;
+.service-card {
+    background-color: #fff3e0;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card h2 {
+    font-size: 1.3em;
     margin-bottom: 10px;
+    color: #ff9800;
 }
 
 .service-card p {
-    margin-bottom: 10px;
+    font-size: 1em;
+    color: #444;
 }
 
-.btn-devis {
-    display: block;
-    width: 250px;
-    margin: 30px auto 0;
+/* Bouton accueil */
+.bouton-acceuil {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.btn-accueil {
-    display: block;
-    width: 200px;
-    margin: 20px auto;
+.bouton-acceuil button {
+    background-color: #ffb347;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bouton-acceuil button:hover {
+    background-color: #ffa500;
+}
+
+/* Footer */
+footer {
+    background-color: #203A5A;
+    color: white;
     text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffb347;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
-    .service-section {
-        padding: 10px;
+@media (min-width: 768px) {
+    .services {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .service-card {
-        padding: 15px;
+        width: 45%;
     }
-
-    .btn-devis {
-        width: 100%;
-    }
-
-    .btn-accueil {
-        width: 100%;
-    }
-  }
+}

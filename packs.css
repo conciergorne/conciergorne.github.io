@@ -1,91 +1,165 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Packs – ConciergOrne</title>
+/* =========================
+   HEADER (logo réduit)
+   ========================= */
 
-    <!-- CSS global -->
-    <link rel="stylesheet" href="css/global.css">
-    <!-- CSS spécifique Packs -->
-    <link rel="stylesheet" href="css/packs.css">
-</head>
+header {
+    text-align: center;
+    padding: 20px 0;
+}
 
-<body>
+header img {
+    max-width: 150px;
+    height: auto;
+}
 
-<header>
-    <img src="logo.png" alt="ConciergOrne">
-</header>
+/* =========================
+   CONTAINER
+   ========================= */
 
-<main class="packs-container">
+.packs-container {
+    padding: 20px;
+    text-align: center;
+}
 
-    <h1>Nos Packs de Conciergerie</h1>
-    <p class="subtitle">Choisissez la formule adaptée à vos besoins</p>
+.packs-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
 
-    <section class="packs">
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
 
-        <!-- ESSENTIEL -->
-        <div class="pack essentiel">
-            <h2>Essentiel</h2>
-            <p class="tagline">Gestion simple et efficace</p>
-            <ul>
-                <li>✔ Annonces & calendrier</li>
-                <li>✔ Communication voyageurs</li>
-                <li>✔ Arrivées / départs</li>
-                <li>✔ Assistance voyageurs</li>
-            </ul>
-            <div class="price">18 % par réservation</div>
-            <a href="#" class="btn-pack">Choisir ce pack</a>
-        </div>
+/* =========================
+   PACKS GRID
+   ========================= */
 
-        <!-- STANDARD -->
-        <div class="pack standard">
-            <h2>Standard</h2>
-            <p class="tagline">Sérénité & propreté incluses</p>
-            <ul>
-                <li>✔ Tout le pack Essentiel</li>
-                <li>✔ Ménage inclus</li>
-                <li>✔ Suivi logement</li>
-            </ul>
-            <div class="price">20 % par réservation</div>
-            <a href="#" class="btn-pack">Choisir ce pack</a>
-        </div>
+.packs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
 
-        <!-- CONFORT -->
-        <div class="pack confort">
-            <h2>Confort</h2>
-            <p class="tagline">Gestion avancée & tranquillité</p>
-            <ul>
-                <li>✔ Tout le pack Standard</li>
-                <li>✔ Coordination prestataires</li>
-                <li>✔ Suivi interventions</li>
-            </ul>
-            <div class="price">22 % par réservation</div>
-            <a href="#" class="btn-pack">Choisir ce pack</a>
-        </div>
+/* =========================
+   PACK CARD
+   ========================= */
 
-        <!-- PREMIUM -->
-        <div class="pack premium">
-            <div class="star">⭐</div>
-            <h2>Premium</h2>
-            <p class="tagline">Service haut de gamme clé en main</p>
-            <ul>
-                <li>✔ Tout le pack Confort</li>
-                <li>✔ Priorité interventions</li>
-                <li>✔ Suivi personnalisé</li>
-                <li>✔ Optimisation des performances</li>
-            </ul>
-            <div class="price">24 % par réservation</div>
-            <a href="#" class="btn-pack">Choisir ce pack</a>
-        </div>
+.pack {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+}
 
-    </section>
+.pack:hover {
+    transform: translateY(-5px);
+}
 
-</main>
+.pack h2 {
+    margin-bottom: 5px;
+}
 
-<footer>
-    © 2026 ConciergOrne – Tous droits réservés
-</footer>
+.tagline {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    opacity: 0.85;
+}
 
-</body>
-</html>
+.pack ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.pack ul li {
+    margin-bottom: 8px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* =========================
+   BOUTON
+   ========================= */
+
+.btn-pack {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* =========================
+   COULEURS PAR PACK
+   ========================= */
+
+.essentiel {
+    border-top: 6px solid #4CAF50;
+}
+.essentiel .btn-pack {
+    background: #4CAF50;
+}
+
+.standard {
+    border-top: 6px solid #2196F3;
+}
+.standard .btn-pack {
+    background: #2196F3;
+}
+
+.confort {
+    border-top: 6px solid #FF9800;
+}
+.confort .btn-pack {
+    background: #FF9800;
+}
+
+.premium {
+    border-top: 6px solid #FFD700;
+    background: linear-gradient(180deg, #fffbe6, #ffffff);
+}
+
+.premium .btn-pack {
+    background: #FFD700;
+    color: #333;
+}
+
+/* =========================
+   ÉTOILE PREMIUM
+   ========================= */
+
+.star {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #FFD700;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: #1f3b53;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9em;
+}

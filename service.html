@@ -7,42 +7,44 @@
     <link rel="stylesheet" href="style-service.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="ConciergOrne Logo" class="logo">
-        <p class="info">La facturation des services à la carte se fait 48h après l’intervention, aucune facturation mensuelle, hors supplément des packs.</p>
-    </header>
 
-    <main>
-        <h2>Nos Services à la Carte</h2>
+<header>
+    <img src="logo.png" alt="Logo ConciergOrne" class="logo">
+    <p class="intro">
+        La facturation des services à la carte se fait 48h après l’intervention, aucune facturation mensuelle, hors supplément des packs.
+    </p>
+</header>
 
-        <section class="service">
-            <h3>Ménage</h3>
-            <p>Nettoyage complet de votre logement.</p>
-            <p class="price">À partir de 30€ / intervention</p>
-        </section>
+<main>
+    <h1>Nos Services à la Carte</h1>
 
-        <section class="service">
-            <h3>Linge</h3>
-            <p>Repassage, lavage et pliage de vos vêtements.</p>
-            <p class="price">À partir de 15€ / intervention</p>
-        </section>
+    <section class="service-card">
+        <h2>Ménage</h2>
+        <p>Nettoyage complet de votre logement.</p>
+        <p class="prix">À partir de 30€ / intervention</p>
+    </section>
 
-        <section class="service">
-            <h3>Bricolage</h3>
-            <p>Petits travaux, réparations et installations.</p>
-            <p class="price">À partir de 25€ / intervention</p>
-            <button class="btn" onclick="window.location.href='paration.html'">En savoir plus</button>
-        </section>
+    <section class="service-card">
+        <h2>Linge</h2>
+        <p>Repassage, lavage et pliage de vos vêtements.</p>
+        <p class="prix">À partir de 15€ / intervention</p>
+    </section>
 
-        <section class="service">
-            <h3>Autres Services</h3>
-            <p>Interventions personnalisées pour vos besoins spécifiques.</p>
-            <p class="price">Tarifs selon prestation</p>
-        </section>
+    <section class="service-card">
+        <h2>Bricolage</h2>
+        <p>Petits travaux, réparations et installations.</p>
+        <p class="prix">À partir de 25€ / intervention</p>
+    </section>
 
-        <div class="devis-container">
-            <button class="btn" onclick="window.location.href='contact.html'">Demander un devis</button>
-        </div>
-    </main>
+    <button class="btn-more">En savoir plus</button>
+
+    <section class="service-card">
+        <h2>Autres Services</h2>
+        <p>Interventions personnalisées pour vos besoins spécifiques.</p>
+        <p class="prix">Tarifs selon prestation</p>
+        <button class="btn-devis" onclick="location.href='contact.html'">Demander un devis</button>
+    </section>
+</main>
+
 </body>
-</html>
+        </html>

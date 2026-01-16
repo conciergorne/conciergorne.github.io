@@ -26,27 +26,23 @@ header {
     background-color: #ffb347;
     color: #fff;
     text-align: center;
-    padding: 20px 10px;
-    position: relative;
+    padding: 30px 10px;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
 header .logo {
-    width: 120px;
-    height: auto;
+    max-width: 150px;
     display: block;
-    margin: 0 auto 10px auto;
-}
-
-/* ===========================
-   NAVIGATION
-=========================== */
-nav {
-    display: none; /* Supprimé la barre de navigation pour design actuel */
+    margin: 0 auto 15px auto;
 }
 
 /* ===========================
@@ -54,52 +50,22 @@ nav {
 =========================== */
 main {
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 0 20px;
     text-align: center;
 }
 
-main h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #1a3e5c;
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
-main p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* ===========================
-   SECTIONS
-=========================== */
-section {
-    padding: 30px 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-    text-align: left;
-}
-
-section h3 {
-    color: #1a3e5c;
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-section p {
-    font-size: 1em;
-    color: #555;
-}
-
-.services-list .service-item {
-    margin-bottom: 15px;
+.home-buttons .btn {
+    width: 200px;
     padding: 15px;
-    border-left: 4px solid #ffb347;
-    background-color: #f9f9f9;
-    border-radius: 6px;
+    font-size: 1.1em;
 }
 
 /* ===========================
@@ -115,21 +81,10 @@ button, .btn {
     cursor: pointer;
     transition: 0.3s;
     display: inline-block;
-    margin: 10px 5px 0 0;
 }
 
 button:hover, .btn:hover {
     background-color: #ffa500;
-}
-
-/* ===========================
-   NOTES / INFORMATIONS
-=========================== */
-.note {
-    margin-top: 20px;
-    font-size: 0.95em;
-    color: #1a3e5c;
-    font-weight: bold;
 }
 
 /* ===========================
@@ -147,31 +102,26 @@ footer {
    RESPONSIVE DESIGN
 =========================== */
 @media screen and (max-width: 768px) {
-    main h2 {
+    header h1 {
         font-size: 1.8em;
     }
 
-    section {
-        padding: 20px 15px;
+    .home-buttons {
+        gap: 15px;
     }
 
-    .services-list .service-item {
-        padding: 12px;
-    }
-
-    button, .btn {
-        padding: 12px 20px;
+    .home-buttons .btn {
+        width: 180px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    main h2 {
+    header h1 {
         font-size: 1.5em;
     }
 
-    button, .btn {
+    .home-buttons .btn {
         width: 100%;
         padding: 12px;
-        margin: 8px 0;
     }
 }

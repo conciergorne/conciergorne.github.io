@@ -4,9 +4,9 @@
 
 .packs-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    flex-direction: column; /* Met les packs les uns sous les autres */
+    align-items: center;    /* Centre horizontalement */
+    gap: 20px;              /* Espace entre chaque pack */
     margin-top: 30px;
 }
 
@@ -15,7 +15,8 @@
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
     padding: 25px 20px;
-    max-width: 300px;
+    width: 90%;
+    max-width: 350px; /* Taille fixe max pour desktop */
     text-align: center;
     transition: transform 0.3s;
 }
@@ -68,7 +69,10 @@
 =========================== */
 @media screen and (max-width: 768px) {
     .packs-container {
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
     }
-      }
+
+    .pack-card {
+        width: 90%;
+    }
+}

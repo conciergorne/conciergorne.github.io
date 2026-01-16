@@ -1,12 +1,48 @@
 /* ===========================
+   GLOBAL STYLES
+=========================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header .logo {
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1a3e5c;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* ===========================
    PACKS PAGE
 =========================== */
-
 .packs-container {
     display: flex;
-    flex-direction: column; /* Met les packs les uns sous les autres */
-    align-items: center;    /* Centre horizontalement */
-    gap: 20px;              /* Espace entre chaque pack */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     margin-top: 30px;
 }
 
@@ -16,7 +52,7 @@
     box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
     padding: 25px 20px;
     width: 90%;
-    max-width: 350px; /* Taille fixe max pour desktop */
+    max-width: 350px;
     text-align: center;
     transition: transform 0.3s;
 }
@@ -62,6 +98,25 @@
 
 .btn-container .btn:hover {
     background-color: #ffa500;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #1a3e5c;
+    color: #fff;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #ffb347;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* ===========================

@@ -28,21 +28,10 @@ header {
     text-align: center;
     padding: 25px 10px;
 }
-/* ===========================
-   CORRECTION FORCÉE DU FOOTER
-=========================== */
-footer {
-    background-color: #1a3e5c !important;
-    color: white !important;
-}
-
-footer a {
-    color: white !important;
-}
 
 header img {
-    width: 180px; /* taille par défaut sur desktop */
-    max-width: 50%; /* ne dépasse pas 50% de la largeur de l'écran */
+    width: 180px;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 0 auto 15px auto;
@@ -58,11 +47,11 @@ header p {
 }
 
 /* ===========================
-   Responsive header logo
+   RESPONSIVE HEADER
 =========================== */
 @media screen and (max-width: 768px) {
     header img {
-        width: 120px; /* réduit sur tablettes */
+        width: 120px;
     }
 
     header h1 {
@@ -76,7 +65,7 @@ header p {
 
 @media screen and (max-width: 480px) {
     header img {
-        width: 90px; /* réduit sur smartphones */
+        width: 90px;
     }
 
     header h1 {
@@ -87,6 +76,7 @@ header p {
         font-size: 0.9em;
     }
 }
+
 /* ===========================
    MAIN CONTENT
 =========================== */
@@ -95,17 +85,6 @@ main {
     margin: 30px auto;
     padding: 0 20px;
     text-align: center;
-}
-
-main h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #1a3e5c;
-}
-
-main p {
-    font-size: 1em;
-    color: #555;
 }
 
 /* ===========================
@@ -126,8 +105,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background: linear-gradient(135deg, #ff914d, #ff6b2b); /* léger effet hover plus dynamique */
-}
+    background: linear-gradient(135deg, #ff914d, #ff6b2b);
 }
 
 /* ===========================
@@ -140,7 +118,8 @@ footer {
     padding: 20px 10px;
     font-size: 0.9em;
 }
-}footer a {
+
+footer a {
     color: white;
     font-weight: 500;
 }
@@ -150,32 +129,16 @@ footer a:hover {
 }
 
 /* ===========================
-   RESPONSIVE DESIGN
+   RESPONSIVE GLOBAL
 =========================== */
 @media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.6em;
-    }
-
-    main h2 {
-        font-size: 1.5em;
-    }
-
     button, .btn {
         width: 80%;
-        padding: 12px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    main {
-        padding: 0 10px;
-    }
-
     button, .btn {
         width: 100%;
-        padding: 12px;
     }
-  }/* ===========================
-   
 }

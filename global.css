@@ -30,7 +30,7 @@ header {
 }
 
 header img {
-    width: 150px; /* taille par défaut sur desktop */
+    width: 180px; /* taille par défaut sur desktop */
     max-width: 50%; /* ne dépasse pas 50% de la largeur de l'écran */
     height: auto;
     display: block;

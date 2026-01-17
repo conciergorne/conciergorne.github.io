@@ -1,78 +1,174 @@
 /* ===========================
-   PAGE QUI SOMMES-NOUS
+   PAGE QUI SOMMES-NOUS PREMIUM
 =========================== */
+
 body {
     background-color: #fdfaf6;
     color: #333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ===========================
+   HEADER PREMIUM
+=========================== */
 header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url('header-bg.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px 10px;
-    background-color: #ffb347;
-    color: #fff;
+    color: white;
+    overflow: hidden;
 }
 
-header .logo {
-    max-width: 120px;
-    display: block;
-    margin: 0 auto 10px;
+header .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
+    z-index: 1;
 }
 
+header img.logo {
+    position: relative;
+    z-index: 2;
+    width: 180px;
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease forwards;
+}
+
+header .header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+header .header-content h1,
+header .header-content p {
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+header .header-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+header .header-content p {
+    font-size: 1.2em;
+}
+
+/* ===========================
+   MAIN SECTIONS
+=========================== */
 main {
     max-width: 900px;
     margin: 30px auto;
     padding: 0 20px;
-    text-align: left;
 }
 
 main section {
     background-color: #fff;
-    padding: 25px 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 30px 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 main h2 {
     color: #1a3e5c;
     margin-bottom: 15px;
+    font-size: 1.6em;
 }
 
 main p, main li {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 main ul {
-    list-style: disc inside;
+    list-style: none;
     padding-left: 0;
 }
 
+main ul li::before {
+    content: "✅";
+    margin-right: 10px;
+    color: #ff914d;
+}
+
+/* ===========================
+   BOUTON RETOUR
+=========================== */
 .bouton-retour {
     text-align: center;
     margin: 30px 0;
 }
 
 .bouton-retour .btn {
-    background-color: #ffb347;
+    background: linear-gradient(135deg, #ffb347, #ff6b2b);
     color: #fff;
-    padding: 12px 25px;
-    border-radius: 6px;
-    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
     font-weight: bold;
-    transition: 0.3s;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: inline-block;
 }
 
 .bouton-retour .btn:hover {
-    background-color: #ffa500;
+    background: linear-gradient(135deg, #ff914d, #ff6b2b);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-    main {
-        padding: 0 15px;
-    }
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #1a3e5c;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.95em;
 }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media screen and (max-width: 768px) {
+    header img.logo { width: 150px; }
+    header .header-content h1 { font-size: 2.2em; }
+    header .header-content p { font-size: 1em; }
+    main section { padding: 25px 20px; }
+    main h2 { font-size: 1.4em; }
+    main p, main li { font-size: 1em; }
+    .bouton-retour .btn { min-width: 200px; }
+}
+
+@media screen and (max-width: 480px) {
+    header img.logo { width: 120px; }
+    header .header-content h1 { font-size: 1.6em; }
+    header .header-content p { font-size: 0.95em; }
+    main section { padding: 20px 15px; }
+    main h2 { font-size: 1.2em; }
+    main p, main li { font-size: 0.95em; }
+    .bouton-retour .btn { min-width: 100%; padding: 12px; }
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+   }

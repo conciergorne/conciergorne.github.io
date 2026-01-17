@@ -30,19 +30,51 @@ header {
 }
 
 header img {
-    width: 150px; /* taille actuelle conservée */
+    width: 150px; /* taille par défaut sur desktop */
+    max-width: 50%; /* ne dépasse pas 50% de la largeur de l'écran */
     height: auto;
     display: block;
     margin: 0 auto 15px auto;
 }
 
 header h1 {
-    font-size: 2em; /* taille texte conservée */
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1em; /* texte sous-titre conservé */
+    font-size: 1em;
+}
+
+/* ===========================
+   Responsive header logo
+=========================== */
+@media screen and (max-width: 768px) {
+    header img {
+        width: 120px; /* réduit sur tablettes */
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    header p {
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header img {
+        width: 90px; /* réduit sur smartphones */
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
 }
 /* ===========================
    MAIN CONTENT

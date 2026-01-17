@@ -1,116 +1,120 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos Packs - Concierg'Orne</title>
-  <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="packs.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Packs - ConciergOrne</title>
+    <link rel="stylesheet" href="packs.css">
 </head>
 <body>
 
-<header class="header-packs">
-  <div class="overlay">
-    <img src="logo.png" alt="Logo Concierg'Orne" class="logo">
-    <p class="slogan">Une gestion sereine et professionnelle de votre logement</p>
-  </div>
-</header>
+<!-- HERO -->
+<section class="hero">
+    <img src="header-bg.png" alt="Vue aérienne de Bagnoles-de-l'Orne" class="hero-img">
+    <div class="hero-overlay">
+        <img src="logo.png" alt="ConciergOrne" class="hero-logo">
+        <p class="hero-slogan">
+            Une gestion sereine et professionnelle de votre logement
+        </p>
+    </div>
+</section>
 
 <main>
-  <h1>Nos Packs de Conciergerie</h1>
-  <p>Choisissez la formule adaptée à vos besoins</p>
+    <h1>Nos Packs de Conciergerie</h1>
+    <p class="subtitle">Choisissez la formule adaptée à vos besoins</p>
 
-  <div class="packs-container">
+    <!-- PACKS -->
+    <div class="packs-container">
 
-    <div class="pack ess">
-      <button class="accordion">Essentiel</button>
-      <div class="panel">
-        <p>Gestion simple et efficace</p>
-        <ul>
-          <li>✔ Annonces & calendrier</li>
-          <li>✔ Communication voyageurs</li>
-          <li>✔ Arrivées / départs</li>
-          <li>✔ Assistance voyageurs</li>
-        </ul>
-        <p><strong>18 %</strong> par réservation</p>
-        <a href="#" class="btn">Choisir ce pack</a>
-      </div>
+        <div class="pack ess">
+            <h2>Essentiel</h2>
+            <p class="pack-desc reminder">Gestion simple et efficace</p>
+            <ul>
+                <li>✔ Annonces & calendrier</li>
+                <li>✔ Communication voyageurs</li>
+                <li>✔ Arrivées / départs</li>
+                <li>✔ Assistance voyageurs</li>
+            </ul>
+            <p class="price"><strong>18 %</strong> / réservation</p>
+        </div>
+
+        <div class="pack std">
+            <h2>Standard</h2>
+            <p class="pack-desc reminder">Sérénité & propreté incluses</p>
+            <ul>
+                <li>✔ Tout le pack Essentiel</li>
+                <li>✔ Ménage inclus</li>
+                <li>✔ Suivi logement</li>
+            </ul>
+            <p class="price"><strong>20 %</strong> / réservation</p>
+        </div>
+
+        <div class="pack conf">
+            <h2>Confort</h2>
+            <p class="pack-desc reminder">Gestion avancée & tranquillité</p>
+            <ul>
+                <li>✔ Tout le pack Standard</li>
+                <li>✔ Ménage inclus</li>
+                <li>✔ Coordination prestataires</li>
+                <li>✔ Suivi interventions *</li>
+            </ul>
+            <p class="price"><strong>22 %</strong> / réservation</p>
+        </div>
+
+        <div class="pack prem">
+            <h2>Premium ★</h2>
+            <p class="pack-desc reminder">Service haut de gamme clé en main</p>
+            <ul>
+                <li>✔ Tout le pack Confort</li>
+                <li>✔ Priorité interventions *</li>
+                <li>✔ Suivi personnalisé *</li>
+                <li>✔ Optimisation des performances *</li>
+            </ul>
+            <p class="price"><strong>24 %</strong> / réservation</p>
+        </div>
+
     </div>
 
-    <div class="pack std">
-      <button class="accordion">Standard</button>
-      <div class="panel">
-        <p>Sérénité & propreté incluses</p>
-        <ul>
-          <li>✔ Tout le pack Essentiel</li>
-          <li>✔ Ménage inclus</li>
-          <li>✔ Suivi logement *</li>
-        </ul>
-        <p><strong>20 %</strong> par réservation</p>
-        <a href="#" class="btn">Choisir ce pack</a>
-      </div>
+    <!-- ACCORDÉON -->
+    <section class="accordion">
+        <h2>Détails des services Premium</h2>
+
+        <details>
+            <summary>Suivi des interventions *</summary>
+            <p>
+                Coordination et contrôle des interventions techniques, réparations
+                et prestataires avec compte-rendu détaillé.
+            </p>
+        </details>
+
+        <details>
+            <summary>Suivi personnalisé *</summary>
+            <p>
+                Accompagnement dédié, conseils personnalisés et ajustements
+                en fonction de votre logement et de vos objectifs.
+            </p>
+        </details>
+
+        <details>
+            <summary>Optimisation des performances *</summary>
+            <p>
+                Analyse des performances de votre annonce, ajustement des tarifs,
+                optimisation du taux d’occupation et recommandations stratégiques.
+            </p>
+        </details>
+    </section>
+
+    <!-- BOUTONS BAS -->
+    <div class="btn-bottom">
+        <a href="index.html" class="btn-accueil">Retour à l’accueil</a>
+        <a href="contact.html" class="btn-devis">Devis & Contact</a>
     </div>
-
-    <div class="pack conf">
-      <button class="accordion">Confort</button>
-      <div class="panel">
-        <p>Gestion avancée & tranquillité</p>
-        <ul>
-          <li>✔ Tout le pack Standard</li>
-          <li>✔ Ménage inclus</li>
-          <li>✔ Coordination prestataires *</li>
-          <li>✔ Suivi interventions *</li>
-        </ul>
-        <p><strong>22 %</strong> par réservation</p>
-        <a href="#" class="btn">Choisir ce pack</a>
-      </div>
-    </div>
-
-    <div class="pack prem">
-      <button class="accordion">Premium ★</button>
-      <div class="panel">
-        <p>Service haut de gamme clé en main</p>
-        <ul>
-          <li>✔ Tout le pack Confort</li>
-          <li>✔ Priorité interventions *</li>
-          <li>✔ Suivi personnalisé *</li>
-          <li>✔ Optimisation des performances *</li>
-        </ul>
-        <p><strong>24 %</strong> par réservation</p>
-        <a href="#" class="btn">Choisir ce pack</a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Explications astérisques -->
-  <div class="explications">
-    <p>* Les services marqués d’un astérisque bénéficient de détails et suivi approfondi.</p>
-  </div>
-
-  <!-- Boutons bas de page -->
-  <div class="btn-bottom">
-    <a href="contact.html" class="btn btn-devis">Contact & Devis</a>
-    <a href="index.html" class="btn btn-accueil">Accueil</a>
-  </div>
 
 </main>
 
 <footer>
-  <p>© 2026 Concierg'Orne - Tous droits réservés</p>
+    <p>© 2026 ConciergOrne — Tous droits réservés</p>
 </footer>
 
-<script>
-  // Accordéon JS
-  const accordions = document.querySelectorAll(".accordion");
-  accordions.forEach((acc) => {
-    acc.addEventListener("click", function() {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
-      panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
-    });
-  });
-</script>
-
 </body>
-            </html>
+</html>

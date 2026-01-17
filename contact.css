@@ -1,5 +1,5 @@
 /* ===========================
-   GLOBAL STYLES
+   STYLE GLOBAL
 =========================== */
 * {
     margin: 0;
@@ -19,6 +19,10 @@ a {
     color: inherit;
 }
 
+h1, h2 {
+    color: #1a3e5c;
+}
+
 /* ===========================
    HEADER
 =========================== */
@@ -26,37 +30,24 @@ header {
     background-color: #ffb347;
     color: #fff;
     text-align: center;
-    padding: 20px 10px;
+    padding: 25px 10px;
 }
 
 header .logo {
-    max-width: 120px;
-    margin-bottom: 10px;
-}
-
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1em;
+    width: 100px;
+    margin-bottom: 15px;
 }
 
 /* ===========================
-   FORM
+   FORMULAIRE
 =========================== */
-main {
+.contact-form {
     max-width: 800px;
     margin: 30px auto;
-    padding: 0 20px;
-}
-
-form {
+    padding: 20px;
     background-color: #fff;
-    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .form-group {
@@ -65,37 +56,56 @@ form {
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: bold;
-    color: #1a3e5c;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
+    padding: 10px;
     border-radius: 6px;
+    border: 1px solid #ccc;
     font-size: 1em;
 }
 
-textarea {
-    resize: vertical;
+.bricolage-list {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.bricolage-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bricolage-list li {
+    margin-bottom: 8px;
+    padding-left: 8px;
+    position: relative;
+}
+
+.bricolage-list li::before {
+    content: "★";
+    color: #ffb347;
+    position: absolute;
+    left: 0;
 }
 
 /* ===========================
-   BUTTONS
+   BOUTONS
 =========================== */
-.form-actions {
+.form-buttons {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
-button.btn,
-a.btn {
+button, .btn {
     background-color: #ffb347;
     color: white;
     padding: 12px 25px;
@@ -107,13 +117,8 @@ a.btn {
     text-align: center;
 }
 
-button.btn:hover,
-a.btn:hover {
+button:hover, .btn:hover {
     background-color: #ffa500;
-}
-
-a.btn-home {
-    background-color: #1a3e5c;
 }
 
 /* ===========================
@@ -128,7 +133,7 @@ footer {
 }
 
 footer a {
-    color: #fff;
+    color: white;
     transition: 0.3s;
 }
 
@@ -137,10 +142,10 @@ footer a:hover {
 }
 
 /* ===========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 =========================== */
 @media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.6em;
+    .form-buttons {
+        flex-direction: column;
     }
 }

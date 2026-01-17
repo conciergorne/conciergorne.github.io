@@ -1,5 +1,5 @@
 /* ===========================
-   STYLE GLOBAL
+   Global Styles
 =========================== */
 * {
     margin: 0;
@@ -19,50 +19,61 @@ a {
     color: inherit;
 }
 
-h1, h2 {
-    color: #1a3e5c;
-}
-
 /* ===========================
-   HEADER
+   Header
 =========================== */
 header {
     background-color: #ffb347;
     color: #fff;
     text-align: center;
-    padding: 25px 10px;
+    padding: 20px 10px;
 }
 
 header .logo {
-    width: 100px;
-    margin-bottom: 15px;
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1em;
 }
 
 /* ===========================
-   FORMULAIRE
+   Main / Form
 =========================== */
-.contact-form {
-    max-width: 800px;
+main {
+    max-width: 900px;
     margin: 30px auto;
-    padding: 20px;
+    padding: 0 20px;
+}
+
+.contact-form {
     background-color: #fff;
+    padding: 25px 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
 }
 
-.form-group {
-    margin-bottom: 20px;
+.contact-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-.form-group label {
+.contact-form label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     font-weight: bold;
+    color: #1a3e5c;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
@@ -70,59 +81,57 @@ header .logo {
     font-size: 1em;
 }
 
-.bricolage-list {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.contact-form textarea {
+    resize: vertical;
 }
 
-.bricolage-list ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.bricolage-list li {
-    margin-bottom: 8px;
-    padding-left: 8px;
-    position: relative;
-}
-
-.bricolage-list li::before {
-    content: "★";
-    color: #ffb347;
-    position: absolute;
-    left: 0;
+.contact-form .note {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
 }
 
 /* ===========================
-   BOUTONS
+   Buttons
 =========================== */
 .form-buttons {
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 15px;
 }
 
-button, .btn {
+.btn-submit {
     background-color: #ffb347;
     color: white;
-    padding: 12px 25px;
     border: none;
+    padding: 12px 25px;
     border-radius: 6px;
-    font-size: 1em;
     cursor: pointer;
     transition: 0.3s;
-    text-align: center;
 }
 
-button:hover, .btn:hover {
+.btn-submit:hover {
     background-color: #ffa500;
 }
 
+.btn-home {
+    display: inline-block;
+    background-color: #1a3e5c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-home:hover {
+    background-color: #163152;
+}
+
 /* ===========================
-   FOOTER
+   Footer
 =========================== */
 footer {
     background-color: #1a3e5c;
@@ -134,7 +143,7 @@ footer {
 
 footer a {
     color: white;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 footer a:hover {
@@ -142,10 +151,14 @@ footer a:hover {
 }
 
 /* ===========================
-   RESPONSIVE DESIGN
+   Responsive
 =========================== */
 @media screen and (max-width: 768px) {
     .form-buttons {
         flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.5em;
     }
 }

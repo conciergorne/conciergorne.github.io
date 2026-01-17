@@ -23,8 +23,8 @@ a {
    HEADER
 =========================== */
 header {
-    background-color: #ffb347;
-    color: #fff;
+    background: linear-gradient(135deg, #ffb347, #ff8c42);
+    color: white;
     text-align: center;
     padding: 25px 10px;
 }

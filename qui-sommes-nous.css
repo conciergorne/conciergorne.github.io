@@ -9,12 +9,12 @@ body {
 }
 
 /* ===========================
-   HEADER PREMIUM
+   HEADER PREMIUM RÉDUIT
 =========================== */
 header {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 35vh; /* réduit par rapport à l'ancienne version */
     background: url('header-bg.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ header img.logo {
     width: 180px;
     max-width: 50%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     animation: fadeIn 1s ease forwards;
 }
 
@@ -56,12 +56,35 @@ header .header-content p {
 }
 
 header .header-content h1 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
+    font-size: 2.4em;
+    margin-bottom: 8px;
 }
 
 header .header-content p {
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+
+/* ===========================
+   NOUVELLE SECTION "POURQUOI NOUS CHOISIR"
+=========================== */
+.pourquoi-nous-choisir {
+    background-color: #fff;
+    padding: 30px 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.pourquoi-nous-choisir h2 {
+    color: #1a3e5c;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.pourquoi-nous-choisir p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
 }
 
 /* ===========================
@@ -147,7 +170,7 @@ footer {
 =========================== */
 @media screen and (max-width: 768px) {
     header img.logo { width: 150px; }
-    header .header-content h1 { font-size: 2.2em; }
+    header .header-content h1 { font-size: 2em; }
     header .header-content p { font-size: 1em; }
     main section { padding: 25px 20px; }
     main h2 { font-size: 1.4em; }
@@ -157,7 +180,7 @@ footer {
 
 @media screen and (max-width: 480px) {
     header img.logo { width: 120px; }
-    header .header-content h1 { font-size: 1.6em; }
+    header .header-content h1 { font-size: 1.5em; }
     header .header-content p { font-size: 0.95em; }
     main section { padding: 20px 15px; }
     main h2 { font-size: 1.2em; }
@@ -171,4 +194,4 @@ footer {
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
-   }
+}

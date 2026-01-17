@@ -1,5 +1,5 @@
 /* ===========================
-   STYLE GLOBAL POUR PACKS
+   STYLE GLOBAL POUR PACKS AMÉLIORÉ
 =========================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,10 +17,19 @@ header {
 }
 
 header .logo {
-    width: 150px; /* Logo réduit pour donner plus de place aux packs */
+    width: 150px;
     height: auto;
 }
 
+header .slogan-header {
+    font-size: 1em;
+    color: #fff;
+    margin-top: 8px;
+}
+
+/* ===========================
+   MAIN
+=========================== */
 main {
     max-width: 1200px;
     margin: 30px auto;
@@ -58,20 +67,21 @@ main p {
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: left;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .pack:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .pack h2 {
-    font-size: 1.5em;
+    font-size: 1.6em; /* légèrement augmenté pour harmoniser */
     margin-bottom: 10px;
 }
 
 .pack p {
-    font-size: 1em;
+    font-size: 1.05em;
     margin-bottom: 10px;
 }
 
@@ -83,6 +93,13 @@ main p {
 
 .pack ul li {
     margin: 5px 0;
+    color: #2c3e50;
+}
+
+.pack ul li::before {
+    content: "✔";
+    color: #27ae60;
+    margin-right: 8px;
 }
 
 /* ===========================
@@ -108,7 +125,6 @@ main p {
     background-color: #ffeaea;
 }
 
-/* Étoile sur Premium */
 .pack.prem h2::after {
     content: " ★";
     color: gold;
@@ -121,7 +137,7 @@ main p {
 =========================== */
 button, .btn, .pack a.btn {
     display: inline-block;
-    background-color: #ffb347;
+    background: linear-gradient(135deg, #ffb347, #ff6b2b);
     color: #fff;
     padding: 12px 25px;
     border-radius: 6px;
@@ -133,7 +149,7 @@ button, .btn, .pack a.btn {
 }
 
 button:hover, .btn:hover, .pack a.btn:hover {
-    background-color: #ffa500;
+    background: linear-gradient(135deg, #ffa500, #ff6b2b);
 }
 
 /* ===========================
@@ -198,7 +214,7 @@ footer {
     }
 
     .pack h2 {
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
     .btn, .pack a.btn, .btn-accueil {

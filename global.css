@@ -157,4 +157,14 @@ footer {
         width: 100%;
         padding: 12px;
     }
-  }
+  }/* ===========================
+   FOOTER LINKS FIX
+=========================== */
+footer a {
+    color: white;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

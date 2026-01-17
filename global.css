@@ -28,6 +28,17 @@ header {
     text-align: center;
     padding: 25px 10px;
 }
+/* ===========================
+   CORRECTION FORCÉE DU FOOTER
+=========================== */
+footer {
+    background-color: #1a3e5c !important;
+    color: white !important;
+}
+
+footer a {
+    color: white !important;
+}
 
 header img {
     width: 180px; /* taille par défaut sur desktop */

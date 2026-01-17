@@ -23,10 +23,11 @@ a {
    HEADER
 =========================== */
 header {
-    background: linear-gradient(135deg, #ffb347, #ff8c42);
+    background: linear-gradient(135deg, #ffb347, #ff6b2b);
     color: white;
     text-align: center;
     padding: 25px 10px;
+}
 }
 
 header img {

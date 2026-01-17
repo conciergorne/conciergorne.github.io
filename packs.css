@@ -144,7 +144,21 @@ main {
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
+   .btn-contact-devis {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    background-color: #ff6b2b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 30px 0;
+    transition: 0.3s;
 }
+
+.btn-contact-devis:hover {
+    background-color: #ff914d;
+}}
 
 /* ===========================
    FOOTER

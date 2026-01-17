@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis - ConciergOrne</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo ConciergOrne" class="logo">
+        <h1>Contact & Devis</h1>
+        <p>Remplissez le formulaire ci-dessous pour vos demandes de packs, services à la carte ou bricolage.</p>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Adresse mail :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Numéro de portable :</label>
+                <input type="tel" id="tel" name="tel" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pack">Choix du Pack :</label>
+                <select id="pack" name="pack">
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="standard">Standard 18%</option>
+                    <option value="confort">Confort 20%</option>
+                    <option value="premium">Premium 22%</option>
+                    <option value="premium_plus">Premium+ 24%</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service à la carte :</label>
+                <select id="service" name="service">
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="menage">Ménage</option>
+                    <option value="linge">Linge</option>
+                    <option value="bricolage">Bricolage</option>
+                    <option value="gestion_travaux">Gestion des travaux</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bricolage">Bricolage :</label>
+                <select id="bricolage" name="bricolage">
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="petits_travaux">Petits travaux</option>
+                    <option value="reparation">Réparation</option>
+                    <option value="suivi_chantier">Suivi de chantier</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="commentaires">Commentaires :</label>
+                <textarea id="commentaires" name="commentaires" rows="5" placeholder="Précisez votre demande"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Envoyer</button>
+                <a href="index.html" class="btn btn-home">Accueil</a>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ConciergOrne</p>
+        <p><a href="mentions-legales.html">Mentions légales</a> | <a href="cgv.html">CGV</a></p>
+    </footer>
+</body>
+</html>

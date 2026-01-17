@@ -27,26 +27,23 @@ header {
     color: white;
     text-align: center;
     padding: 25px 10px;
-
-
 }
 
 header img {
-    width: 150px;
+    width: 150px; /* taille actuelle conservée */
     height: auto;
     display: block;
     margin: 0 auto 15px auto;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2em; /* taille texte conservée */
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1em;
+    font-size: 1em; /* texte sous-titre conservé */
 }
-
 /* ===========================
    MAIN CONTENT
 =========================== */

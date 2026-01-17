@@ -1,0 +1,81 @@
+/* ===========================
+   PAGES LEGALES – CGV / MENTIONS
+   =========================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdf9f3;
+    color: #333;
+}
+
+header {
+    background-color: #ffb347;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header img {
+    max-width: 160px;
+    height: auto;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #1f4e79;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #ff8c00;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+p, li {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.footer-legal {
+    margin-top: 50px;
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-legal a {
+    color: #ffb347;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Bouton retour accueil */
+.back-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #ffb347;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.back-home:hover {
+    background-color: #ff8c00;
+}

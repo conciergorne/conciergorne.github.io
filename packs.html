@@ -9,13 +9,10 @@
 </head>
 <body>
 
-<header>
-  <div class="hero">
-    <img src="header-bg.png" alt="Vue aérienne" class="hero-img">
-    <div class="hero-overlay">
-        <img src="logo.png" alt="ConciergOrne" class="hero-logo">
-        <p class="hero-slogan">Une gestion sereine et professionnelle de votre logement</p>
-    </div>
+<header class="header-packs">
+  <div class="overlay">
+    <img src="logo.png" alt="Logo Concierg'Orne" class="logo">
+    <p class="slogan">Une gestion sereine et professionnelle de votre logement</p>
   </div>
 </header>
 
@@ -26,72 +23,75 @@
   <div class="packs-container">
 
     <div class="pack ess">
-      <h2>Essentiel</h2>
-      <p>Gestion simple et efficace</p>
-      <ul>
-        <li>✔ Annonces & calendrier</li>
-        <li>✔ Communication voyageurs</li>
-        <li>✔ Arrivées / départs</li>
-        <li>✔ Assistance voyageurs</li>
-      </ul>
-      <p><strong>18 %</strong> par réservation</p>
-      <a href="#" class="btn">Choisir ce pack</a>
+      <button class="accordion">Essentiel</button>
+      <div class="panel">
+        <p>Gestion simple et efficace</p>
+        <ul>
+          <li>✔ Annonces & calendrier</li>
+          <li>✔ Communication voyageurs</li>
+          <li>✔ Arrivées / départs</li>
+          <li>✔ Assistance voyageurs</li>
+        </ul>
+        <p><strong>18 %</strong> par réservation</p>
+        <a href="#" class="btn">Choisir ce pack</a>
+      </div>
     </div>
 
     <div class="pack std">
-      <h2>Standard</h2>
-      <p>Sérénité & propreté incluses</p>
-      <ul>
-        <li>✔ Tout le pack Essentiel</li>
-        <li>✔ Ménage inclus*</li>
-        <li>✔ Suivi logement*</li>
-      </ul>
-      <p><strong>20 %</strong> par réservation</p>
-      <a href="#" class="btn">Choisir ce pack</a>
+      <button class="accordion">Standard</button>
+      <div class="panel">
+        <p>Sérénité & propreté incluses</p>
+        <ul>
+          <li>✔ Tout le pack Essentiel</li>
+          <li>✔ Ménage inclus</li>
+          <li>✔ Suivi logement *</li>
+        </ul>
+        <p><strong>20 %</strong> par réservation</p>
+        <a href="#" class="btn">Choisir ce pack</a>
+      </div>
     </div>
 
     <div class="pack conf">
-      <h2>Confort</h2>
-      <p>Gestion avancée & tranquillité</p>
-      <ul>
-        <li>✔ Tout le pack Standard</li>
-        <li>✔ Ménage inclus*</li>
-        <li>✔ Coordination prestataires*</li>
-        <li>✔ Suivi interventions*</li>
-      </ul>
-      <p><strong>22 %</strong> par réservation</p>
-      <a href="#" class="btn">Choisir ce pack</a>
+      <button class="accordion">Confort</button>
+      <div class="panel">
+        <p>Gestion avancée & tranquillité</p>
+        <ul>
+          <li>✔ Tout le pack Standard</li>
+          <li>✔ Ménage inclus</li>
+          <li>✔ Coordination prestataires *</li>
+          <li>✔ Suivi interventions *</li>
+        </ul>
+        <p><strong>22 %</strong> par réservation</p>
+        <a href="#" class="btn">Choisir ce pack</a>
+      </div>
     </div>
 
     <div class="pack prem">
-      <h2>Premium ★</h2>
-      <p>Service haut de gamme clé en main</p>
-      <ul>
-        <li>✔ Tout le pack Confort</li>
-        <li>✔ Priorité interventions*</li>
-        <li>✔ Suivi personnalisé*</li>
-        <li>✔ Optimisation des performances*</li>
-      </ul>
-      <p><strong>24 %</strong> par réservation</p>
-      <a href="#" class="btn">Choisir ce pack</a>
+      <button class="accordion">Premium ★</button>
+      <div class="panel">
+        <p>Service haut de gamme clé en main</p>
+        <ul>
+          <li>✔ Tout le pack Confort</li>
+          <li>✔ Priorité interventions *</li>
+          <li>✔ Suivi personnalisé *</li>
+          <li>✔ Optimisation des performances *</li>
+        </ul>
+        <p><strong>24 %</strong> par réservation</p>
+        <a href="#" class="btn">Choisir ce pack</a>
+      </div>
     </div>
 
   </div>
 
-  <!-- Explications des services avancés -->
-  <div class="explications-services">
-    <p>* Les services marqués d’un astérisque disposent d’explications détaillées :</p>
-    <ul>
-      <li><strong>Suivi interventions :</strong> Notre équipe coordonne chaque intervention rapidement et efficacement.</li>
-      <li><strong>Suivi personnalisé :</strong> Chaque logement bénéficie d’un accompagnement dédié et sur-mesure.</li>
-      <li><strong>Optimisation des performances :</strong> Nous analysons et améliorons la rentabilité et l’efficacité de votre logement.</li>
-    </ul>
+  <!-- Explications astérisques -->
+  <div class="explications">
+    <p>* Les services marqués d’un astérisque bénéficient de détails et suivi approfondi.</p>
   </div>
 
-  <!-- Bouton Accueil et Contact & Devis -->
+  <!-- Boutons bas de page -->
   <div class="btn-bottom">
+    <a href="contact.html" class="btn btn-devis">Contact & Devis</a>
     <a href="index.html" class="btn btn-accueil">Accueil</a>
-    <a href="contact.html" class="btn btn-contact-devis">Contact & Devis</a>
   </div>
 
 </main>
@@ -100,5 +100,17 @@
   <p>© 2026 Concierg'Orne - Tous droits réservés</p>
 </footer>
 
+<script>
+  // Accordéon JS
+  const accordions = document.querySelectorAll(".accordion");
+  accordions.forEach((acc) => {
+    acc.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+    });
+  });
+</script>
+
 </body>
-                                            </html>
+            </html>

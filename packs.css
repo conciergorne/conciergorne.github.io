@@ -1,21 +1,16 @@
 /* ===========================
-   BASE
+   STYLE GLOBAL POUR PACKS
 =========================== */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdfaf6;
     color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2 {
-    color: #1a3e5c;
-}
-
-/* ===========================
-   HERO
-=========================== */
-.hero {
+header .hero {
     position: relative;
     height: 22vh;
     min-height: 140px;
@@ -29,7 +24,6 @@ h1, h2 {
     object-fit: cover;
     object-position: center 65%;
 }
-
 
 .hero-overlay {
     position: absolute;
@@ -56,7 +50,7 @@ h1, h2 {
 }
 
 /* ===========================
-   TITRES
+   MAIN
 =========================== */
 main {
     max-width: 1200px;
@@ -65,9 +59,16 @@ main {
     text-align: center;
 }
 
-.subtitle {
-    margin-bottom: 30px;
+main h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1a3e5c;
+}
+
+main p {
+    font-size: 1.1em;
     color: #555;
+    margin-bottom: 30px;
 }
 
 /* ===========================
@@ -81,70 +82,95 @@ main {
 }
 
 .pack {
-    background: #fff;
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: #fff;
     border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
-    width: 280px;
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.pack:hover {
+    transform: translateY(-5px);
+}
+
+.pack h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.pack p {
+    font-size: 1em;
+    margin-bottom: 10px;
 }
 
 .pack ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 15px;
 }
 
-.pack li {
-    margin: 6px 0;
+.pack ul li {
+    margin: 5px 0;
 }
 
-.price {
+/* Couleurs par pack */
+.pack.ess { border-top: 4px solid #3498db; background-color: #eaf2fb; }
+.pack.std { border-top: 4px solid #2ecc71; background-color: #eafaf1; }
+.pack.conf { border-top: 4px solid #f39c12; background-color: #fff7ea; }
+.pack.prem { border-top: 4px solid #e74c3c; background-color: #ffeaea; }
+
+.pack.prem h2::after {
+    content: " ★";
+    color: gold;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+/* ===========================
+   BOUTONS
+=========================== */
+button, .btn, .pack a.btn {
+    display: inline-block;
+    background-color: #ffb347;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
     margin-top: 10px;
-    font-size: 1.1em;
+    transition: 0.3s;
 }
 
-/* Couleurs */
-.pack.ess { border-top: 4px solid #3498db; background:#eef5fb; }
-.pack.std { border-top: 4px solid #2ecc71; background:#eefaf3; }
-.pack.conf { border-top: 4px solid #f39c12; background:#fff5e6; }
-.pack.prem { border-top: 4px solid #e74c3c; background:#ffecec; }
-
-/* ===========================
-   ACCORDÉON
-=========================== */
-.accordion {
-    max-width: 800px;
-    margin: 50px auto;
-    text-align: left;
+button:hover, .btn:hover, .pack a.btn:hover {
+    background-color: #ffa500;
 }
 
-.accordion details {
-    background: #fff;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.accordion summary {
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* ===========================
-   BOUTON
-=========================== */
 .btn-bottom {
-    margin: 40px 0;
+    text-align: center;
+    margin: 30px 0;
 }
 
 .btn-accueil {
-    background: #1a3e5c;
-    color: #fff;
+    display: inline-block;
     padding: 12px 25px;
     border-radius: 8px;
+    background-color: #34495e;
+    color: #fff;
     text-decoration: none;
-   .btn-contact-devis {
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.btn-accueil:hover {
+    background-color: #2c3e50;
+}
+
+.btn-contact-devis {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 8px;
@@ -152,34 +178,62 @@ main {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    margin: 30px 0;
+    margin: 10px;
     transition: 0.3s;
 }
 
 .btn-contact-devis:hover {
     background-color: #ff914d;
-}}
+}
+
+/* ===========================
+   Explications services *
+=========================== */
+.explications-services {
+    text-align: left;
+    max-width: 900px;
+    margin: 20px auto 40px;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.explications-services p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.explications-services ul li {
+    margin: 5px 0;
+}
 
 /* ===========================
    FOOTER
 =========================== */
 footer {
-    background: #1a3e5c;
+    background-color: #1a3e5c;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 20px 10px;
+    font-size: 0.9em;
+    margin-top: 40px;
 }
 
 /* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 768px) {
-    .packs-container {
-        flex-direction: column;
-        align-items: center;
-    }
+@media screen and (max-width: 1024px) { .packs-container { gap: 20px; } }
 
-    .hero {
-        height: 24vh;
-    }
+@media screen and (max-width: 768px) {
+    main h1 { font-size: 1.8em; }
+    .packs-container { flex-direction: column; align-items: center; }
+}
+
+@media screen and (max-width: 480px) {
+    .pack { max-width: 90%; padding: 15px; }
+    .pack h2 { font-size: 1.3em; }
+    .btn, .pack a.btn, .btn-accueil, .btn-contact-devis { width: 100%; padding: 12px; }
+    .hero-slogan { font-size: 0.9em; }
+    .hero-logo { width: 50px; }
 }

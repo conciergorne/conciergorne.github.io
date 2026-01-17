@@ -129,6 +129,14 @@ footer {
     padding: 20px 10px;
     font-size: 0.9em;
 }
+}footer a {
+    color: white;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 /* ===========================
    RESPONSIVE DESIGN
@@ -158,13 +166,5 @@ footer {
         padding: 12px;
     }
   }/* ===========================
-   FOOTER LINKS FIX
-=========================== */
-footer a {
-    color: white;
-    font-weight: 500;
-}
-
-footer a:hover {
-    text-decoration: underline;
+   
 }

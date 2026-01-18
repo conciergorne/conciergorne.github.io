@@ -1,112 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact & Devis | ConciergOrne</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Contact & Demande de devis | ConciergOrne</title>
+  <meta name="description" content="Contactez ConciergOrne pour une demande de devis en conciergerie, ménage, linge ou bricolage à Bagnoles-de-l'Orne. Réponse rapide et transparente.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Demande de devis ConciergOrne – conciergerie, services à la carte et bricolage à Bagnoles-de-l'Orne. Réponse rapide et transparente.">
-
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="contact.css">
+  <!-- CSS global -->
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS spécifique contact -->
+  <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
 
-<header class="hero">
-    <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
-    <div class="hero-overlay">
-        <img src="logo.png" alt="ConciergOrne" class="hero-logo">
-        <h1>Contact & Demande de devis</h1>
-    </div>
+<header class="page-header">
+  <img src="images/header-bagnoles.jpg" alt="Bagnoles-de-l'Orne vue aérienne">
+  <div class="header-overlay">
+    <img src="images/logo-conciergorne.png" alt="ConciergOrne" class="logo-header">
+    <h1>Contact & Demande de devis</h1>
+  </div>
 </header>
 
 <main class="contact-container">
 
-    <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form" id="contactForm">
+  <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form">
 
-        <label>Nom complet</label>
-        <input type="text" name="Nom" required>
-
-        <label>Email</label>
-        <input type="email" name="Email" required>
-
-        <label>Téléphone</label>
-        <input type="tel" name="Téléphone" required>
-
-        <!-- PACK -->
-        <label>Pack de conciergerie</label>
-        <select name="Pack">
-            <option value="">-- Aucun --</option>
-            <option>Essentiel – 18 % / réservation</option>
-            <option>Standard – 20 % / réservation</option>
-            <option>Confort – 22 % / réservation</option>
-            <option>Premium – 24 % / réservation</option>
-        </select>
-
-        <!-- MENAGE -->
-        <label>Ménage (selon superficie)</label>
-        <select name="Menage">
-            <option value="">-- Sélectionner --</option>
-            <option>Studio / T1 (≤30 m²) – 40 €</option>
-            <option>T2 (31–50 m²) – 50 €</option>
-            <option>T3 (51–70 m²) – 60 €</option>
-            <option>T4 (71–90 m²) – 70 €</option>
-            <option>Maison / +90 m² – Sur devis</option>
-        </select>
-
-        <!-- LINGE -->
-        <label>Linge (selon superficie)</label>
-        <select name="Linge">
-            <option value="">-- Sélectionner --</option>
-            <option>Studio / T1 – 10 €</option>
-            <option>T2 – 15 €</option>
-            <option>T3 – 20 €</option>
-            <option>T4 – 25 €</option>
-            <option>Maison / +90 m² – Sur devis</option>
-        </select>
-
-        <!-- BRICOLAGE -->
-        <label>Bricolage & petites réparations</label>
-        <select name="Bricolage">
-            <option value="">-- Sélectionner --</option>
-            <option>Électricité – prise / interrupteur (25 €)</option>
-            <option>Plomberie – fuite simple (30 €)</option>
-            <option>Menuiserie – meuble / étagère (30 €)</option>
-            <option>Autre intervention – sur demande</option>
-        </select>
-
-        <label>Votre message</label>
-        <textarea name="Message" rows="4" placeholder="Décrivez votre demande"></textarea>
-
-        <div class="form-actions">
-            <button type="submit" class="btn primary">Envoyer ma demande</button>
-            <a href="index.html" class="btn secondary">Accueil</a>
-        </div>
-
-        <!-- FEEDBACK -->
-        <p class="form-success" id="formSuccess">
-            ✔️ Votre demande a bien été envoyée. Nous vous répondrons dans les meilleurs délais.
-        </p>
-
-    </form>
-
-    <div class="urgent-box">
-        <strong>⚠ Intervention urgente</strong><br>
-        Pour une prestation à réaliser dans les 24h, vous pouvez envoyer un SMS au
-        <strong>07 71 62 39 74</strong>.  
-        Un supplément de 5 € peut être appliqué.
+    <div class="form-group">
+      <label>Nom complet</label>
+      <input type="text" name="nom" required>
     </div>
 
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Téléphone</label>
+      <input type="tel" name="telephone" required>
+    </div>
+
+    <!-- MENUS DÉROULANTS TRANSPARENTS -->
+
+    <div class="form-group">
+      <label>Pack de conciergerie</label>
+      <select name="pack">
+        <option value="">Aucun</option>
+        <option>Essentiel – 18 % / réservation</option>
+        <option>Standard – 20 % / réservation</option>
+        <option>Confort – 22 % / réservation</option>
+        <option>Premium – 24 % / réservation</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Ménage (selon superficie)</label>
+      <select name="menage">
+        <option value="">— Sélectionner —</option>
+        <option>Studio / T1 (≤30 m²) – 35 €</option>
+        <option>T2 (31–50 m²) – 45 €</option>
+        <option>T3 (51–70 m²) – 55 €</option>
+        <option>T4+ (71 m² et +) – 65 €</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Linge (selon superficie)</label>
+      <select name="linge">
+        <option value="">— Sélectionner —</option>
+        <option>Studio / T1 – 15 €</option>
+        <option>T2 – 20 €</option>
+        <option>T3 – 25 €</option>
+        <option>T4+ – 30 €</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Bricolage & petites réparations</label>
+      <select name="bricolage">
+        <option value="">— Sélectionner —</option>
+        <option>Remplacement prise/interrupteur – 25 €</option>
+        <option>Pose luminaire – 30 €</option>
+        <option>Réparation fuite apparente – 30 €</option>
+        <option>Changement siphon – 30 €</option>
+        <option>Autre intervention (sur demande)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Votre message</label>
+      <textarea name="message" rows="5" placeholder="Décrivez votre demande"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit">Envoyer ma demande</button>
+      <a href="index.html" class="btn-secondary">Accueil</a>
+    </div>
+
+    <!-- Message urgence -->
+    <div class="urgence-box">
+      <strong>Intervention urgente :</strong><br>
+      Pour une prestation à réaliser sous 24h, vous pouvez envoyer un SMS au <strong>07 71 62 39 74</strong>.  
+      Un supplément de <strong>5 €</strong> peut être appliqué.
+    </div>
+
+  </form>
+
 </main>
-
-<script>
-const form = document.getElementById('contactForm');
-const successMsg = document.getElementById('formSuccess');
-
-form.addEventListener('submit', function () {
-    successMsg.classList.add('visible');
-});
-</script>
 
 </body>
 </html>

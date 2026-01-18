@@ -3,58 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services à la carte - ConciergOrne</title>
+    <title>Service à la carte - ConciergOrne</title>
     <link rel="stylesheet" href="service.css">
 </head>
 <body>
 
 <!-- HERO -->
-<header class="hero">
+<section class="hero">
     <img src="header-bg.png" alt="Vue aérienne de Bagnoles-de-l'Orne" class="hero-img">
     <div class="hero-overlay">
         <img src="logo.png" alt="ConciergOrne Logo" class="hero-logo">
-        <h1>Services à la carte</h1>
-        <p>
-            Nos services à la carte sont conçus pour répondre à vos besoins précis.
-            La facturation se fait 48h après chaque intervention.
+        <p class="hero-slogan">
+            Nos services à la carte, adaptés à chaque logement
+        </p>
+        <p class="hero-subtext">
+            La facturation se fait 48h après chaque intervention, prix indicatifs selon la taille du logement.
         </p>
     </div>
-</header>
+</section>
 
 <main>
-    <section class="services">
-        <h2>Nos services à la carte</h2>
+    <h1>Nos services à la carte</h1>
 
-        <div class="service-card">
-            <h3>Ménage</h3>
+    <div class="services-container">
+
+        <div class="service-card menage">
+            <h2>Ménage</h2>
             <p>Nettoyage complet de votre logement pour préparer l’arrivée des locataires.</p>
-            <p><strong>Prix :</strong> 40€ / intervention</p>
+            <p class="price-info">Prix indicatif : à partir de 40€ / intervention, selon la taille du logement</p>
         </div>
 
-        <div class="service-card">
-            <h3>Linge</h3>
+        <div class="service-card linge">
+            <h2>Linge</h2>
             <p>Fourniture et changement du linge de maison pour vos locations.</p>
-            <p><strong>Prix :</strong> 10€ / intervention</p>
+            <p class="price-info">Prix indicatif : à partir de 10€ / intervention, selon la taille du logement</p>
         </div>
 
-        <div class="service-card">
-            <h3>Bricolage</h3>
+        <div class="service-card bricolage">
+            <h2>Bricolage</h2>
             <p>Petits travaux d’entretien et réparations ponctuelles.</p>
-            <a href="bricolage.html" class="btn-service">Voir tous les services de bricolage</a>
+            <a href="bricolage.html" class="btn">Voir la page Bricolage</a>
         </div>
 
-        <div class="service-card">
-            <h3>Gestion de travaux</h3>
+        <div class="service-card travaux">
+            <h2>Gestion de travaux</h2>
             <p>Nous recherchons, obtenons et suivons les devis pour vos travaux importants, avec un suivi complet et transparent.</p>
-            <p><strong>Prix :</strong> à partir de 30€</p>
+            <p class="price-info">Prix indicatif : à partir de 30€, selon la taille et la complexité du projet</p>
         </div>
 
-        <!-- Boutons bas de page -->
-        <div class="btn-bottom">
-            <a href="contact.html" class="btn btn-devis">Demander un devis</a>
-            <a href="index.html" class="btn btn-accueil">Accueil</a>
-        </div>
-    </section>
+    </div>
+
+    <div class="btn-bottom">
+        <a href="contact.html" class="btn btn-devis">Demander un devis</a>
+        <a href="index.html" class="btn btn-accueil">Accueil</a>
+    </div>
 </main>
 
 <footer>

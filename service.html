@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services à la carte - ConciergOrne</title>
-    <meta name="description" content="Découvrez nos services à la carte pour votre logement Airbnb à Bagnoles-de-l'Orne : ménage, linge, bricolage et gestion de travaux. Services personnalisés et transparents.">
+    <title>Service à la carte - ConciergOrne</title>
     <link rel="stylesheet" href="service.css">
 </head>
 <body>
 
 <!-- HERO -->
-<header class="hero">
+<section class="hero">
     <img src="header-bg.png" alt="Vue aérienne de Bagnoles-de-l'Orne" class="hero-img">
     <div class="hero-overlay">
         <img src="logo.png" alt="ConciergOrne Logo" class="hero-logo">
         <h1>Services à la carte</h1>
-        <p>Nos services à la carte sont conçus pour répondre à vos besoins précis. La facturation se fait 48h après chaque intervention. Aucun abonnement, tout est transparent et clair pour les propriétaires.</p>
+        <p class="hero-text">
+            Nos services à la carte sont conçus pour répondre à vos besoins précis. 
+            La facturation se fait 48h après chaque intervention. Aucun abonnement, 
+            tout est transparent et clair pour les propriétaires.
+        </p>
     </div>
-</header>
+</section>
 
 <main>
-    <section class="services">
-        <h2>Nos services à la carte</h2>
+    <h2>Nos services à la carte</h2>
+
+    <div class="services-container">
 
         <div class="service-card menage">
             <h3>Ménage</h3>
@@ -38,7 +42,7 @@
         <div class="service-card bricolage">
             <h3>Bricolage</h3>
             <p>Petits travaux d’entretien et réparations ponctuelles.</p>
-            <a href="bricolage.html" class="btn-service">Voir tous les services de bricolage</a>
+            <a href="bricolage.html" class="btn-link">Voir la liste complète</a>
         </div>
 
         <div class="service-card travaux">
@@ -47,19 +51,18 @@
             <p>Se renseigner par mail – Prix à partir de 30€</p>
         </div>
 
-        <div class="btn-container">
-            <a href="contact.html" class="btn">Demander un devis</a>
-            <a href="index.html" class="btn">Accueil</a>
-        </div>
-    </section>
+    </div>
+
+    <!-- BOUTONS BAS -->
+    <div class="btn-bottom">
+        <a href="contact.html" class="btn">Demander un devis</a>
+        <a href="index.html" class="btn">Accueil</a>
+    </div>
+
 </main>
 
 <footer>
     <p>© 2026 ConciergOrne — Tous droits réservés</p>
-    <p>
-        <a href="mentions-legales.html">Mentions légales</a> |
-        <a href="cgv.html">CGV</a>
-    </p>
 </footer>
 
 </body>

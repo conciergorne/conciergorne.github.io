@@ -1,152 +1,161 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdfaf6;
     color: #333;
-    line-height: 1.6;
 }
 
-a { text-decoration: none; color: inherit; }
-
-/* ================= HERO ================= */
-.hero {
-    position: relative;
-    height: 28vh;
-    min-height: 180px;
-    max-height: 250px;
-    overflow: hidden;
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.header {
     text-align: center;
-    padding: 15px;
+    padding: 25px 15px;
 }
 
-.hero-logo {
-    width: 80px;
+.logo {
+    max-width: 140px;
     margin-bottom: 10px;
 }
 
-.hero-overlay h1 {
-    color: #fff;
-    font-size: 1.8em;
+.header h1 {
+    color: #ffb347; /* couleur visible sur le header */
     margin-bottom: 10px;
 }
 
-.hero-slogan {
-    color: #fff;
-    font-size: 1.05em;
-    max-width: 320px;
+.subtitle {
+    font-size: 1em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-/* ================= MAIN ================= */
-main {
+.container {
     max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
+    margin: auto;
+    padding: 20px;
 }
 
-.contact-container {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
+h2 {
+    color: #1a3e5c;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-/* FORMULAIRE */
-.form-section {
-    flex: 1 1 400px;
+.accordion {
+    margin-bottom: 30px;
+}
+
+.accordion details {
     background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    cursor: pointer;
 }
 
-.form-section h2 {
-    margin-bottom: 20px;
+.accordion summary {
+    font-weight: bold;
+    font-size: 1.1em;
     color: #1a3e5c;
 }
 
-.form-section label {
+.accordion ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.accordion li {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.form-section input,
-.form-section textarea {
+form input, form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 1em;
 }
 
-.form-section button {
-    background-color: #ffb347;
-    color: #fff;
+.btn {
     padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
     cursor: pointer;
-    font-size: 1em;
+    border: none;
     transition: 0.3s;
 }
 
-.form-section button:hover {
+.primary {
+    background-color: #ffb347;
+    color: #fff;
+}
+
+.primary:hover {
     background-color: #ffa500;
 }
 
-/* ================= URGENCES ================= */
-.urgent-section {
-    flex: 1 1 300px;
-    background: #fff8ee;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.urgent-section h2 {
-    color: #f39c12;
-    margin-bottom: 10px;
-}
-
-.urgent-section p {
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background: #1a3e5c;
+.secondary {
+    background-color: #1a3e5c;
     color: #fff;
+}
+
+.secondary:hover {
+    background-color: #34495e;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.confirmation {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-top: 10px;
+    display: none; /* peut être affiché via JS après submit */
+}
+
+.footer {
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    font-size: 0.9em;
+    background-color: #1a3e5c;
+    color: white;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .contact-container {
+/* Responsive */
+@media (max-width: 600px) {
+    .actions {
         flex-direction: column;
+    }
+
+    .logo {
+        max-width: 110px;
     }
 }

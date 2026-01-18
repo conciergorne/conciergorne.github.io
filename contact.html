@@ -1,144 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact & Demande de devis - ConciergOrne</title>
-<link rel="stylesheet" href="contact.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis - ConciergOrne</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
 <header class="page-header">
-  <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
-  <div class="header-overlay">
-    <img src="logo.png" alt="ConciergOrne" class="logo-header">
-    <h1>Contact & Demande de devis</h1>
-  </div>
+    <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
+    <div class="header-overlay">
+        <img src="logo.png" alt="ConciergOrne" class="logo-header">
+        <h1>Contact & Demande de devis</h1>
+    </div>
 </header>
 
 <main class="container">
-  <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form">
-    <div class="form-group">
-      <label for="nom">Nom complet</label>
-      <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
-    </div>
+    <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Votre email" required>
-    </div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Votre email" required>
 
-    <div class="form-group">
-      <label for="telephone">Téléphone</label>
-      <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro" required>
-    </div>
+        <label for="tel">Téléphone</label>
+        <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" required>
 
-    <div class="form-group">
-      <label for="type-logement">Type de logement</label>
-      <input type="text" id="type-logement" name="type-logement" placeholder="Appartement, Maison..." required>
-    </div>
+        <label for="logement">Type de logement</label>
+        <input type="text" id="logement" name="logement" placeholder="Ex: Appartement, Maison" required>
 
-    <div class="form-group">
-      <label for="surface">Surface estimée en m²</label>
-      <input type="number" id="surface" name="surface" placeholder="Ex : 50" required>
-    </div>
+        <label for="surface">Surface estimée (m²)</label>
+        <input type="number" id="surface" name="surface" placeholder="Ex: 45" required>
 
-    <div class="form-group">
-      <label for="pack">Pack de conciergerie</label>
-      <select id="pack" name="pack">
-        <option value="essentiel">Essentiel – 18%</option>
-        <option value="standard">Standard – 20%</option>
-        <option value="confort">Confort – 22%</option>
-        <option value="premium">Premium – 24%</option>
-      </select>
-    </div>
+        <label for="pack">Pack de conciergerie</label>
+        <select id="pack" name="pack">
+            <option value="">-- Sélectionnez un pack --</option>
+            <option value="Essentiel">Essentiel - 18%</option>
+            <option value="Standard">Standard - 20%</option>
+            <option value="Confort">Confort - 22%</option>
+            <option value="Premium">Premium - 24%</option>
+        </select>
 
-    <div class="form-group">
-      <label for="menage">Ménage</label>
-      <select id="menage" name="menage">
-        <option value="t1">T1 / 30 m² – 40 €</option>
-        <option value="t2">T2 / 50 m² – 50 €</option>
-        <option value="t3">T3 / 80 m² – 70 €</option>
-        <option value="t4">T4 / 120 m² – 100 €</option>
-      </select>
-    </div>
+        <label for="menage">Ménage</label>
+        <select id="menage" name="menage">
+            <option value="">-- Sélectionnez votre type de ménage --</option>
+            <option value="T1">T1 - 40€</option>
+            <option value="T2">T2 - 50€</option>
+            <option value="T3">T3 - 60€</option>
+            <option value="T4">T4 - 70€</option>
+        </select>
 
-    <div class="form-group">
-      <label for="linge">Linge</label>
-      <select id="linge" name="linge">
-        <option value="t1">T1 / 30 m² – 10 €</option>
-        <option value="t2">T2 / 50 m² – 15 €</option>
-        <option value="t3">T3 / 80 m² – 20 €</option>
-        <option value="t4">T4 / 120 m² – 25 €</option>
-      </select>
-    </div>
+        <label for="linge">Linge</label>
+        <select id="linge" name="linge">
+            <option value="">-- Sélectionnez votre type de linge --</option>
+            <option value="T1">T1 - 10€</option>
+            <option value="T2">T2 - 15€</option>
+            <option value="T3">T3 - 20€</option>
+            <option value="T4">T4 - 25€</option>
+        </select>
 
-    <div class="form-group">
-      <label for="bricolage">Bricolage & petites réparations</label>
-      <select id="bricolage" name="bricolage" size="10">
-        <option value="electricite-prise">Électricité : Remplacement prise ou interrupteur – 25 €</option>
-        <option value="electricite-plafonnier">Électricité : Pose plafonnier / applique – 30 €</option>
-        <option value="electricite-luminaire">Électricité : Remplacement luminaire – 35 €</option>
-        <option value="electricite-diagnostic">Électricité : Diagnostic panne simple – 30 €</option>
-        <option value="plomberie-robinet">Plomberie : Remplacement robinet / mitigeur – 35 €</option>
-        <option value="plomberie-siphon">Plomberie : Changement siphon – 30 €</option>
-        <option value="plomberie-fuite">Plomberie : Réparation fuite apparente – 30 €</option>
-        <option value="plomberie-debouchage">Plomberie : Débouchage lavabo / douche – 30 €</option>
-        <option value="menuiserie-meuble">Menuiserie : Montage meuble en kit – 30 €</option>
-        <option value="menuiserie-etagere">Menuiserie : Pose étagère / tringle – 25 €</option>
-        <option value="menuiserie-portes">Menuiserie : Réglage portes / placards – 25 €</option>
-        <option value="menuiserie-reparations">Menuiserie : Petites réparations bois – 30 €</option>
-        <option value="divers-detecteur">Divers : Pose détecteur fumée – 20 €</option>
-        <option value="divers-tv">Divers : Pose support TV (mur plein) – 40 €</option>
-        <option value="divers-wc">Divers : Remplacement abattant WC – 25 €</option>
-        <option value="divers-ajustements">Divers : Petits ajustements / réparations – 30 €</option>
-        <option value="travaux">Gestion & suivi de travaux – À partir de 30 €</option>
-      </select>
-      <p class="note">* Autres bricolages sur demande peuvent être réalisés hors liste ci-dessus.</p>
-    </div>
+        <label for="bricolage">Bricolage / Petites réparations</label>
+        <select id="bricolage" name="bricolage">
+            <option value="">-- Sélectionnez vos prestations bricolage --</option>
+            <option value="Electricité - Remplacement prise">⚡ Électricité - Remplacement prise/interrupteur - 25€</option>
+            <option value="Electricité - Plafonnier">⚡ Pose plafonnier/applique - 30€</option>
+            <option value="Plomberie - Robinet">🚰 Remplacement robinet/mitigeur - 35€</option>
+            <option value="Plomberie - Siphon">🚰 Changement siphon - 30€</option>
+            <option value="Menuiserie - Montage meuble">🪚 Montage meuble en kit - 30€</option>
+            <option value="Menuiserie - Pose étagère">🪚 Pose étagère / tringle - 25€</option>
+            <option value="Divers - Détecteur fumée">🧰 Pose détecteur fumée - 20€</option>
+            <option value="Travaux - Gestion">🏗️ Gestion & suivi travaux - à partir de 30€</option>
+        </select>
 
-    <div class="form-group">
-      <label for="message">Votre message</label>
-      <textarea id="message" name="message" placeholder="Décrivez votre demande..." required></textarea>
-    </div>
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Décrivez vos besoins..." required></textarea>
 
-    <div class="actions">
-      <button type="submit" class="btn primary">Envoyer ma demande</button>
-      <a href="index.html" class="btn secondary">Accueil</a>
-    </div>
+        <div class="actions">
+            <button type="submit" class="btn primary">Envoyer ma demande</button>
+            <a href="index.html" class="btn secondary">Accueil</a>
+        </div>
 
-    <div class="urgent-box">
-      Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5 € peut être appliqué.
-    </div>
+        <div class="urgent">
+            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5 € peut être appliqué pour une intervention urgente.
+        </div>
 
-    <div id="feedback" class="feedback"></div>
-  </form>
+        <div class="feedback" id="feedback">Votre demande a été envoyée. Nous vous répondrons rapidement.</div>
+    </form>
 </main>
 
 <script>
-  const form = document.querySelector('.contact-form');
-  const feedback = document.getElementById('feedback');
+    // Feedback premium
+    const form = document.querySelector('.contact-form');
+    const feedback = document.getElementById('feedback');
+    feedback.style.display = 'none';
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const data = new FormData(form);
-    fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' } })
-      .then(response => {
-        if(response.ok){
-          feedback.textContent = "Votre demande a été envoyée avec succès. Nous vous répondrons rapidement.";
-          feedback.classList.add('show');
-          form.reset();
-        } else {
-          feedback.textContent = "Une erreur est survenue, merci de réessayer.";
-          feedback.classList.add('show');
-        }
-      })
-      .catch(() => {
-        feedback.textContent = "Une erreur est survenue, merci de réessayer.";
-        feedback.classList.add('show');
-      });
-  });
+    form.addEventListener('submit', function(e) {
+        feedback.style.display = 'block';
+    });
 </script>
 
 </body>
-            </html>
+</html>

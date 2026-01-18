@@ -8,154 +8,141 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdfaf6;
     color: #333;
+    line-height: 1.6;
 }
 
-.header {
-    text-align: center;
-    padding: 25px 15px;
-}
-
-.logo {
-    max-width: 140px;
-    margin-bottom: 10px;
-}
-
-.header h1 {
-    color: #ffb347; /* couleur visible sur le header */
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 1em;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-}
-
-h2 {
-    color: #1a3e5c;
-    margin-bottom: 15px;
+/* ================= Header Hero ================= */
+.hero-header {
+    position: relative;
     text-align: center;
 }
 
-.accordion {
-    margin-bottom: 30px;
-}
-
-.accordion details {
-    background: #fff;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    cursor: pointer;
-}
-
-.accordion summary {
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #1a3e5c;
-}
-
-.accordion ul {
-    list-style: none;
-    padding-left: 15px;
-    margin-top: 10px;
-}
-
-.accordion li {
-    margin-bottom: 8px;
-    font-size: 1em;
-    color: #333;
-}
-
-.form-section {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-form input, form textarea {
+.hero-img {
     width: 100%;
-    padding: 10px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 62, 92, 0.5); /* fondu sombre pour contraste */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-logo {
+    max-width: 150px;
     margin-bottom: 15px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.1em;
+    max-width: 700px;
+}
+
+/* ================= Container Form ================= */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.form-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #1a3e5c;
+}
+
+.devis-form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.devis-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.devis-form input,
+.devis-form select,
+.devis-form textarea {
+    width: 100%;
+    padding: 10px 12px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 1em;
 }
 
-.btn {
+.devis-form textarea {
+    resize: vertical;
+}
+
+.btn.primary {
+    background-color: #ffb347;
+    color: #fff;
+    border: none;
     padding: 12px 25px;
     border-radius: 6px;
-    text-decoration: none;
     font-weight: bold;
-    text-align: center;
+    margin-top: 20px;
     cursor: pointer;
-    border: none;
     transition: 0.3s;
 }
 
-.primary {
-    background-color: #ffb347;
-    color: #fff;
-}
-
-.primary:hover {
+.btn.primary:hover {
     background-color: #ffa500;
 }
 
-.secondary {
-    background-color: #1a3e5c;
-    color: #fff;
-}
-
-.secondary:hover {
-    background-color: #34495e;
-}
-
-.actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 30px 0;
-    flex-wrap: wrap;
-}
-
 .confirmation {
-    color: #2ecc71;
-    font-weight: bold;
-    margin-top: 10px;
-    display: none; /* peut être affiché via JS après submit */
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #1a3e5c;
 }
 
+/* Footer */
 .footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
     background-color: #1a3e5c;
     color: white;
+    margin-top: 40px;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-    .actions {
-        flex-direction: column;
+@media (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 2em;
     }
 
-    .logo {
-        max-width: 110px;
+    .hero-overlay p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-overlay h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-overlay p {
+        font-size: 0.9em;
     }
 }

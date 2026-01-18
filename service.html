@@ -3,62 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service à la carte - ConciergOrne</title>
+    <title>Services à la carte - ConciergOrne</title>
     <link rel="stylesheet" href="service.css">
 </head>
 <body>
 
 <!-- HERO -->
-<section class="hero">
+<header class="hero">
     <img src="header-bg.png" alt="Vue aérienne de Bagnoles-de-l'Orne" class="hero-img">
     <div class="hero-overlay">
         <img src="logo.png" alt="ConciergOrne Logo" class="hero-logo">
         <h1>Services à la carte</h1>
-        <p class="hero-text">
-            Nos services à la carte sont conçus pour répondre à vos besoins précis. 
-            La facturation se fait 48h après chaque intervention. Aucun abonnement, 
+        <p>
+            Nos services à la carte sont conçus pour répondre à vos besoins précis.
+            La facturation se fait 48h après chaque intervention. Aucun abonnement,
             tout est transparent et clair pour les propriétaires.
         </p>
     </div>
-</section>
+</header>
 
 <main>
-    <h2>Nos services à la carte</h2>
+    <section class="services">
+        <h2>Nos services à la carte</h2>
 
-    <div class="services-container">
-
-        <div class="service-card menage">
+        <div class="service-card">
             <h3>Ménage</h3>
             <p>Nettoyage complet de votre logement pour préparer l’arrivée des locataires.</p>
-            <p>Prix : 40€ / intervention</p>
+            <p><strong>Prix :</strong> 40€ / intervention</p>
         </div>
 
-        <div class="service-card linge">
+        <div class="service-card">
             <h3>Linge</h3>
             <p>Fourniture et changement du linge de maison pour vos locations.</p>
-            <p>Prix : 10€ / intervention</p>
+            <p><strong>Prix :</strong> 10€ / intervention</p>
         </div>
 
-        <div class="service-card bricolage">
+        <div class="service-card">
             <h3>Bricolage</h3>
             <p>Petits travaux d’entretien et réparations ponctuelles.</p>
-            <a href="bricolage.html" class="btn-link">Voir la liste complète</a>
+            <a href="bricolage.html" class="btn-service">Voir tous les services de bricolage</a>
         </div>
 
-        <div class="service-card travaux">
+        <div class="service-card">
             <h3>Gestion de travaux</h3>
             <p>Nous recherchons, obtenons et suivons les devis pour vos travaux importants, avec un suivi complet et transparent.</p>
-            <p>Se renseigner par mail – Prix à partir de 30€</p>
+            <p><strong>Prix :</strong> à partir de 30€</p>
         </div>
 
-    </div>
-
-    <!-- BOUTONS BAS -->
-    <div class="btn-bottom">
-        <a href="contact.html" class="btn">Demander un devis</a>
-        <a href="index.html" class="btn">Accueil</a>
-    </div>
-
+        <!-- Boutons bas de page -->
+        <div class="btn-bottom">
+            <a href="contact.html" class="btn btn-devis">Demander un devis</a>
+            <a href="index.html" class="btn btn-accueil">Accueil</a>
+        </div>
+    </section>
 </main>
 
 <footer>

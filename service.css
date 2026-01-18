@@ -89,8 +89,14 @@ main h2 {
     background: #fff;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     text-align: left;
+    border-left: 6px solid #ffb347; /* couleur vive sur le bord pour dynamiser */
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
 }
 
 .service-card h3 {

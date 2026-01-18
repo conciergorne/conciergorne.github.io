@@ -9,111 +9,88 @@
 <body>
 
 <header class="page-header">
-  <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne" class="header-img">
-  <div class="header-overlay">
-    <img src="logo.png" alt="ConciergOrne" class="logo-header">
-    <h1>Contact & Demande de devis</h1>
-  </div>
+    <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
+    <div class="header-overlay">
+        <img src="logo.png" alt="ConciergOrne" class="logo-header">
+        <h1>Contact & Demande de devis</h1>
+    </div>
 </header>
 
-<main class="contact-container">
-    <h2>Envoyez votre demande de devis</h2>
+<main class="container">
+    <form action="https://formspree.io/f/mnjjpozg" method="POST" id="contactForm">
 
-    <form class="contact-form" action="https://formspree.io/f/mnjjpozg" method="POST">
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" required>
+        <label for="nom">Nom complet</label>
+        <input type="text" name="nom" id="nom" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" required>
+        <input type="email" name="email" id="email" required>
 
-        <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" name="phone" required>
+        <label for="telephone">Téléphone</label>
+        <input type="tel" name="telephone" id="telephone" required>
 
         <label for="type-logement">Type de logement</label>
-        <input type="text" id="type-logement" name="type-logement" placeholder="Ex : Appartement, Maison" required>
+        <input type="text" name="type-logement" id="type-logement">
 
         <label for="surface">Surface estimée (m²)</label>
-        <input type="number" id="surface" name="surface" min="5" placeholder="Ex : 45" required>
+        <input type="number" name="surface" id="surface">
 
-        <!-- Packs de conciergerie -->
+        <!-- Pack de conciergerie -->
         <label for="pack">Pack de conciergerie</label>
-        <select id="pack" name="pack">
-            <option value="">-- Choisir un pack --</option>
-            <option value="Essentiel">Essentiel (18% / réservation)</option>
-            <option value="Standard">Standard (20% / réservation)</option>
-            <option value="Confort">Confort (22% / réservation)</option>
-            <option value="Premium">Premium (24% / réservation)</option>
+        <select name="pack" id="pack">
+            <option value="essentiel">Essentiel</option>
+            <option value="standard">Standard</option>
+            <option value="confort">Confort</option>
+            <option value="premium">Premium</option>
         </select>
 
-        <!-- Ménage avec prix détaillés -->
+        <!-- Ménage -->
         <label for="menage">Ménage</label>
-        <select id="menage" name="menage">
-            <option value="">-- Choisir la prestation --</option>
-            <option value="studio">Studio / 20m² : à partir de 30€</option>
-            <option value="1chambre">1 chambre / 35m² : à partir de 40€</option>
-            <option value="2chambres">2 chambres / 50m² : à partir de 55€</option>
-            <option value="3chambres">3 chambres / 70m² : à partir de 70€</option>
-            <option value="4chambres">4 chambres / 90m² : à partir de 85€</option>
+        <select name="menage" id="menage">
+            <option value="studio">Studio - 40€</option>
+            <option value="t2">T2 - 50€</option>
+            <option value="t3">T3 - 60€</option>
+            <option value="t4">T4 - 70€</option>
         </select>
 
-        <!-- Linge avec prix détaillés -->
+        <!-- Linge -->
         <label for="linge">Linge</label>
-        <select id="linge" name="linge">
-            <option value="">-- Choisir la prestation --</option>
-            <option value="studio">Studio / 20m² : 5€</option>
-            <option value="1chambre">1 chambre / 35m² : 10€</option>
-            <option value="2chambres">2 chambres / 50m² : 15€</option>
-            <option value="3chambres">3 chambres / 70m² : 20€</option>
-            <option value="4chambres">4 chambres / 90m² : 25€</option>
+        <select name="linge" id="linge">
+            <option value="studio">Studio - 10€</option>
+            <option value="t2">T2 - 15€</option>
+            <option value="t3">T3 - 20€</option>
+            <option value="t4">T4 - 25€</option>
         </select>
 
-        <!-- Bricolage / petites réparations -->
+        <!-- Bricolage / Petites réparations -->
         <label for="bricolage">Bricolage / Petites réparations</label>
-        <select id="bricolage" name="bricolage">
-            <option value="">-- Choisir la prestation --</option>
-            <option value="electricite_prise">Électricité : Remplacement prise / interrupteur – 25€</option>
-            <option value="electricite_luminaire">Électricité : Pose plafonnier / applique – 30€</option>
-            <option value="plomberie_robinet">Plomberie : Remplacement robinet / mitigeur – 35€</option>
-            <option value="plomberie_siphon">Plomberie : Changement siphon – 30€</option>
-            <option value="menuiserie_meuble">Menuiserie : Montage meuble en kit – 30€</option>
-            <option value="menuiserie_etagere">Menuiserie : Pose étagère / tringle – 25€</option>
-            <option value="divers_detecteur">Divers : Pose détecteur fumée – 20€</option>
-            <option value="divers_support_tv">Divers : Pose support TV – 40€</option>
-            <option value="travaux_gestion">Gestion travaux : à partir de 30€ (sur devis)</option>
+        <select name="bricolage" id="bricolage">
+            <option value="electricite-prise">Electricité - Remplacement prise : 25€</option>
+            <option value="electricite-plafonnier">Electricité - Pose plafonnier : 30€</option>
+            <option value="plomberie-robinet">Plomberie - Remplacement robinet : 35€</option>
+            <option value="plomberie-siphon">Plomberie - Changement siphon : 30€</option>
+            <option value="menuiserie-meuble">Menuiserie - Montage meuble : 30€</option>
+            <option value="menuiserie-etagere">Menuiserie - Pose étagère : 25€</option>
+            <option value="divers-detecteur">Divers - Pose détecteur fumée : 20€</option>
+            <option value="divers-support-tv">Divers - Pose support TV : 40€</option>
+            <!-- Ajouter toutes les autres prestations ici -->
         </select>
 
         <label for="message">Votre message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Décrivez vos besoins..."></textarea>
+        <textarea name="message" id="message" rows="5"></textarea>
 
-        <!-- Boutons -->
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <button type="submit" class="btn btn-submit">Envoyer ma demande</button>
-            <a href="index.html" class="btn btn-home">Accueil</a>
+        <div class="actions">
+            <button type="submit" class="btn primary">Envoyer ma demande</button>
+            <a href="index.html" class="btn secondary">Accueil</a>
         </div>
 
-        <!-- Message urgent -->
-        <div class="urgent-box">
-            Pour une prestation urgente à réaliser dans les 24h, vous pouvez envoyer un SMS au 07 71 62 39 74. <br>
-            Un supplément de 5 € peut être appliqué pour une intervention urgente.
-        </div>
+        <p class="urgent">
+            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5 € peut être appliqué.
+        </p>
 
-        <!-- Feedback JS -->
-        <div id="feedback-message">Votre demande a été envoyée. Nous vous répondrons dans les meilleurs délais.</div>
+        <p id="feedback" class="feedback">Votre demande a été envoyée. Nous vous répondrons par email dans les plus brefs délais.</p>
+
     </form>
 </main>
-
-<script>
-    // Feedback après envoi (simulé ici)
-    const form = document.querySelector('.contact-form');
-    const feedback = document.getElementById('feedback-message');
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        feedback.style.display = 'block';
-        feedback.scrollIntoView({behavior: "smooth"});
-        form.reset();
-    });
-</script>
 
 </body>
 </html>

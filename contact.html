@@ -3,124 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Demande de devis - ConciergOrne</title>
+    <title>Contact & Devis - ConciergOrne</title>
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
-<!-- HEADER identique aux autres pages -->
 <header class="page-header">
-    <img src="header-bg.png" alt="Vue aérienne de Bagnoles-de-l'Orne" class="header-bg">
-    <div class="header-overlay">
-        <img src="logo.png" alt="ConciergOrne" class="logo-header">
-        <h1>Contact & Demande de devis</h1>
-    </div>
+  <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne" class="header-img">
+  <div class="header-overlay">
+    <img src="logo.png" alt="ConciergOrne" class="logo-header">
+    <h1>Contact & Demande de devis</h1>
+  </div>
 </header>
 
 <main class="container">
+  <form id="devis-form" action="https://formspree.io/f/mnjjpozg" method="POST">
+    
+    <label for="nom">Nom complet :</label>
+    <input type="text" id="nom" name="nom" required>
 
-    <h2>Envoyez-nous votre demande</h2>
-    <p>Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé.</p>
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
 
-    <form id="contactForm" action="https://formspree.io/f/mnjjpozg" method="POST">
-        <!-- Infos personnelles -->
-        <input type="text" name="nom" placeholder="Nom complet" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="telephone" placeholder="Téléphone" required>
+    <label for="telephone">Téléphone :</label>
+    <input type="tel" id="telephone" name="telephone" required>
 
-        <!-- Type de logement & Surface -->
-        <input type="text" name="type_logement" placeholder="Type de logement (ex : appartement, maison)" required>
-        <input type="number" name="surface" placeholder="Surface estimée en m²" required>
+    <label for="type-logement">Type de logement :</label>
+    <input type="text" id="type-logement" name="type-logement" required>
 
-        <!-- Pack -->
-        <select name="pack">
-            <option value="" disabled selected>Pack de conciergerie</option>
-            <option value="essentiel">Essentiel</option>
-            <option value="standard">Standard</option>
-            <option value="confort">Confort</option>
-            <option value="premium">Premium</option>
-        </select>
+    <label for="surface">Surface estimée (m²) :</label>
+    <input type="number" id="surface" name="surface" required>
 
-        <!-- Ménage -->
-        <select name="menage">
-            <option value="" disabled selected>Ménage</option>
-            <option value="studio">Studio – à partir de 30€</option>
-            <option value="T2">T2 – à partir de 40€</option>
-            <option value="T3">T3 – à partir de 50€</option>
-            <option value="T4">T4 – à partir de 60€</option>
-        </select>
+    <label for="pack">Pack de conciergerie :</label>
+    <select id="pack" name="pack">
+      <option value="">-- Sélectionner --</option>
+      <option value="Essentiel">Essentiel</option>
+      <option value="Standard">Standard</option>
+      <option value="Confort">Confort</option>
+      <option value="Premium">Premium</option>
+    </select>
 
-        <!-- Linge -->
-        <select name="linge">
-            <option value="" disabled selected>Linge</option>
-            <option value="studio">Studio – 10€</option>
-            <option value="T2">T2 – 15€</option>
-            <option value="T3">T3 – 20€</option>
-            <option value="T4">T4 – 25€</option>
-        </select>
+    <label for="menage">Ménage :</label>
+    <select id="menage" name="menage">
+      <option value="">-- Sélectionner --</option>
+      <option value="Petit (0-40m²)">Petit (0-40m²) : 40€</option>
+      <option value="Moyen (41-70m²)">Moyen (41-70m²) : 55€</option>
+      <option value="Grand (71-100m²)">Grand (71-100m²) : 70€</option>
+      <option value="Très grand (100m²+)">Très grand (100m²+) : 90€</option>
+    </select>
 
-        <!-- Bricolage / Petites réparations -->
-        <select name="bricolage">
-            <option value="" disabled selected>Bricolage / Petites réparations</option>
-            <option value="elec_prise">⚡ Remplacement prise/interrupteur – 25€</option>
-            <option value="elec_plafonnier">⚡ Pose plafonnier/applique – 30€</option>
-            <option value="plomberie_robinet">🚰 Remplacement robinet/mitigeur – 35€</option>
-            <option value="plomberie_fuite">🚰 Réparation fuite apparente – 30€</option>
-            <option value="menuiserie_meuble">🪚 Montage meuble en kit – 30€</option>
-            <option value="divers_detecteur">🧰 Pose détecteur fumée – 20€</option>
-            <!-- tu peux rajouter toutes les autres prestations bricolage ici -->
-        </select>
+    <label for="linge">Linge :</label>
+    <select id="linge" name="linge">
+      <option value="">-- Sélectionner --</option>
+      <option value="Petit (0-40m²)">Petit (0-40m²) : 10€</option>
+      <option value="Moyen (41-70m²)">Moyen (41-70m²) : 15€</option>
+      <option value="Grand (71-100m²)">Grand (71-100m²) : 20€</option>
+      <option value="Très grand (100m²+)">Très grand (100m²+) : 25€</option>
+    </select>
 
-        <!-- Message -->
-        <textarea name="message" placeholder="Votre message" rows="5"></textarea>
+    <label for="bricolage">Bricolage / Petites réparations :</label>
+    <select id="bricolage" name="bricolage">
+      <option value="">-- Sélectionner --</option>
+      <option value="Électricité - Remplacement prise">Électricité - Remplacement prise : 25€</option>
+      <option value="Électricité - Pose plafonnier">Électricité - Pose plafonnier : 30€</option>
+      <option value="Plomberie - Remplacement robinet">Plomberie - Remplacement robinet : 35€</option>
+      <option value="Menuiserie - Montage meuble">Menuiserie - Montage meuble : 30€</option>
+      <option value="Divers - Pose détecteur fumée">Divers - Pose détecteur fumée : 20€</option>
+      <!-- Ajouter le reste des bricolages ici si nécessaire -->
+    </select>
 
-        <!-- Boutons -->
-        <div class="form-actions">
-            <button type="submit" class="btn primary">Envoyer ma demande</button>
-            <a href="index.html" class="btn secondary">Accueil</a>
-        </div>
+    <label for="message">Votre message :</label>
+    <textarea id="message" name="message" rows="5"></textarea>
 
-        <!-- Message intervention urgente -->
-        <div class="urgent-info">
-            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5€ peut être appliqué pour cette intervention.
-        </div>
+    <div class="actions">
+      <button type="submit" class="btn primary">Envoyer ma demande</button>
+      <a href="index.html" class="btn secondary">Accueil</a>
+    </div>
 
-        <!-- Feedback après envoi -->
-        <div id="formFeedback" class="feedback"></div>
-    </form>
+    <div class="urgent-info">
+      Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5 € peut être appliqué pour une intervention urgente.
+    </div>
 
+    <div id="feedback" class="feedback-success" style="display:none;">
+      Votre demande a été envoyée. Nous vous répondrons dans un délai de 24h.
+    </div>
+  </form>
 </main>
 
-<footer class="footer">
-    <p>&copy; 2026 ConciergOrne</p>
-</footer>
-
 <script>
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('formFeedback');
-
-    form.addEventListener('submit', async function(e){
-        e.preventDefault();
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-            feedback.textContent = "Votre demande a été envoyée. Nous vous contacterons pour confirmer votre devis.";
-            feedback.style.display = "block";
-            feedback.style.border = "1px solid #ffb347";
-            feedback.style.padding = "15px";
-            feedback.style.marginTop = "20px";
-            feedback.style.backgroundColor = "#fff8ee";
-            feedback.style.borderRadius = "8px";
-            form.reset();
-        } else {
-            feedback.textContent = "Une erreur est survenue, veuillez réessayer.";
-            feedback.style.display = "block";
-        }
+  const form = document.getElementById('devis-form');
+  const feedback = document.getElementById('feedback');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if(response.ok){
+        feedback.style.display = 'block';
+        form.reset();
+        form.scrollIntoView({behavior: "smooth"});
+      } else { alert("Une erreur est survenue, veuillez réessayer."); }
     });
+  });
 </script>
 
 </body>

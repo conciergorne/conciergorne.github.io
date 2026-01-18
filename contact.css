@@ -1,19 +1,104 @@
-* { box-sizing: border-box; margin:0; padding:0; }
-body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fdfaf6; color:#333; }
-.page-header { position:relative; text-align:center; }
-.page-header img { width:50%; max-width:600px; display:block; margin:0 auto; }
-.header-overlay { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; }
-.logo-header { max-width:140px; margin-bottom:10px; }
-.container { max-width:1000px; margin:30px auto; padding:20px; }
-.contact-form .form-group { margin-bottom:15px; text-align:left; }
-.contact-form label { display:block; margin-bottom:5px; font-weight:bold; }
-.contact-form input, .contact-form select, .contact-form textarea { width:100%; padding:10px; border-radius:6px; border:1px solid #ccc; }
-.contact-form textarea { resize:vertical; min-height:80px; }
-.actions { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px; }
-.btn { padding:12px 25px; border-radius:6px; text-decoration:none; font-weight:bold; text-align:center; cursor:pointer; border:none; }
-.primary { background:#ffb347; color:#fff; }
-.secondary { background:#1a3e5c; color:#fff; }
-.urgent-box { margin-top:20px; padding:15px; background:#fff8ee; border-left:5px solid #ff914d; font-size:0.95em; }
-.feedback { margin-top:15px; padding:10px; display:none; text-align:center; border-radius:6px; }
-.feedback.show { display:block; background:#d4edda; color:#155724; border:1px solid #c3e6cb; }
-select[size] { height:auto; }
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis - ConciergOrne</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header class="page-header">
+    <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
+    <div class="header-overlay">
+        <img src="logo.png" alt="ConciergOrne" class="logo-header">
+        <h1>Contact & Demande de devis</h1>
+    </div>
+</header>
+
+<main class="container">
+    <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Votre email" required>
+
+        <label for="tel">Téléphone</label>
+        <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" required>
+
+        <label for="logement">Type de logement</label>
+        <input type="text" id="logement" name="logement" placeholder="Ex: Appartement, Maison" required>
+
+        <label for="surface">Surface estimée (m²)</label>
+        <input type="number" id="surface" name="surface" placeholder="Ex: 45" required>
+
+        <label for="pack">Pack de conciergerie</label>
+        <select id="pack" name="pack">
+            <option value="">-- Sélectionnez un pack --</option>
+            <option value="Essentiel">Essentiel - 18%</option>
+            <option value="Standard">Standard - 20%</option>
+            <option value="Confort">Confort - 22%</option>
+            <option value="Premium">Premium - 24%</option>
+        </select>
+
+        <label for="menage">Ménage</label>
+        <select id="menage" name="menage">
+            <option value="">-- Sélectionnez votre type de ménage --</option>
+            <option value="T1">T1 - 40€</option>
+            <option value="T2">T2 - 50€</option>
+            <option value="T3">T3 - 60€</option>
+            <option value="T4">T4 - 70€</option>
+        </select>
+
+        <label for="linge">Linge</label>
+        <select id="linge" name="linge">
+            <option value="">-- Sélectionnez votre type de linge --</option>
+            <option value="T1">T1 - 10€</option>
+            <option value="T2">T2 - 15€</option>
+            <option value="T3">T3 - 20€</option>
+            <option value="T4">T4 - 25€</option>
+        </select>
+
+        <label for="bricolage">Bricolage / Petites réparations</label>
+        <select id="bricolage" name="bricolage">
+            <option value="">-- Sélectionnez vos prestations bricolage --</option>
+            <option value="Electricité - Remplacement prise">⚡ Électricité - Remplacement prise/interrupteur - 25€</option>
+            <option value="Electricité - Plafonnier">⚡ Pose plafonnier/applique - 30€</option>
+            <option value="Plomberie - Robinet">🚰 Remplacement robinet/mitigeur - 35€</option>
+            <option value="Plomberie - Siphon">🚰 Changement siphon - 30€</option>
+            <option value="Menuiserie - Montage meuble">🪚 Montage meuble en kit - 30€</option>
+            <option value="Menuiserie - Pose étagère">🪚 Pose étagère / tringle - 25€</option>
+            <option value="Divers - Détecteur fumée">🧰 Pose détecteur fumée - 20€</option>
+            <option value="Travaux - Gestion">🏗️ Gestion & suivi travaux - à partir de 30€</option>
+        </select>
+
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Décrivez vos besoins..." required></textarea>
+
+        <div class="actions">
+            <button type="submit" class="btn primary">Envoyer ma demande</button>
+            <a href="index.html" class="btn secondary">Accueil</a>
+        </div>
+
+        <div class="urgent">
+            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5 € peut être appliqué pour une intervention urgente.
+        </div>
+
+        <div class="feedback" id="feedback">Votre demande a été envoyée. Nous vous répondrons rapidement.</div>
+    </form>
+</main>
+
+<script>
+    // Feedback premium
+    const form = document.querySelector('.contact-form');
+    const feedback = document.getElementById('feedback');
+    feedback.style.display = 'none';
+
+    form.addEventListener('submit', function(e) {
+        feedback.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

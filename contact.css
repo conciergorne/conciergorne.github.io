@@ -8,12 +8,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdfaf6;
     color: #333;
-    line-height: 1.6;
 }
 
 .hero {
     position: relative;
     text-align: center;
+    color: white;
 }
 
 .hero-img {
@@ -28,43 +28,32 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-logo {
     max-width: 140px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.hero-title {
-    color: #fff;
+.hero h1 {
     font-size: 2.5em;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 30px auto;
-    padding: 0 20px;
-}
-
-.urgent-info {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #555;
-    font-weight: bold;
-}
-
-.devis-form {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 0 15px;
 }
 
 .devis-form h2 {
@@ -75,45 +64,69 @@ body {
 
 .devis-form label {
     display: block;
-    margin-top: 15px;
+    margin: 15px 0 5px;
     font-weight: bold;
 }
 
 .devis-form input,
-.devis-form textarea,
-.devis-form select {
+.devis-form select,
+.devis-form textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 1em;
 }
 
-.devis-form button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-    font-weight: bold;
-    font-size: 1em;
-    border: none;
+textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
     border-radius: 6px;
-    background-color: #ffb347;
-    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.devis-form button:hover {
+.primary {
+    background-color: #ffb347;
+    color: #fff;
+    border: none;
+}
+
+.primary:hover {
     background-color: #ffa500;
 }
 
-.confirmation-message {
-    display: none;
-    text-align: center;
-    margin-top: 15px;
-    color: green;
-    font-weight: bold;
+.secondary {
+    background-color: #1a3e5c;
+    color: #fff;
+}
+
+.secondary:hover {
+    background-color: #163153;
+}
+
+.urgent {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff4e0;
+    border-left: 6px solid #ff914d;
+    border-radius: 8px;
+    font-size: 0.95em;
+    color: #333;
 }
 
 .footer {
@@ -122,12 +135,19 @@ body {
     font-size: 0.9em;
     background-color: #1a3e5c;
     color: white;
-    margin-top: 30px;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-    .hero-title {
-        font-size: 2em;
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .form-actions {
+        flex-direction: column;
     }
 }

@@ -10,42 +10,47 @@ body {
     color: #333;
 }
 
+/* ===========================
+   HEADER
+=========================== */
 .header {
     text-align: center;
     padding: 25px 15px;
-    background: url('header-bg.png') no-repeat center center/cover;
-    color: #fff;
     position: relative;
 }
 
-.header h1 {
-    color: #ffffff; /* blanc */
-    /* ou un blanc cassé pour un effet plus doux */
-    /* color: #fdf6e3; */
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* pour encore plus de lisibilité */
-}
-
-.logo {
+.header img.logo {
     max-width: 140px;
     margin-bottom: 10px;
 }
 
-.subtitle {
+.header h1 {
+    color: #ffffff; /* titre bien visible sur l'image du lac */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* lisibilité premium */
+}
+
+.header .subtitle {
     font-size: 1em;
+    color: #f5f5f5; /* un blanc cassé pour rester lisible et harmonieux */
     max-width: 600px;
     margin: 0 auto;
 }
 
+/* ===========================
+   MAIN CONTAINER
+=========================== */
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
 
-h1, h2 {
+h1 {
+    text-align: center;
     color: #1a3e5c;
+    margin-bottom: 15px;
 }
 
 .intro {
@@ -54,12 +59,15 @@ h1, h2 {
     color: #555;
 }
 
+/* ===========================
+   SERVICE BOX
+=========================== */
 .service-box {
     background: #fff;
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     position: relative;
 }
 
@@ -81,13 +89,25 @@ h1, h2 {
     margin-top: 10px;
 }
 
-/* Couleurs bords des catégories */
+/* Couleurs bord gauche par catégorie pour un style premium */
 .electricite { border-left: 6px solid #f4c430; }
 .plomberie { border-left: 6px solid #4aa3df; }
 .menuiserie { border-left: 6px solid #a67c52; }
 .divers { border-left: 6px solid #6fbf73; }
 .travaux { border-left: 6px solid #ff914d; }
 
+/* Astérix pour signaler que d'autres bricolages sont possibles */
+.service-box::after {
+    content: " * D'autres interventions sur demande peuvent être réalisées.";
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ===========================
+   LEGAL INFO
+=========================== */
 .legal {
     background: #fff8ee;
     border-radius: 10px;
@@ -96,6 +116,9 @@ h1, h2 {
     font-size: 0.95em;
 }
 
+/* ===========================
+   ACTION BUTTONS
+=========================== */
 .actions {
     display: flex;
     justify-content: center;
@@ -110,6 +133,7 @@ h1, h2 {
     text-decoration: none;
     font-weight: bold;
     text-align: center;
+    transition: 0.3s;
 }
 
 .primary {
@@ -117,11 +141,22 @@ h1, h2 {
     color: #fff;
 }
 
+.primary:hover {
+    background-color: #ffa500;
+}
+
 .secondary {
     background-color: #1a3e5c;
     color: #fff;
 }
 
+.secondary:hover {
+    background-color: #162f44;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
     text-align: center;
     padding: 20px;
@@ -130,7 +165,9 @@ h1, h2 {
     color: white;
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 600px) {
     .actions {
         flex-direction: column;
@@ -139,4 +176,4 @@ h1, h2 {
     .logo {
         max-width: 110px;
     }
-}
+    }

@@ -3,80 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Devis | ConciergOrne</title>
+    <title>Devis & Contact - ConciergOrne</title>
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
-<header class="hero">
-    <img src="header-bg.png" alt="Vue aérienne de Bagnoles-de-l'Orne" class="hero-img">
+<header class="hero-header">
+    <img src="header-bg.png" alt="Conciergerie à Bagnoles-de-l'Orne" class="hero-img">
     <div class="hero-overlay">
         <img src="logo.png" alt="ConciergOrne Logo" class="hero-logo">
-        <h1>Contact & Devis</h1>
-        <p>Pour toute demande, remplissez le formulaire ci-dessous.</p>
+        <h1>Demande de devis personnalisé</h1>
+        <p>Pour toutes nos prestations, remplissez ce formulaire pour recevoir votre devis précis.</p>
     </div>
 </header>
 
 <main class="container">
-    <form action="https://formspree.io/f/mnjjpozg" method="POST" class="devis-form">
-        <h2>Demande de devis</h2>
 
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
+    <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form">
+        <div class="form-group">
+            <label for="nom">Nom et Prénom :</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
 
-        <label for="tel">Téléphone :</label>
-        <input type="tel" id="tel" name="tel" required>
+        <div class="form-group">
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="tel" required>
+        </div>
 
-        <!-- Menu déroulant Pack -->
-        <label for="pack">Pack de conciergerie :</label>
-        <select id="pack" name="pack">
-            <option value="">-- Sélectionnez --</option>
-            <option value="Essentiel">Essentiel : 18 % / réservation</option>
-            <option value="Standard">Standard : 20 % / réservation</option>
-            <option value="Confort">Confort : 22 % / réservation</option>
-            <option value="Premium">Premium : 24 % / réservation</option>
-        </select>
+        <!-- Type de logement & surface -->
+        <div class="form-group">
+            <label for="logement">Type de logement :</label>
+            <select id="logement" name="logement" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="Studio">Studio</option>
+                <option value="Appartement">Appartement</option>
+                <option value="Maison">Maison</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="surface">Surface estimée (m²) :</label>
+            <input type="number" id="surface" name="surface" placeholder="Ex : 45" required>
+        </div>
+
+        <!-- Menu déroulant Packs -->
+        <div class="form-group">
+            <label for="pack">Pack :</label>
+            <select id="pack" name="pack">
+                <option value="">-- Sélectionnez --</option>
+                <option value="Essentiel">Essentiel – 18% / réservation</option>
+                <option value="Standard">Standard – 20% / réservation</option>
+                <option value="Confort">Confort – 22% / réservation</option>
+                <option value="Premium">Premium – 24% / réservation</option>
+            </select>
+        </div>
 
         <!-- Menu déroulant Service à la carte -->
-        <label for="service">Service à la carte :</label>
-        <select id="service" name="service">
-            <option value="">-- Sélectionnez --</option>
-            <option value="Ménage">Ménage</option>
-            <option value="Linge">Linge</option>
-            <option value="Bricolage">Bricolage</option>
-            <option value="Gestion de travaux">Gestion de travaux</option>
-        </select>
+        <div class="form-group">
+            <label for="service">Service à la carte :</label>
+            <select id="service" name="service">
+                <option value="">-- Sélectionnez --</option>
+                <option value="Ménage">Ménage – à partir de 40€ / intervention</option>
+                <option value="Linge">Linge – à partir de 10€ / intervention</option>
+                <option value="Bricolage">Bricolage – selon prestation choisie</option>
+                <option value="Gestion de travaux">Gestion de travaux – sur devis</option>
+            </select>
+        </div>
 
-        <!-- Menu déroulant Bricolage avec prix -->
-        <label for="bricolage">Bricolage & Petites réparations :</label>
-        <select id="bricolage" name="bricolage">
-            <option value="">-- Sélectionnez --</option>
-            <option value="Électricité">Électricité ⚡ – Remplacement prise : 25€, Plafonnier : 30€, Luminaire : 35€</option>
-            <option value="Plomberie">Plomberie 🚰 – Robinet : 35€, Siphon : 30€, Débouchage lavabo/douche : 30€</option>
-            <option value="Menuiserie">Menuiserie 🪚 – Montage meuble : 30€, Étagère : 25€, Réglage portes : 25€</option>
-            <option value="Divers">Divers 🧰 – Détecteur fumée : 20€, Support TV : 40€, Abattant WC : 25€</option>
-        </select>
+        <!-- Menu déroulant Bricolage -->
+        <div class="form-group">
+            <label for="bricolage">Bricolage spécifique :</label>
+            <select id="bricolage" name="bricolage">
+                <option value="">-- Sélectionnez --</option>
+                <option value="Electricité">Électricité – à partir de 25€</option>
+                <option value="Plomberie">Plomberie – à partir de 30€</option>
+                <option value="Menuiserie">Menuiserie – à partir de 25€</option>
+                <option value="Divers">Divers – à partir de 20€</option>
+            </select>
+        </div>
 
-        <label for="message">Votre message :</label>
-        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre demande"></textarea>
+        <!-- Message texte -->
+        <div class="form-group">
+            <label for="message">Message / détails :</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ex : date souhaitée, étage, nombre de pièces..."></textarea>
+        </div>
 
         <div class="form-actions">
             <button type="submit" class="btn primary">Envoyer ma demande</button>
             <a href="index.html" class="btn secondary">Accueil</a>
         </div>
 
-        <div class="urgent">
-            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74.
-            Un supplément de 5 € peut être appliqué pour une intervention urgente.
+        <div class="urgent-box">
+            <p>⚠️ Pour une prestation urgente à réaliser dans les 24h, vous pouvez envoyer un SMS au 07 71 62 39 74. Un supplément de 5€ peut être appliqué.</p>
         </div>
+
     </form>
+
 </main>
 
-<footer class="footer">
-    <p>&copy; 2026 ConciergOrne — Tous droits réservés</p>
+<footer>
+    <p>© 2026 ConciergOrne — Tous droits réservés</p>
 </footer>
 
 </body>

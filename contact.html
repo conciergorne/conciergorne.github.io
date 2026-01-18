@@ -2,143 +2,116 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Contact & Demande de devis | ConciergOrne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- ton CSS global -->
+    <title>Contact & Demande de devis - ConciergOrne</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
-<!-- Header identique aux autres pages -->
 <header class="page-header">
     <img src="images/header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
     <div class="header-overlay">
-        <img src="images/logo-conciergorne.png" alt="ConciergOrne" class="logo-header">
+        <img src="images/logo.png" alt="ConciergOrne" class="logo-header">
         <h1>Contact & Demande de devis</h1>
     </div>
 </header>
 
-<main class="container">
+<main class="contact-container">
+    <h2>Envoyez votre demande de devis</h2>
 
-    <p class="intro">
-        Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au <strong>07 71 62 39 74</strong>.
-        Un supplément de 5 € peut être appliqué.
-    </p>
+    <form class="contact-form" action="https://formspree.io/f/mnjjpozg" method="POST">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" required>
 
-    <form action="https://formspree.io/f/mnjjpozg" method="POST" id="devisForm" class="form-devis">
-        
-        <label for="nom">Nom complet :</label>
-        <input type="text" id="nom" name="nom" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" required>
 
-        <label for="telephone">Téléphone :</label>
-        <input type="tel" id="telephone" name="telephone" required>
+        <label for="type-logement">Type de logement</label>
+        <input type="text" id="type-logement" name="type-logement" placeholder="Ex : Appartement, Maison" required>
 
-        <label for="logement">Type de logement :</label>
-        <input type="text" id="logement" name="logement" placeholder="Maison / Appartement" required>
+        <label for="surface">Surface estimée (m²)</label>
+        <input type="number" id="surface" name="surface" min="5" placeholder="Ex : 45" required>
 
-        <label for="surface">Surface estimée (m²) :</label>
-        <input type="number" id="surface" name="surface" placeholder="Ex: 85" required>
-
-        <!-- Pack de conciergerie -->
-        <label for="pack">Pack de conciergerie :</label>
+        <!-- Packs de conciergerie -->
+        <label for="pack">Pack de conciergerie</label>
         <select id="pack" name="pack">
-            <option value="aucun">-- Aucun --</option>
-            <option value="essentiel">Essentiel : 18% / réservation</option>
-            <option value="standard">Standard : 20% / réservation</option>
-            <option value="confort">Confort : 22% / réservation</option>
-            <option value="premium">Premium : 24% / réservation</option>
+            <option value="">-- Choisir un pack --</option>
+            <option value="Essentiel">Essentiel (18% / réservation)</option>
+            <option value="Standard">Standard (20% / réservation)</option>
+            <option value="Confort">Confort (22% / réservation)</option>
+            <option value="Premium">Premium (24% / réservation)</option>
         </select>
 
-        <!-- Ménage -->
-        <label for="menage">Ménage (selon superficie) :</label>
+        <!-- Ménage avec prix détaillés -->
+        <label for="menage">Ménage</label>
         <select id="menage" name="menage">
-            <option value="">-- Sélectionnez --</option>
-            <option value="40-60">40€ / 40-60m²</option>
-            <option value="61-80">50€ / 61-80m²</option>
-            <option value="81-100">60€ / 81-100m²</option>
-            <option value="100+">À partir de 70€ / >100m²</option>
+            <option value="">-- Choisir la prestation --</option>
+            <option value="studio">Studio / 20m² : à partir de 30€</option>
+            <option value="1chambre">1 chambre / 35m² : à partir de 40€</option>
+            <option value="2chambres">2 chambres / 50m² : à partir de 55€</option>
+            <option value="3chambres">3 chambres / 70m² : à partir de 70€</option>
+            <option value="4chambres">4 chambres / 90m² : à partir de 85€</option>
         </select>
 
-        <!-- Linge -->
-        <label for="linge">Linge (selon superficie) :</label>
+        <!-- Linge avec prix détaillés -->
+        <label for="linge">Linge</label>
         <select id="linge" name="linge">
-            <option value="">-- Sélectionnez --</option>
-            <option value="40-60">20€ / 40-60m²</option>
-            <option value="61-80">25€ / 61-80m²</option>
-            <option value="81-100">30€ / 81-100m²</option>
-            <option value="100+">À partir de 35€ / >100m²</option>
+            <option value="">-- Choisir la prestation --</option>
+            <option value="studio">Studio / 20m² : 5€</option>
+            <option value="1chambre">1 chambre / 35m² : 10€</option>
+            <option value="2chambres">2 chambres / 50m² : 15€</option>
+            <option value="3chambres">3 chambres / 70m² : 20€</option>
+            <option value="4chambres">4 chambres / 90m² : 25€</option>
         </select>
 
-        <!-- Bricolage & petites réparations -->
-        <label for="bricolage">Bricolage / Petites réparations :</label>
+        <!-- Bricolage / petites réparations -->
+        <label for="bricolage">Bricolage / Petites réparations</label>
         <select id="bricolage" name="bricolage">
-            <option value="">-- Sélectionnez --</option>
-            <option value="electricite-prises">⚡ Électricité : Prise / Interrupteur 25€</option>
-            <option value="electricite-plafonnier">⚡ Pose plafonnier / applique 30€</option>
-            <option value="electricite-luminaire">⚡ Remplacement luminaire existant 35€</option>
-            <option value="electricite-diagnostic">⚡ Diagnostic simple panne électrique 30€</option>
-
-            <option value="plomberie-robinet">🚰 Remplacement robinet / mitigeur 35€</option>
-            <option value="plomberie-siphon">🚰 Changement siphon 30€</option>
-            <option value="plomberie-fuite">🚰 Réparation fuite apparente 30€</option>
-            <option value="plomberie-debouchage">🚰 Débouchage simple lavabo / douche 30€</option>
-
-            <option value="menuiserie-meuble">🪚 Montage meuble en kit 30€</option>
-            <option value="menuiserie-etagere">🪚 Pose étagère / tringle 25€</option>
-            <option value="menuiserie-portes">🪚 Réglage portes / placards 25€</option>
-            <option value="menuiserie-bois">🪚 Petites réparations bois 30€</option>
-
-            <option value="divers-detecteur">🧰 Pose détecteur fumée 20€</option>
-            <option value="divers-support-tv">🧰 Pose support TV (mur plein) 40€</option>
-            <option value="divers-wc">🧰 Remplacement abattant WC 25€</option>
-            <option value="divers-ajustements">🧰 Petits ajustements / réparations 30€</option>
-
-            <option value="travaux-suivi">🏗️ Gestion & suivi de travaux : sur devis à partir de 30€</option>
+            <option value="">-- Choisir la prestation --</option>
+            <option value="electricite_prise">Électricité : Remplacement prise / interrupteur – 25€</option>
+            <option value="electricite_luminaire">Électricité : Pose plafonnier / applique – 30€</option>
+            <option value="plomberie_robinet">Plomberie : Remplacement robinet / mitigeur – 35€</option>
+            <option value="plomberie_siphon">Plomberie : Changement siphon – 30€</option>
+            <option value="menuiserie_meuble">Menuiserie : Montage meuble en kit – 30€</option>
+            <option value="menuiserie_etagere">Menuiserie : Pose étagère / tringle – 25€</option>
+            <option value="divers_detecteur">Divers : Pose détecteur fumée – 20€</option>
+            <option value="divers_support_tv">Divers : Pose support TV – 40€</option>
+            <option value="travaux_gestion">Gestion travaux : à partir de 30€ (sur devis)</option>
         </select>
 
-        <label for="message">Votre message :</label>
-        <textarea id="message" name="message" placeholder="Décrivez votre demande" required></textarea>
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Décrivez vos besoins..."></textarea>
 
-        <div class="form-actions">
-            <button type="submit" class="btn primary">Envoyer ma demande</button>
-            <a href="index.html" class="btn secondary">Accueil</a>
+        <!-- Boutons -->
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="submit" class="btn btn-submit">Envoyer ma demande</button>
+            <a href="index.html" class="btn btn-home">Accueil</a>
         </div>
 
-        <!-- Message encadré intervention urgente -->
-        <div class="urgent-note">
-            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au <strong>07 71 62 39 74</strong>. Un supplément de 5 € peut être appliqué.
+        <!-- Message urgent -->
+        <div class="urgent-box">
+            Pour une prestation urgente à réaliser dans les 24h, vous pouvez envoyer un SMS au 07 71 62 39 74. <br>
+            Un supplément de 5 € peut être appliqué pour une intervention urgente.
         </div>
 
-        <!-- Feedback après envoi -->
-        <p id="form-feedback" class="form-feedback" style="display:none;">
-            Votre demande a été envoyée. Nous vous répondrons dans un délai de 24h.
-        </p>
-
+        <!-- Feedback JS -->
+        <div id="feedback-message">Votre demande a été envoyée. Nous vous répondrons dans les meilleurs délais.</div>
     </form>
-
 </main>
 
 <script>
-    // Feedback prenium
-    const form = document.getElementById('devisForm');
-    const feedback = document.getElementById('form-feedback');
+    // Feedback après envoi (simulé ici)
+    const form = document.querySelector('.contact-form');
+    const feedback = document.getElementById('feedback-message');
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if(response.ok){
-                feedback.style.display = 'block';
-                form.reset();
-            } else {
-                alert("Une erreur est survenue. Veuillez réessayer.");
-            }
-        });
+        feedback.style.display = 'block';
+        feedback.scrollIntoView({behavior: "smooth"});
+        form.reset();
     });
 </script>
 

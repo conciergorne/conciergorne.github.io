@@ -1,113 +1,146 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact & Demande de devis | ConciergOrne</title>
-  <meta name="description" content="Contactez ConciergOrne pour une demande de devis en conciergerie, ménage, linge ou bricolage à Bagnoles-de-l'Orne. Réponse rapide et transparente.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS global -->
-  <link rel="stylesheet" href="style.css">
-  <!-- CSS spécifique contact -->
-  <link rel="stylesheet" href="contact.css">
+    <meta charset="UTF-8">
+    <title>Contact & Demande de devis | ConciergOrne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- ton CSS global -->
 </head>
-
 <body>
 
+<!-- Header identique aux autres pages -->
 <header class="page-header">
- <img src="images/header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
-  <div class="header-overlay">
-    <img src="images/logo-conciergorne.png" alt="ConciergOrne" class="logo-header">
-    <h1>Contact & Demande de devis</h1>
-  </div>
+    <img src="images/header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
+    <div class="header-overlay">
+        <img src="images/logo-conciergorne.png" alt="ConciergOrne" class="logo-header">
+        <h1>Contact & Demande de devis</h1>
+    </div>
 </header>
 
-<main class="contact-container">
+<main class="container">
 
-  <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form">
+    <p class="intro">
+        Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au <strong>07 71 62 39 74</strong>.
+        Un supplément de 5 € peut être appliqué.
+    </p>
 
-    <div class="form-group">
-      <label>Nom complet</label>
-      <input type="text" name="nom" required>
-    </div>
+    <form action="https://formspree.io/f/mnjjpozg" method="POST" id="devisForm" class="form-devis">
+        
+        <label for="nom">Nom complet :</label>
+        <input type="text" id="nom" name="nom" required>
 
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" name="email" required>
-    </div>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
 
-    <div class="form-group">
-      <label>Téléphone</label>
-      <input type="tel" name="telephone" required>
-    </div>
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required>
 
-    <!-- MENUS DÉROULANTS TRANSPARENTS -->
+        <label for="logement">Type de logement :</label>
+        <input type="text" id="logement" name="logement" placeholder="Maison / Appartement" required>
 
-    <div class="form-group">
-      <label>Pack de conciergerie</label>
-      <select name="pack">
-        <option value="">Aucun</option>
-        <option>Essentiel – 18 % / réservation</option>
-        <option>Standard – 20 % / réservation</option>
-        <option>Confort – 22 % / réservation</option>
-        <option>Premium – 24 % / réservation</option>
-      </select>
-    </div>
+        <label for="surface">Surface estimée (m²) :</label>
+        <input type="number" id="surface" name="surface" placeholder="Ex: 85" required>
 
-    <div class="form-group">
-      <label>Ménage (selon superficie)</label>
-      <select name="menage">
-        <option value="">— Sélectionner —</option>
-        <option>Studio / T1 (≤30 m²) – 35 €</option>
-        <option>T2 (31–50 m²) – 45 €</option>
-        <option>T3 (51–70 m²) – 55 €</option>
-        <option>T4+ (71 m² et +) – 65 €</option>
-      </select>
-    </div>
+        <!-- Pack de conciergerie -->
+        <label for="pack">Pack de conciergerie :</label>
+        <select id="pack" name="pack">
+            <option value="aucun">-- Aucun --</option>
+            <option value="essentiel">Essentiel : 18% / réservation</option>
+            <option value="standard">Standard : 20% / réservation</option>
+            <option value="confort">Confort : 22% / réservation</option>
+            <option value="premium">Premium : 24% / réservation</option>
+        </select>
 
-    <div class="form-group">
-      <label>Linge (selon superficie)</label>
-      <select name="linge">
-        <option value="">— Sélectionner —</option>
-        <option>Studio / T1 – 15 €</option>
-        <option>T2 – 20 €</option>
-        <option>T3 – 25 €</option>
-        <option>T4+ – 30 €</option>
-      </select>
-    </div>
+        <!-- Ménage -->
+        <label for="menage">Ménage (selon superficie) :</label>
+        <select id="menage" name="menage">
+            <option value="">-- Sélectionnez --</option>
+            <option value="40-60">40€ / 40-60m²</option>
+            <option value="61-80">50€ / 61-80m²</option>
+            <option value="81-100">60€ / 81-100m²</option>
+            <option value="100+">À partir de 70€ / >100m²</option>
+        </select>
 
-    <div class="form-group">
-      <label>Bricolage & petites réparations</label>
-      <select name="bricolage">
-        <option value="">— Sélectionner —</option>
-        <option>Remplacement prise/interrupteur – 25 €</option>
-        <option>Pose luminaire – 30 €</option>
-        <option>Réparation fuite apparente – 30 €</option>
-        <option>Changement siphon – 30 €</option>
-        <option>Autre intervention (sur demande)</option>
-      </select>
-    </div>
+        <!-- Linge -->
+        <label for="linge">Linge (selon superficie) :</label>
+        <select id="linge" name="linge">
+            <option value="">-- Sélectionnez --</option>
+            <option value="40-60">20€ / 40-60m²</option>
+            <option value="61-80">25€ / 61-80m²</option>
+            <option value="81-100">30€ / 81-100m²</option>
+            <option value="100+">À partir de 35€ / >100m²</option>
+        </select>
 
-    <div class="form-group">
-      <label>Votre message</label>
-      <textarea name="message" rows="5" placeholder="Décrivez votre demande"></textarea>
-    </div>
+        <!-- Bricolage & petites réparations -->
+        <label for="bricolage">Bricolage / Petites réparations :</label>
+        <select id="bricolage" name="bricolage">
+            <option value="">-- Sélectionnez --</option>
+            <option value="electricite-prises">⚡ Électricité : Prise / Interrupteur 25€</option>
+            <option value="electricite-plafonnier">⚡ Pose plafonnier / applique 30€</option>
+            <option value="electricite-luminaire">⚡ Remplacement luminaire existant 35€</option>
+            <option value="electricite-diagnostic">⚡ Diagnostic simple panne électrique 30€</option>
 
-    <div class="form-actions">
-      <button type="submit">Envoyer ma demande</button>
-      <a href="index.html" class="btn-secondary">Accueil</a>
-    </div>
+            <option value="plomberie-robinet">🚰 Remplacement robinet / mitigeur 35€</option>
+            <option value="plomberie-siphon">🚰 Changement siphon 30€</option>
+            <option value="plomberie-fuite">🚰 Réparation fuite apparente 30€</option>
+            <option value="plomberie-debouchage">🚰 Débouchage simple lavabo / douche 30€</option>
 
-    <!-- Message urgence -->
-    <div class="urgence-box">
-      <strong>Intervention urgente :</strong><br>
-      Pour une prestation à réaliser sous 24h, vous pouvez envoyer un SMS au <strong>07 71 62 39 74</strong>.  
-      Un supplément de <strong>5 €</strong> peut être appliqué.
-    </div>
+            <option value="menuiserie-meuble">🪚 Montage meuble en kit 30€</option>
+            <option value="menuiserie-etagere">🪚 Pose étagère / tringle 25€</option>
+            <option value="menuiserie-portes">🪚 Réglage portes / placards 25€</option>
+            <option value="menuiserie-bois">🪚 Petites réparations bois 30€</option>
 
-  </form>
+            <option value="divers-detecteur">🧰 Pose détecteur fumée 20€</option>
+            <option value="divers-support-tv">🧰 Pose support TV (mur plein) 40€</option>
+            <option value="divers-wc">🧰 Remplacement abattant WC 25€</option>
+            <option value="divers-ajustements">🧰 Petits ajustements / réparations 30€</option>
+
+            <option value="travaux-suivi">🏗️ Gestion & suivi de travaux : sur devis à partir de 30€</option>
+        </select>
+
+        <label for="message">Votre message :</label>
+        <textarea id="message" name="message" placeholder="Décrivez votre demande" required></textarea>
+
+        <div class="form-actions">
+            <button type="submit" class="btn primary">Envoyer ma demande</button>
+            <a href="index.html" class="btn secondary">Accueil</a>
+        </div>
+
+        <!-- Message encadré intervention urgente -->
+        <div class="urgent-note">
+            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au <strong>07 71 62 39 74</strong>. Un supplément de 5 € peut être appliqué.
+        </div>
+
+        <!-- Feedback après envoi -->
+        <p id="form-feedback" class="form-feedback" style="display:none;">
+            Votre demande a été envoyée. Nous vous répondrons dans un délai de 24h.
+        </p>
+
+    </form>
 
 </main>
+
+<script>
+    // Feedback prenium
+    const form = document.getElementById('devisForm');
+    const feedback = document.getElementById('form-feedback');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if(response.ok){
+                feedback.style.display = 'block';
+                form.reset();
+            } else {
+                alert("Une erreur est survenue. Veuillez réessayer.");
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* GLOBAL */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,20 +9,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdfaf6;
     color: #333;
+    line-height: 1.6;
 }
 
-/* HEADER HERO */
+/* HEADER */
 .hero {
     position: relative;
-    height: 50vh;
-    overflow: hidden;
     text-align: center;
-    color: #fff;
 }
 
 .hero-img {
     width: 100%;
-    height: 100%;
+    height: 350px;
     object-fit: cover;
 }
 
@@ -31,12 +30,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.45);
+    background-color: rgba(0,0,0,0.35);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    color: #fff;
+    padding: 0 15px;
 }
 
 .hero-logo {
@@ -45,44 +45,55 @@ body {
 }
 
 .hero h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #ffb347; /* titre visible sur l'image */
 }
 
 .hero p {
     font-size: 1.1em;
-    max-width: 600px;
-}
-
-/* MAIN CONTENT */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-}
-
-.intro {
+    max-width: 650px;
     text-align: center;
-    margin: 20px 0 40px 0;
-    color: #555;
+}
+
+/* MAIN */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #1a3e5c;
+    margin-bottom: 25px;
+}
+
+/* SERVICES BOX */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .service-box {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    border-left: 6px solid;
 }
 
-.service-box h2 {
-    margin-bottom: 10px;
+.service-box h3 {
+    margin-bottom: 12px;
+    color: #1a3e5c;
 }
 
 .service-box ul {
     list-style: none;
+    margin-bottom: 10px;
 }
 
 .service-box li {
@@ -92,21 +103,29 @@ body {
 .note {
     font-size: 0.9em;
     color: #777;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
-/* Couleurs par catégorie */
-.electricite { border-left: 6px solid #f4c430; }
-.plomberie { border-left: 6px solid #4aa3df; }
-.menuiserie { border-left: 6px solid #a67c52; }
-.divers { border-left: 6px solid #6fbf73; }
-.travaux { border-left: 6px solid #ff914d; }
+.asterisk {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+}
 
-.actions {
+/* Bordures colorées par catégorie */
+.electricite { border-left-color: #f4c430; }
+.plomberie { border-left-color: #4aa3df; }
+.menuiserie { border-left-color: #a67c52; }
+.divers { border-left-color: #6fbf73; }
+.travaux { border-left-color: #ff914d; }
+
+/* BOUTONS BAS */
+.btn-bottom {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin: 30px 0;
+    gap: 20px;
+    margin: 40px 0;
     flex-wrap: wrap;
 }
 
@@ -118,17 +137,18 @@ body {
     text-align: center;
 }
 
-.primary {
+.btn-primary {
     background-color: #ffb347;
     color: #fff;
 }
 
-.secondary {
+.btn-secondary {
     background-color: #1a3e5c;
     color: #fff;
 }
 
-.footer {
+/* FOOTER */
+footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
@@ -136,13 +156,19 @@ body {
     color: white;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 1.6em; }
-    .hero p { font-size: 1em; }
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 480px) {
-    .actions { flex-direction: column; }
-    .hero-logo { max-width: 100px; }
+    .btn-bottom {
+        flex-direction: column;
+    }
 }

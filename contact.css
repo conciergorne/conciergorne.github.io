@@ -1,104 +1,121 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Devis - ConciergOrne</title>
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+}
 
-<header class="page-header">
-    <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
-    <div class="header-overlay">
-        <img src="logo.png" alt="ConciergOrne" class="logo-header">
-        <h1>Contact & Demande de devis</h1>
-    </div>
-</header>
+.page-header {
+    position: relative;
+    text-align: center;
+}
 
-<main class="container">
-    <form action="https://formspree.io/f/mnjjpozg" method="POST" class="contact-form">
-        <label for="nom">Nom complet</label>
-        <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
+.page-header img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" placeholder="Votre email" required>
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+}
 
-        <label for="tel">Téléphone</label>
-        <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" required>
+.header-overlay h1 {
+    font-size: 2.5em;
+    margin-top: 15px;
+}
 
-        <label for="logement">Type de logement</label>
-        <input type="text" id="logement" name="logement" placeholder="Ex: Appartement, Maison" required>
+.logo-header {
+    max-width: 150px;
+}
 
-        <label for="surface">Surface estimée (m²)</label>
-        <input type="number" id="surface" name="surface" placeholder="Ex: 45" required>
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
-        <label for="pack">Pack de conciergerie</label>
-        <select id="pack" name="pack">
-            <option value="">-- Sélectionnez un pack --</option>
-            <option value="Essentiel">Essentiel - 18%</option>
-            <option value="Standard">Standard - 20%</option>
-            <option value="Confort">Confort - 22%</option>
-            <option value="Premium">Premium - 24%</option>
-        </select>
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-        <label for="menage">Ménage</label>
-        <select id="menage" name="menage">
-            <option value="">-- Sélectionnez votre type de ménage --</option>
-            <option value="T1">T1 - 40€</option>
-            <option value="T2">T2 - 50€</option>
-            <option value="T3">T3 - 60€</option>
-            <option value="T4">T4 - 70€</option>
-        </select>
+.contact-form label {
+    font-weight: bold;
+}
 
-        <label for="linge">Linge</label>
-        <select id="linge" name="linge">
-            <option value="">-- Sélectionnez votre type de linge --</option>
-            <option value="T1">T1 - 10€</option>
-            <option value="T2">T2 - 15€</option>
-            <option value="T3">T3 - 20€</option>
-            <option value="T4">T4 - 25€</option>
-        </select>
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
 
-        <label for="bricolage">Bricolage / Petites réparations</label>
-        <select id="bricolage" name="bricolage">
-            <option value="">-- Sélectionnez vos prestations bricolage --</option>
-            <option value="Electricité - Remplacement prise">⚡ Électricité - Remplacement prise/interrupteur - 25€</option>
-            <option value="Electricité - Plafonnier">⚡ Pose plafonnier/applique - 30€</option>
-            <option value="Plomberie - Robinet">🚰 Remplacement robinet/mitigeur - 35€</option>
-            <option value="Plomberie - Siphon">🚰 Changement siphon - 30€</option>
-            <option value="Menuiserie - Montage meuble">🪚 Montage meuble en kit - 30€</option>
-            <option value="Menuiserie - Pose étagère">🪚 Pose étagère / tringle - 25€</option>
-            <option value="Divers - Détecteur fumée">🧰 Pose détecteur fumée - 20€</option>
-            <option value="Travaux - Gestion">🏗️ Gestion & suivi travaux - à partir de 30€</option>
-        </select>
+.contact-form textarea {
+    resize: vertical;
+}
 
-        <label for="message">Votre message</label>
-        <textarea id="message" name="message" placeholder="Décrivez vos besoins..." required></textarea>
+.actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
 
-        <div class="actions">
-            <button type="submit" class="btn primary">Envoyer ma demande</button>
-            <a href="index.html" class="btn secondary">Accueil</a>
-        </div>
+.btn {
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
 
-        <div class="urgent">
-            Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5 € peut être appliqué pour une intervention urgente.
-        </div>
+.primary {
+    background-color: #ffb347;
+    color: #fff;
+    border: none;
+}
 
-        <div class="feedback" id="feedback">Votre demande a été envoyée. Nous vous répondrons rapidement.</div>
-    </form>
-</main>
+.secondary {
+    background-color: #1a3e5c;
+    color: #fff;
+    border: none;
+}
 
-<script>
-    // Feedback premium
-    const form = document.querySelector('.contact-form');
-    const feedback = document.getElementById('feedback');
-    feedback.style.display = 'none';
+.urgent {
+    background-color: #fff8ee;
+    border-left: 6px solid #ff914d;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
 
-    form.addEventListener('submit', function(e) {
-        feedback.style.display = 'block';
-    });
-</script>
+.feedback {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    display: none;
+    font-weight: bold;
+}
 
-</body>
-</html>
+@media (max-width: 768px) {
+    .actions {
+        flex-direction: column;
+    }
+}

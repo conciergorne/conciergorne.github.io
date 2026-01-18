@@ -1,100 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact & Demande de devis | ConciergOrne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- HEADER identique aux autres pages -->
 <header class="page-header">
-  <img src="header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
-  <div class="header-overlay">
-    <img src="logo.png" alt="ConciergOrne" class="logo-header">
-    <h1 style="font-size:2.2em;">Contact & Demande de devis</h1> <!-- Taille réduite pour bien tenir dans l'image -->
-  </div>
+    <img src="images/header-bg.png" alt="Bagnoles-de-l'Orne vue aérienne">
+    <div class="header-overlay">
+        <img src="images/logo-conciergorne.png" alt="ConciergOrne" class="logo-header">
+        <h1>Contact & Demande de devis</h1>
+    </div>
 </header>
 
 <main class="container">
-  <form action="https://formspree.io/f/mnjjpozg" method="POST">
-    
-    <!-- Champs principaux -->
-    <label for="nom">Nom complet</label>
-    <input type="text" id="nom" name="nom" required>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
+    <form action="https://formspree.io/f/mnjjpozg" method="POST" class="devis-form">
+        <label>Nom complet :</label>
+        <input type="text" name="nom" required>
 
-    <label for="telephone">Téléphone</label>
-    <input type="tel" id="telephone" name="telephone" required>
+        <label>Email :</label>
+        <input type="email" name="email" required>
 
-    <label for="type_logement">Type de logement</label>
-    <input type="text" id="type_logement" name="type_logement">
+        <label>Téléphone :</label>
+        <input type="tel" name="tel" required>
 
-    <label for="surface">Surface estimée en m²</label>
-    <input type="number" id="surface" name="surface">
+        <label>Type de logement :</label>
+        <input type="text" name="type_logement" placeholder="Appartement, maison..." required>
 
-    <!-- Pack de conciergerie -->
-    <label for="pack">Pack de conciergerie</label>
-    <select id="pack" name="pack">
-      <option value="">-- Sélectionnez un pack --</option>
-      <option value="Essentiel">Essentiel (18%)</option>
-      <option value="Standard">Standard (20%)</option>
-      <option value="Confort">Confort (22%)</option>
-      <option value="Premium">Premium (24%)</option>
-    </select>
+        <label>Surface estimée en m² :</label>
+        <input type="number" name="surface" placeholder="Ex : 45" required>
 
-    <!-- Ménage avec prix par superficie -->
-    <label for="menage">Ménage</label>
-    <select id="menage" name="menage">
-      <option value="">-- Sélectionnez --</option>
-      <option value="T1">T1 : à partir de 40€</option>
-      <option value="T2">T2 : à partir de 50€</option>
-      <option value="T3">T3 : à partir de 60€</option>
-      <option value="T4">T4 : à partir de 70€</option>
-      <option value="T5">T5 : à partir de 80€</option>
-    </select>
+        <label>Pack de conciergerie :</label>
+        <select name="pack">
+            <option value="aucun">-- Aucun --</option>
+            <option value="essentiel">Essentiel : 18%</option>
+            <option value="standard">Standard : 20%</option>
+            <option value="confort">Confort : 22%</option>
+            <option value="premium">Premium : 24%</option>
+        </select>
 
-    <!-- Linge avec prix par superficie -->
-    <label for="linge">Linge</label>
-    <select id="linge" name="linge">
-      <option value="">-- Sélectionnez --</option>
-      <option value="T1">T1 : 10€</option>
-      <option value="T2">T2 : 12€</option>
-      <option value="T3">T3 : 14€</option>
-      <option value="T4">T4 : 16€</option>
-      <option value="T5">T5 : 18€</option>
-    </select>
+        <label>Ménage (selon superficie) :</label>
+        <select name="menage">
+            <option value="aucun">-- Sélectionnez --</option>
+            <option value="T1">T1 : 25 €</option>
+            <option value="T2">T2 : 35 €</option>
+            <option value="T3">T3 : 45 €</option>
+            <option value="T4">T4 : 55 €</option>
+        </select>
 
-    <!-- Bricolage / Petites réparations complet -->
-    <label for="bricolage">Bricolage / Petites réparations</label>
-    <select id="bricolage" name="bricolage">
-      <option value="">-- Sélectionnez vos prestations bricolage --</option>
-      <option value="Remplacement prise ou interrupteur">Remplacement prise ou interrupteur : 25 €</option>
-      <option value="Pose plafonnier / applique">Pose plafonnier / applique : 30 €</option>
-      <option value="Remplacement luminaire existant">Remplacement luminaire existant : 35 €</option>
-      <option value="Diagnostic simple panne électrique">Diagnostic simple panne électrique : 30 €</option>
-      <option value="Remplacement robinet / mitigeur">Remplacement robinet / mitigeur : 35 €</option>
-      <option value="Changement siphon">Changement siphon : 30 €</option>
-      <option value="Réparation fuite apparente">Réparation fuite apparente : 30 €</option>
-      <option value="Débouchage simple lavabo / douche">Débouchage simple lavabo / douche : 30 €</option>
-      <option value="Montage meuble en kit">Montage meuble en kit : 30 €</option>
-      <option value="Pose étagère / tringle">Pose étagère / tringle : 25 €</option>
-      <option value="Réglage portes / placards">Réglage portes / placards : 25 €</option>
-      <option value="Petites réparations bois">Petites réparations bois : 30 €</option>
-      <option value="Pose détecteur fumée">Pose détecteur fumée : 20 €</option>
-      <option value="Pose support TV (mur plein)">Pose support TV (mur plein) : 40 €</option>
-      <option value="Remplacement abattant WC">Remplacement abattant WC : 25 €</option>
-      <option value="Petits ajustements / réparations">Petits ajustements / réparations : 30 €</option>
-      <option value="Gestion & suivi de travaux">Gestion & suivi de travaux : à partir de 30 €</option>
-      <option value="Autre demande de bricolage">Autre demande de bricolage</option>
-    </select>
+        <label>Linge (selon superficie) :</label>
+        <select name="linge">
+            <option value="aucun">-- Sélectionnez --</option>
+            <option value="T1">T1 : 10 €</option>
+            <option value="T2">T2 : 15 €</option>
+            <option value="T3">T3 : 20 €</option>
+            <option value="T4">T4 : 25 €</option>
+        </select>
 
-    <!-- Message -->
-    <label for="message">Votre message</label>
-    <textarea id="message" name="message" placeholder="Indiquez ici vos demandes particulières…"></textarea>
+        <label>Bricolage & Petites réparations :</label>
+        <select name="bricolage">
+            <option value="aucun">-- Sélectionnez --</option>
+            <option>Remplacement prise ou interrupteur : 25 €</option>
+            <option>Pose plafonnier / applique : 30 €</option>
+            <option>Remplacement luminaire existant : 35 €</option>
+            <option>Diagnostic simple panne électrique : 30 €</option>
+            <option>Remplacement robinet / mitigeur : 35 €</option>
+            <option>Changement siphon : 30 €</option>
+            <option>Réparation fuite apparente : 30 €</option>
+            <option>Débouchage simple lavabo / douche : 30 €</option>
+            <option>Montage meuble en kit : 30 €</option>
+            <option>Pose étagère / tringle : 25 €</option>
+            <option>Réglage portes / placards : 25 €</option>
+            <option>Petites réparations bois : 30 €</option>
+            <option>Pose détecteur fumée : 20 €</option>
+            <option>Pose support TV (mur plein) : 40 €</option>
+            <option>Remplacement abattant WC : 25 €</option>
+            <option>Petits ajustements / réparations : 30 €</option>
+            <option>Gestion & suivi de travaux : À partir de 30 €</option>
+            <option>Autre demande de bricolage</option>
+        </select>
 
-    <!-- Boutons -->
-    <div class="actions">
-      <button type="submit" class="btn primary">Envoyer ma demande</button>
-      <a href="index.html" class="btn secondary">Accueil</a>
-    </div>
+        <label>Votre message :</label>
+        <textarea name="message" placeholder="Décrivez votre demande ici..."></textarea>
 
-    <!-- Encadré intervention urgente -->
-    <div class="urgent-note">
-      Pour une prestation urgente à réaliser dans les 24h, vous pouvez nous envoyer un SMS au 07 71 62 39 74. Un supplément de 5 € peut être appliqué.
-    </div>
+        <div class="form-actions">
+            <button type="submit">Envoyer ma demande</button>
+            <a href="index.html" class="btn-accueil">Accueil</a>
+        </div>
 
-  </form>
-          </main>
+        <div class="urgent-message">
+            Pour une prestation urgente à réaliser dans les 24h, vous pouvez envoyer un SMS au <strong>07 71 62 39 74</strong>. Un supplément de 5 € peut être appliqué.
+        </div>
+    </form>
+
+</main>
+
+<script>
+document.querySelector('.devis-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if(response.ok) {
+            alert("Votre demande a été envoyée. Nous vous répondrons rapidement.");
+            form.reset();
+        } else {
+            alert("Erreur lors de l'envoi. Veuillez réessayer.");
+        }
+    });
+});
+</script>
+
+</body>
+  </html>

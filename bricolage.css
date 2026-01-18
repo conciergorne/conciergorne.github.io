@@ -19,9 +19,12 @@ body {
 }
 
 .header h1 {
-    color: #fff; /* Titre visible sur le header */
+    color: #ffffff; /* blanc */
+    /* ou un blanc cassé pour un effet plus doux */
+    /* color: #fdf6e3; */
     font-size: 1.8em;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* pour encore plus de lisibilité */
 }
 
 .logo {

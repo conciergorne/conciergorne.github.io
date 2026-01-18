@@ -9,51 +9,71 @@
 <body>
 
 <!-- HERO -->
-<section class="hero">
+<header class="hero">
     <img src="header-bg.png" alt="Vue aérienne de Bagnoles-de-l'Orne" class="hero-img">
     <div class="hero-overlay">
         <img src="logo.png" alt="ConciergOrne Logo" class="hero-logo">
-        <p class="hero-slogan">
-            Nos services à la carte, adaptés à chaque logement
-        </p>
-        <p class="hero-subtext">
-            La facturation se fait 48h après chaque intervention, prix indicatifs selon la taille du logement.
+        <h1>Services à la carte</h1>
+        <p>
+            Nos services à la carte sont conçus pour répondre à vos besoins précis. 
+            La facturation se fait 48h après chaque intervention.
         </p>
     </div>
-</section>
+</header>
 
 <main>
-    <h1>Nos services à la carte</h1>
+    <h2>Nos services à la carte</h2>
 
-    <div class="services-container">
+    <!-- Ménage -->
+    <div class="service-card menage">
+        <h3>Ménage</h3>
+        <p>Nettoyage complet de votre logement pour préparer l’arrivée des locataires.</p>
 
-        <div class="service-card menage">
-            <h2>Ménage</h2>
-            <p>Nettoyage complet de votre logement pour préparer l’arrivée des locataires.</p>
-            <p class="price-info">Prix indicatif : à partir de 40€ / intervention, selon la taille du logement</p>
-        </div>
-
-        <div class="service-card linge">
-            <h2>Linge</h2>
-            <p>Fourniture et changement du linge de maison pour vos locations.</p>
-            <p class="price-info">Prix indicatif : à partir de 10€ / intervention, selon la taille du logement</p>
-        </div>
-
-        <div class="service-card bricolage">
-            <h2>Bricolage</h2>
-            <p>Petits travaux d’entretien et réparations ponctuelles.</p>
-            <a href="bricolage.html" class="btn">Voir la page Bricolage</a>
-        </div>
-
-        <div class="service-card travaux">
-            <h2>Gestion de travaux</h2>
-            <p>Nous recherchons, obtenons et suivons les devis pour vos travaux importants, avec un suivi complet et transparent.</p>
-            <p class="price-info">Prix indicatif : à partir de 30€, selon la taille et la complexité du projet</p>
-        </div>
-
+        <details>
+            <summary>Prix selon la superficie du logement</summary>
+            <ul>
+                <li>Studio / T1 : 40€</li>
+                <li>T2 : 50€</li>
+                <li>T3 : 60€</li>
+                <li>T4 : 75€</li>
+                <li>T5+ : Sur devis</li>
+            </ul>
+        </details>
     </div>
 
-    <div class="btn-bottom">
+    <!-- Linge -->
+    <div class="service-card linge">
+        <h3>Linge</h3>
+        <p>Fourniture et changement du linge de maison pour vos locations.</p>
+
+        <details>
+            <summary>Prix selon la superficie du logement</summary>
+            <ul>
+                <li>Studio / T1 : 10€</li>
+                <li>T2 : 15€</li>
+                <li>T3 : 20€</li>
+                <li>T4 : 25€</li>
+                <li>T5+ : Sur devis</li>
+            </ul>
+        </details>
+    </div>
+
+    <!-- Bricolage -->
+    <div class="service-card bricolage">
+        <h3>Bricolage</h3>
+        <p>Petits travaux d’entretien et réparations ponctuelles.</p>
+        <a href="bricolage.html" class="btn">Voir la page Bricolage</a>
+    </div>
+
+    <!-- Gestion de travaux -->
+    <div class="service-card travaux">
+        <h3>Gestion de travaux</h3>
+        <p>Nous recherchons, obtenons et suivons les devis pour vos travaux importants, avec un suivi complet et transparent.</p>
+        <p>Se renseigner par mail – Prix à partir de 30€</p>
+    </div>
+
+    <!-- Boutons bas de page -->
+    <div class="btn-container">
         <a href="contact.html" class="btn btn-devis">Demander un devis</a>
         <a href="index.html" class="btn btn-accueil">Accueil</a>
     </div>

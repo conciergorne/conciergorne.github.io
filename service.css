@@ -1,5 +1,5 @@
 /* ===========================
-   GLOBAL
+   BASE
 =========================== */
 * {
     margin: 0;
@@ -35,14 +35,13 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.45);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 15px;
-    color: #fff;
+    padding: 10px 20px;
 }
 
 .hero-logo {
@@ -50,18 +49,15 @@ body {
     margin-bottom: 10px;
 }
 
-.hero h1 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    max-width: 600px;
+.hero-text {
+    color: #fff;
+    max-width: 400px;
     font-size: 1em;
+    margin-top: 5px;
 }
 
 /* ===========================
-   MAIN CONTENT
+   TITRES
 =========================== */
 main {
     max-width: 1200px;
@@ -70,27 +66,40 @@ main {
 }
 
 h2 {
-    color: #1a3e5c;
     font-size: 1.8em;
     margin-bottom: 20px;
+    color: #1a3e5c;
 }
 
 /* ===========================
-   SERVICE CARDS
+   SERVICE CARDS PREMIUM
 =========================== */
-.service-card {
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    color: #fff;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    text-align: left;
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
-.menage { background-color: #4CAF50; }
-.linge { background-color: #2196F3; }
-.bricolage { background-color: #FF9800; }
-.travaux { background-color: #9C27B0; }
+.service-card {
+    background: #fff;
+    padding: 20px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Couleurs par service */
+.menage { background-color: #4CAF50; color: #fff; }
+.linge { background-color: #2196F3; color: #fff; }
+.bricolage { background-color: #FF9800; color: #fff; }
+.travaux { background-color: #9C27B0; color: #fff; }
 
 .service-card h3 {
     font-size: 1.4em;
@@ -102,29 +111,30 @@ h2 {
     margin-bottom: 8px;
 }
 
-.btn-service {
+/* Bouton bricolage */
+.btn-link {
     display: inline-block;
-    margin-top: 10px;
-    background-color: #fff;
-    color: #FF9800;
-    padding: 8px 15px;
+    background-color: #ffb347;
+    color: #fff;
+    padding: 8px 20px;
     border-radius: 6px;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn-service:hover {
-    background-color: #ffe0b2;
+.btn-link:hover {
+    background-color: #ffa500;
 }
 
 /* ===========================
-   BUTTONS
+   BOUTONS BAS
 =========================== */
-.btn-container {
+.btn-bottom {
+    margin: 40px 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 30px;
 }
 
 .btn {
@@ -132,10 +142,9 @@ h2 {
     background-color: #ffb347;
     color: white;
     padding: 12px 25px;
-    border: none;
     border-radius: 6px;
     font-size: 1em;
-    cursor: pointer;
+    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -149,39 +158,26 @@ h2 {
 footer {
     background: #1a3e5c;
     color: #fff;
-    text-align: center;
     padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 /* ===========================
    RESPONSIVE
 =========================== */
-@media screen and (max-width: 768px) {
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .btn-container {
-        flex-direction: column;
-    }
-
-    .service-card {
-        padding: 15px;
-    }
+@media (max-width: 1024px) {
+    .services-container { gap: 20px; }
 }
 
-@media screen and (max-width: 480px) {
-    .hero p {
-        font-size: 1em;
-    }
+@media (max-width: 768px) {
+    .hero { height: 24vh; }
+    .services-container { flex-direction: column; align-items: center; }
+    h2 { font-size: 1.5em; }
+}
 
-    .btn {
-        width: 100%;
-        padding: 12px;
-    }
-
-    .btn-service {
-        width: 100%;
-        text-align: center;
-    }
+@media (max-width: 480px) {
+    .hero-text { font-size: 0.95em; }
+    .service-card { width: 90%; padding: 15px; }
+    .btn, .btn-link { width: 100%; text-align: center; padding: 12px; }
 }

@@ -1,6 +1,3 @@
-/* ===========================
-   Global Styles
-=========================== */
 * {
     margin: 0;
     padding: 0;
@@ -8,157 +5,148 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     background-color: #fdfaf6;
     color: #333;
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a { text-decoration: none; color: inherit; }
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 28vh;
+    min-height: 180px;
+    max-height: 250px;
+    overflow: hidden;
 }
 
-/* ===========================
-   Header
-=========================== */
-header {
-    background-color: #ffb347;
-    color: #fff;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px 10px;
+    padding: 15px;
 }
 
-header .logo {
-    max-width: 120px;
+.hero-logo {
+    width: 80px;
     margin-bottom: 10px;
 }
 
-header h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
+.hero-overlay h1 {
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1em;
+.hero-slogan {
+    color: #fff;
+    font-size: 1.05em;
+    max-width: 320px;
 }
 
-/* ===========================
-   Main / Form
-=========================== */
+/* ================= MAIN ================= */
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 30px auto;
     padding: 0 20px;
 }
 
-.contact-form {
-    background-color: #fff;
-    padding: 25px 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.contact-form .form-group {
-    margin-bottom: 15px;
-    text-align: left;
+/* FORMULAIRE */
+.form-section {
+    flex: 1 1 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.form-section h2 {
+    margin-bottom: 20px;
     color: #1a3e5c;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 1em;
 }
 
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form .note {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 5px;
-}
-
-/* ===========================
-   Buttons
-=========================== */
-.form-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 15px;
-}
-
-.btn-submit {
+.form-section button {
     background-color: #ffb347;
-    color: white;
-    border: none;
+    color: #fff;
     padding: 12px 25px;
-    border-radius: 6px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 1em;
     transition: 0.3s;
 }
 
-.btn-submit:hover {
+.form-section button:hover {
     background-color: #ffa500;
 }
 
-.btn-home {
-    display: inline-block;
-    background-color: #1a3e5c;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
-    text-align: center;
-    transition: 0.3s;
+/* ================= URGENCES ================= */
+.urgent-section {
+    flex: 1 1 300px;
+    background: #fff8ee;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.btn-home:hover {
-    background-color: #163152;
+.urgent-section h2 {
+    color: #f39c12;
+    margin-bottom: 10px;
 }
 
-/* ===========================
-   Footer
-=========================== */
+.urgent-section p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* ================= FOOTER ================= */
 footer {
-    background-color: #1a3e5c;
-    color: white;
+    background: #1a3e5c;
+    color: #fff;
     text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9em;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-footer a {
-    color: white;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #ffb347;
-}
-
-/* ===========================
-   Responsive
-=========================== */
-@media screen and (max-width: 768px) {
-    .form-buttons {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .contact-container {
         flex-direction: column;
-    }
-
-    header h1 {
-        font-size: 1.5em;
     }
 }
